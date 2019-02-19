@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewData["Title"] = "Update";
+}
+<div class="app-content">
+    <div class="app-title">
+        <div>
+            <h1><i class="fa fa-building-o"></i> @Rental_WebCore2.Resources.RentalTexts.Update_Pro</h1>
+        </div>
+    </div>
+    <div class="tile">
+        <div class="tile-body">
+            <form>
+                <div class="form-group">
+                    <label class="control-label" style="font-size:20px">@Rental_WebCore2.Resources.RentalTexts.Name_Pro</label>
+                    <input class="form-control" type="text" value="Tòa nhà H3">
+                </div>
+                <div class="form-group">
+                    <label class="control-label" style="font-size:20px">@Rental_WebCore2.Resources.RentalTexts.Address</label>
+                    <input class="form-control" type="text" value="384 Hoàng Diệu">
+                </div>
+                <div class="form-group">
+                    <label class="control-label" style="font-size:20px">@Rental_WebCore2.Resources.RentalTexts.Province_City</label>
+                    <select class="form-control" id="exampleSelect1">
+                        <option>TP.Hà Nội</option>
+                        <option>Huế</option>
+                        <option>Đà Nẵng</option>
+                        <option>Nha Trang</option>
+                        <option selected>TP.Hồ Chí Minh</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" style="font-size:20px">@Rental_WebCore2.Resources.RentalTexts.District</label>
+                    <select class="form-control" id="exampleSelect1">
+                        <option>Q.4</option>
+                        <option>Huế</option>
+                        <option>Đà Nẵng</option>
+                        <option>Nha Trang</option>
+                        <option>TP.Hồ Chí Minh</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" style="font-size:20px">@Rental_WebCore2.Resources.RentalTexts.Wards</label>
+                    <select class="form-control" id="exampleSelect1">
+                        <option>P.6</option>
+                        <option>Huế</option>
+                        <option>Đà Nẵng</option>
+                        <option>Nha Trang</option>
+                        <option>TP.Hồ Chí Minh</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" style="font-size:20px">@Rental_WebCore2.Resources.RentalTexts.Type_Pro</label>
+                    <select class="form-control" id="exampleSelect1">
+                        <option>Tòa nhà</option>
+                        <option>Huế</option>
+                        <option>Đà Nẵng</option>
+                        <option>Nha Trang</option>
+                        <option>TP.Hồ Chí Minh</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="tile-footer row">
+            <div class="col-lg-3">
+                <a class="btn btn-primary btn-lg btn-block" href="@Url.Action("Save", "Property")" style="font-size: 20px;color:white">
+                    <i class="fa fa-fw fa-lg fa-check-circle" style="font-size:20px"></i> @Rental_WebCore2.Resources.RentalTexts.Save
+                </a>
+            </div>
+            <div class="col-lg-3">
+                <a class="btn btn-secondary btn-lg btn-block" href="@Url.Action("ListProperty", "Property")" style="font-size: 20px;color:white">
+                    <i class="fa fa-fw fa-lg fa-times-circle" style="font-size:20px"></i> @Rental_WebCore2.Resources.RentalTexts.Cancel
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,258 @@
+﻿
+@{
+    ViewData["Title"] = "Text";
+}
+<link href="~/css/main.css" rel="stylesheet" />
+<html>
+<body>
+    <div class="col-sm-8 col-xs-12">
+        <input type="hidden" value="True" name="IsPopup">
+
+
+
+        <div class="control-group form-group">
+            <label class="control-label col-lg-5 col-md-4 col-sm-4" for="Type">Loại (*)</label>
+            <div class="control-value col-lg-7 col-md-8 col-sm-8" style="width: 695px;">
+                <div class="clearfix">
+                    <input id="defaultValueType" name="defaultValueType" type="hidden" value=""><select data-val="true" data-val-required="Bắt buộc nhập" id="Type" name="Type" aria-required="true" aria-describedby="Type-error" aria-invalid="false">
+                        <option value="SCPS">Sự cố phát sinh</option>
+                        <option value="KHDK">Kế hoạch định kỳ</option>
+                    </select>
+                </div>
+                <div class="clearfix">
+                    <span class="help-inline field-validation-valid" data-valmsg-for="Type" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div id="" class="control-group form-group ">
+            <label class="control-label col-lg-5 col-md-4 col-sm-4" for="Name">Tên (*)</label>
+            <div class="control-value col-lg-7 col-md-8 col-sm-8" style="width: 695px;">
+                <div class="clearfix">
+                    <input autocomplete="off" class="col-xs-12" data-val="true" data-val-length="Tên không được vượt quá 100 ký tự." data-val-length-max="100" data-val-required="Bắt buộc nhập" id="Name" maskformat="" name="Name" placeholder="" type="text" value="">
+                </div>
+                <div class="clearfix">
+                    <span class="field-validation-valid help-inline" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="KHDK" style="display: block;">
+
+
+
+            <div class="control-group form-group">
+                <label class="control-label col-lg-5 col-md-4 col-sm-4" for="Periodic">Định kỳ</label>
+                <div class="control-value col-lg-7 col-md-8 col-sm-8">
+                    <div class="clearfix">
+                        <input id="defaultValuePeriodic" name="defaultValuePeriodic" type="hidden" value=""><select id="Periodic" name="Periodic">
+                            <option value="">- Chọn -</option>
+                            <option value="Daily">Hằng ngày</option>
+                            <option value="Weekly">Hằng tuần</option>
+                            <option value="Monthly">Hằng tháng</option>
+                            <option value="Quarterly">Hằng quý</option>
+                            <option value="6Months">Mỗi 6 tháng</option>
+                            <option value="Yearly">Hằng năm</option>
+                        </select>
+                    </div>
+                    <div class="clearfix">
+                        <span class="field-validation-valid help-inline" data-valmsg-for="Periodic" data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="control-group form-group">
+                <label class="control-label col-lg-5 col-md-4 col-sm-4" for="Reminder">Nhắc</label>
+                <div class="control-value col-lg-7 col-md-8 col-sm-8">
+                    <div class="clearfix">
+                        <input id="defaultValueReminder" name="defaultValueReminder" type="hidden" value=""><select id="Reminder" name="Reminder">
+                            <option value="">- Chọn -</option>
+                            <option value="BeforeOneHour">Trước 1 giờ</option>
+                            <option value="BeforeOneDay">Trước 1 ngày</option>
+                            <option value="BeforeOneWeek">Trước 1 tuần</option>
+                            <option value="BeforeOneMonth">Trước 1 tháng</option>
+                        </select>
+                    </div>
+                    <div class="clearfix">
+                        <span class="field-validation-valid help-inline" data-valmsg-for="Reminder" data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+        <div id="" class="control-group form-group ">
+            <label class="control-label col-lg-5 col-md-4 col-sm-4 control-label-textarea" for="Note">Ghi chú</label>
+            <div class="control-value col-lg-7 col-md-8 col-sm-8" style="width: 695px;">
+                <div class="clearfix">
+                    <textarea class="col-xs-12" cols="20" id="Note" name="Note" placeholder="Ghi chú" rows="2"></textarea>
+                </div>
+                <div class="clearfix">
+                    <span class="field-validation-valid help-inline" data-valmsg-for="Note" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="control-group form-group">
+            <label class="control-label col-lg-5 col-md-4 col-sm-4" for="ConstructionUnit">Thực hiện bởi (*)</label>
+            <div class="control-value col-lg-7 col-md-8 col-sm-8" style="width: 695px;">
+                <div class="clearfix">
+                    <input id="defaultValueConstructionUnit" name="defaultValueConstructionUnit" type="hidden" value=""><select data-val="true" data-val-required="Bắt buộc nhập" id="ConstructionUnit" name="ConstructionUnit">
+                        <option value="Nội bộ">Nội bộ</option>
+                        <option value="Nhà thầu bên ngoài">Nhà thầu bên ngoài</option>
+                    </select>
+                </div>
+                <div class="clearfix">
+                    <span class="field-validation-valid help-inline" data-valmsg-for="ConstructionUnit" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="NoiBo">
+
+            <h5><b>BỘ PHẬN THỰC HIỆN</b></h5>
+
+
+
+            <div class="control-group form-group">
+                <label class="control-label no-padding-right col-lg-5 col-md-4 col-sm-4" for="UserClientTypeId">Bộ phận</label>
+                <div class="control-value col-lg-7 col-md-8 col-sm-8" style="width: 695px;">
+                    <div class="clearfix">
+                        <select class="col-xs-4 " data-val="true" data-val-number="The field Bộ phận must be a number." id="UserClientTypeId" name="UserClientTypeId">
+                            <option value="">- Rỗng -</option>
+                        </select>
+                    </div>
+                    <div class="clearfix">
+                        <span class="field-validation-valid help-inline" data-valmsg-for="UserClientTypeId" data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="NhaThau" style="display: none">
+            <h5><b>THÔNG TIN NHÀ THẦU</b></h5>
+
+
+
+            <div class="control-group form-group">
+                <label class="control-label " for="MaintenanceId">Công ty(Nhà thầu) (*)</label>
+                <div class="control-value">
+                    <div class="clearfix">
+
+
+                        <div class="input-group">
+                            <input data-val="true" data-val-number="The field Công ty(Nhà thầu) must be a number." id="MaintenanceId" name="MaintenanceId" type="hidden" value="">
+                            <input data-val="true" data-val-required="Bắt buộc nhập" id="MaintenanceId_DisplayText" name="MaintenanceId_DisplayText" readonly="True" type="text" value="">        <span class="input-group-addon" onclick="OpenPopup('/Supplier/Index?IsPopup=true&amp;jsCallback=selectItem_MaintenanceId', 'Tìm kiếm dữ liệu', 800, 600)" style="cursor:pointer">
+                                <i class="ace-icon fa fa-search"></i>
+                            </span>
+                            <span class="input-group-addon" onclick="OpenPopup('/Supplier/Create?IsPopup=true', 'Thêm mới', 800, 600)" style="cursor: pointer; background: #428BCA; color: #fff; border-color: #428BCA;">
+                                <i class="ace-icon fa fa-plus"></i>
+                            </span>
+                        </div>
+                        <span class="field-validation-valid" data-valmsg-for="MaintenanceId_DisplayText" data-valmsg-replace="true"></span>
+                        <script type="text/javascript">
+                            function selectItem_MaintenanceId(id, name) {
+                                $("#MaintenanceId").val(id).trigger('change');
+                                $("#MaintenanceId_DisplayText").val(name).trigger('change');
+                                $("#MaintenanceId_DisplayText").focus().blur();
+                                ClosePopup();
+                            }
+                        </script>
+                    </div>
+                    <div class="clearfix">
+                        <span class="field-validation-valid help-inline" data-valmsg-for="MaintenanceId" data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div id="" class="control-group form-group ">
+                <label class="control-label col-lg-5 col-md-4 col-sm-4" for="Maintenancer">Người đại diện</label>
+                <div class="control-value col-lg-7 col-md-8 col-sm-8">
+                    <div class="clearfix">
+                        <input autocomplete="off" class="col-xs-12" id="Maintenancer" maskformat="" name="Maintenancer" placeholder="" type="text" value="">
+                    </div>
+                    <div class="clearfix">
+                        <span class="field-validation-valid help-inline" data-valmsg-for="Maintenancer" data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div id="" class="control-group form-group ">
+                <label class="control-label col-lg-5 col-md-4 col-sm-4" for="MaintenancerPhone">Điện thoại</label>
+                <div class="control-value col-lg-7 col-md-8 col-sm-8">
+                    <div class="clearfix">
+                        <input autocomplete="off" class="col-xs-12" id="MaintenancerPhone" maskformat="" name="MaintenancerPhone" placeholder="" type="text" value="">
+                    </div>
+                    <div class="clearfix">
+                        <span class="field-validation-valid help-inline" data-valmsg-for="MaintenancerPhone" data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div id="" class="control-group form-group ">
+                <label class="control-label col-lg-5 col-md-4 col-sm-4 control-label-textarea" for="MaintenancerInfo">Thông tin</label>
+                <div class="control-value col-lg-7 col-md-8 col-sm-8">
+                    <div class="clearfix">
+                        <textarea class="col-xs-12" cols="20" id="MaintenancerInfo" name="MaintenancerInfo" placeholder="Thông tin thực hiện" rows="2"></textarea>
+                    </div>
+                    <div class="clearfix">
+                        <span class="field-validation-valid help-inline" data-valmsg-for="MaintenancerInfo" data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var closePopup = '';
+    $(document).ready(function () {
+        //nếu là được gọi theo dạng popup từ form khác thì chạy đoạn code bên dưới
+        if (closePopup != '') {
+            var option = '<option value="0" ></option>';
+            //tên funtion có thể khác theo từng công việc riêng (đây chỉ là mẫu khi thêm mới sẽ gọi lại)
+            window.parent.ClosePopupAndAppendSelect(option);
+        }
+        $("#Type").change(function () {
+            var $this = $(this);
+            if ($this.val() == "KHDK") {
+                $(".KHDK").show();
+            }
+            else {
+                $(".KHDK").hide();
+            }
+        });
+    });
+</script>

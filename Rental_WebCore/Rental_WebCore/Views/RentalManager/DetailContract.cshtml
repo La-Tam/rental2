@@ -1,0 +1,753 @@
+﻿
+@{
+    ViewData["Title"] = "DetailContract";
+}
+<head>
+    <link href="~/CSS_Rental/css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+    <main class="app-content">
+        <div class="tile">
+            <div class="page-header">
+                <div class="alert alert-warning" style="background-color:#009688;">
+                    <div class="row">
+                        <h4 style="margin-bottom:0px; text-align:left;color:aliceblue">THÔNG TIN HỢP ĐỒNG</h4>
+                        <a class="btn-outline-primary" href="/RentalManager/ContractIndex" style="margin-left:750px">
+                            <span aria-hidden="true">
+                                <img src="~/images/Rental/Contract/icons8-delete-60.png" style="width:25px" />
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                @* Duong dan tab  *@
+                <div class="row" style="margin-bottom:2rem;">
+                    <div class="col-lg-12">
+                        <div class="bs-component">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item"><a class="nav-link " data-toggle="tab" href="#DC_detail"><i class="icon fa fa-info"></i> Chi tiết hợp đồng</a></li>
+                                <li class="nav-item"><a class="nav-link " data-toggle="tab" href="#DC_customer"><i><img src="~/images/Rental/Contract/icons8-user-30.png" style="margin-top:-6px;width:20px" /></i> Khách thuê</a></li>
+                                <li class="nav-item"><a class="nav-link " data-toggle="tab" href="#DC_history"><i><img src="~/images/Rental/Contract/icons8-time-machine-30.png" style="width:20px;margin-top:-6px" /></i> Lịch sử hóa đơn</a></li>
+                                <li class="nav-item"><a class="nav-link " data-toggle="tab" href="#DC_asset"><i class="icon fa fa-diamond"></i> Tài sản bàn giao</a></li>
+                                <li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#DC_expediency"><i><img src="~/images/Rental/Contract/icons8-dirt-bike-30.png" style="margin-top:-6px" /></i> Phương tiện</a></li>
+                            </ul>
+                            @* Chi tiet *@
+                            <div class="tab-content " id="myTabContent">
+                                <div class="tab-pane fade" id="DC_detail">
+                                    <div class="tile">
+
+                                        <div class="row">
+                                            @* VT *@
+                                            @* Thong tin hop dong *@
+                                            <div class="col-md-5">
+                                                <div class="tile">
+                                                    <h5>Thông tin hợp đồng</h5>
+                                                    <hr />
+                                                    <div class="tile-body">
+                                                        <form class="form-horizontal">
+                                                            <div class="form-group row">
+                                                                <label class="control-label col-md-4">Mã hợp đồng</label>
+                                                                <div class="col-md-8">
+
+                                                                    <input class="text-body col-md-8" type="text" disabled="" value="HD-123456789">
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="control-label col-md-4">Ngày tạo hợp đồng</label>
+                                                                <div class="col-md-8">
+                                                                    <input class="text-body col-md-8" type="text" disabled="" value="18/1/2019">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="control-label col-md-4">Ngày hiệu lực</label>
+                                                                <div class="col-md-8">
+                                                                    <input class="text-body col-md-8" type="text" disabled="" value="25/1/2019">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="control-label col-md-4">Đến ngày</label>
+                                                                <div class="col-md-8">
+                                                                    <input class="text-body col-md-8" type="text" disabled="" value="25/6/2019">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="control-label col-md-4">Dự án</label>
+                                                                <div class="col-md-8">
+                                                                    <input class="text-body col-md-12 " type="text" disabled="" value="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="control-label col-md-4">Tòa nhà</label>
+                                                                <div class="col-md-8">
+                                                                    <input class="text-body col-md-12 " type="text" disabled="" value="Vina-phone">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="control-label col-md-4">Tầng</label>
+                                                                <div class="col-md-8">
+                                                                    <input class="text-body col-md-12 " type="text" disabled="" value="Tầng 2">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="control-label col-md-4">Phòng</label>
+                                                                <div class="col-md-8">
+                                                                    <input class="text-body col-md-12 " type="text" disabled="" value="P.103">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="control-label col-md-4">Loại sản phẩm</label>
+                                                                <div class="col-md-8">
+                                                                    <input class="text-body col-md-12 " type="text" disabled="" value="3 phòng ngủ">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="control-label col-md-4">Giá</label>
+                                                                <div class="col-md-8">
+                                                                    <input class="text-body col-md-12 " type="text" disabled="" value="8.000.000">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="control-label col-md-4">Tiền cọc</label>
+                                                                <div class="col-md-8">
+                                                                    <input class="text-body col-md-12 " type="text" disabled="" value="5.000.000">
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group row">
+                                                                <label class="control-label col-md-3">Ghi chú</label>
+                                                                <div class="col-md-8">
+                                                                    <textarea class="text-body" rows="4" placeholder="Note" disabled="" style="width:267px"></textarea>
+                                                                </div>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            @*VP *@
+                                            @* Dich vu *@
+
+                                            <div class="col-md-7">
+                                                <div class="tile">
+                                                    <h5>Đăng ký dịch vụ</h5>
+                                                    <a class="btn btn-outline-primary" style="border:1px solid;border-color:black; margin-top:10px" onclick="AddService(0)"><i class="fa fa-plus"></i>Thêm dịch vụ</a>
+                                                    <p></p>
+                                                    <hr style="margin-top:-0px" />
+                                                    <div style="  height:575px; border:1px solid black; padding:20px; overflow:auto;border-color:darkgray">
+                                                        <table class="table table-bordered">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th style="width:25px"><img src="~/images/Rental/Contract/icons8-checkmark-filled-50.png" style="width:20px" /></th>
+                                                                    <th class="col-md-3">Loại dịch vụ</th>
+                                                                    <th style="text-align:center;width:15px">Số lượng</th>
+                                                                    <th>Đơn giá</th>
+                                                                    <th>Đơn vị</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td><input class="checkbox" type="checkbox" checked="checked" /></td>
+                                                                    <td>
+                                                                        <input class="text-body  " style="width:150px" disabled="" type="text" value="Internet  ">
+                                                                    </td>
+                                                                    <td><input class="text-center " type="text" style="width:25px" value="1" disabled="" /></td>
+                                                                    <td><input class="text-dark " style="width:80px" type="text" value="200.000" disabled="" /></td>
+                                                                    <td>
+                                                                        <input class="text-body  " style="width:80px" disabled="" type="text" value="Đồng/Tháng">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><input class="checkbox" type="checkbox" checked="checked" /></td>
+                                                                    <td>
+                                                                        <input class="text-body " style="width:150px" disabled="" type="text" value="Cáp  ">
+                                                                    </td>
+                                                                    <td><input class="text-center " type="text" style="width:25px" value="1" disabled="" /></td>
+                                                                    <td><input class="text-dark " style="width:80px" type="text" value="150.000" disabled="" /></td>
+                                                                    <td>
+                                                                        <input class="text-body  " style="width:80px" disabled="" type="text" value="Đồng/Tháng">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><input class="checkbox" type="checkbox" checked="checked" /></td>
+                                                                    <td>
+                                                                        <input class="text-body  " style="width:150px" disabled="" type="text" value="Đổ rác  ">
+                                                                    </td>
+                                                                    <td><input class="text-center " style="width:25px" type="text" value="1" disabled="" /></td>
+                                                                    <td><input class="text-dark " style="width:80px" type="text" value="30.000" disabled="" /></td>
+                                                                    <td>
+                                                                        <input class="text-body  " style="width:80px" disabled="" type="text" value="Đồng/Tháng">
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <hr style="margin-top:-10px" />
+                                        <div class="row">
+                                            <a class="btn-outline-primary" href="/RentalManager/CreatContract" style="margin-left:20px;width:110px;border:1px solid"><i><img src="~/images/Rental/Contract/icons8-edit-file-30.png" style="width:20px; margin-top:-6px;" /></i> Chỉnh sửa</a>
+                                            <a class="btn-outline-primary" style="margin-left:30px;width:120px;border:1px solid"><i><img src="~/images/Rental/Contract/icons8-print-30.png" style="width:20px; margin-top:-6px" /></i> In hợp đồng</a>
+                                            <a class="btn-outline-primary" href="/RentalManager/ContractIndex" style="margin-left:30px;width:90px;border:1px solid;border-color:black"><i><img src="~/images/Rental/Contract/icons8-exit-30.png" style="width:20px; margin-top:-6px" /></i> Thoát ra</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                @* Khach thue *@
+                                <div class="tab-pane fade " id="DC_customer">
+                                    <div class="tile" style="height:100%">
+                                        <div class="tile" style="height:auto;width:850px;border:solid 1px;border-color:darkgray">
+                                            <h5>Người thuê</h5>
+                                            <a class="btn btn-outline-primary" style="border:1px solid;border-color:black" onclick="AddMoreTenants(0)"><i class="fa fa-plus"></i>Thêm người cùng thuê</a>
+                                            <p></p>
+                                            <hr />
+
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="">
+                                                        <a class="btn btn-primary" style="background-color:aliceblue;margin-left: 50px; width: 200px;height: 200px;padding-top:80px;border:solid 2px;border-color:black;">+ Thêm ảnh</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7">
+                                                    <div class="tile-body">
+                                                        <form class="form-horizontal">
+                                                            <div class="form-group row">
+                                                                <label class="control-label col-md-4">Tên khách thuê</label>
+                                                                <div class="col-md-8">
+                                                                    <input class="text-body col-md-8 " type="text" value="AAA" disabled="disabled">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="control-label col-md-4">Điện thoại</label>
+                                                                <div class="col-md-8">
+                                                                    <input class="text-body col-md-8 " type="text" value="01254851313" disabled="disabled">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="control-label col-md-4">CMND</label>
+                                                                <div class="col-md-8">
+                                                                    <input class="text-body col-md-8 " type="text" value="012365487" disabled="disabled">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="control-label col-md-4">Email</label>
+                                                                <div class="col-md-8">
+                                                                    <input class="text-body col-md-8 " type="text" value="mnh@gmail.com" disabled="disabled">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="control-label col-md-3">Ghi chú</label>
+                                                                <div class="col-md-9">
+                                                                    <textarea class="text-body" rows="4" placeholder="Note" style="width:290px"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="widget-toolbar " style="margin-left:40px">
+
+                                                    <button data-toggle="dropdown" class="btn btn-info btn-primary dropdown-toggle" aria-expanded="true" style="padding:0px 3px;"></button>
+                                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                                        <li role="presentation"><a role="menuitem" tabindex="-1" onclick="Editinfo(0)">Chỉnh sửa thông tin</a></li>
+                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Xóa</a></li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                        @* Khach cung thue *@
+                                        <div class="tile" style="height:auto;width:850px;border:solid 1px;border-color:darkgray">
+                                            <h5>Người cùng thuê</h5>
+
+                                            <hr />
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="">
+                                                        <a class="btn btn-primary" style="background-color:aliceblue;margin-left: 50px; width: 200px;height: 200px;padding-top:80px;border:solid 2px;border-color:black;">+ Thêm ảnh</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7">
+                                                    <div class="tile-body">
+                                                        <form class="form-horizontal">
+                                                            <div class="form-group row">
+                                                                <label class="control-label col-md-4">Tên khách thuê</label>
+                                                                <div class="col-md-8">
+                                                                    <input class="text-body col-md-8 " type="text" value="AAA" disabled="disabled">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="control-label col-md-4">Điện thoại</label>
+                                                                <div class="col-md-8">
+                                                                    <input class="text-body col-md-8 " type="text" value="01254851313" disabled="disabled">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="control-label col-md-4">CMND</label>
+                                                                <div class="col-md-8">
+                                                                    <input class="text-body col-md-8 " type="text" value="012365487" disabled="disabled">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="control-label col-md-4">Email</label>
+                                                                <div class="col-md-8">
+                                                                    <input class="text-body col-md-8 " type="text" value="mnh@gmail.com" disabled="disabled">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="control-label col-md-3">Ghi chú</label>
+                                                                <div class="col-md-9">
+                                                                    <textarea class="text-body" rows="4" placeholder="Note" style="width:290px"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                @* Dropdown *@
+                                                <div class="widget-toolbar " style="margin-left:40px">
+                                                    <button data-toggle="dropdown" class="btn btn-info btn-primary dropdown-toggle" aria-expanded="true" style="padding:0px 3px;"></button>
+                                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                                        <li role="presentation"><a role="menuitem" tabindex="-1" onclick="Editinfo(0)">Chỉnh sửa thông tin</a></li>
+                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href=" ">Xóa</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                @* lich su hoa don *@
+                                <div class="tab-pane fade  " id="DC_history">
+                                    <div class="tile">
+                                        <div class="tile" style="width:850px;border:solid 1px;border-color:darkgray">
+                                            <table class="table table-bordered" style="width:800px ;text-align:center">
+                                                <thead>
+                                                    <tr>
+                                                        <th>STT</th>
+                                                        <th>Ngày/Tháng/Năm</th>
+                                                        <th>Số tiền đóng</th>
+                                                        <th>Chi tiết</th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>18/11/2019</td>
+                                                        <td>10.000.000</td>
+                                                        <td id="11"><button onclick="ViewHistory(0)"><i class="fa fa-eye" aria-hidden="true"></i></button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>18/12/2019</td>
+                                                        <td>10.000.000</td>
+                                                        <td id="12"><button onclick="ViewHistory(0)"><i class="fa fa-eye" aria-hidden="true"></i></button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>18/1/2019</td>
+                                                        <td>10.000.000</td>
+                                                        <td id="1"><button onclick="ViewHistory(0)"><i class="fa fa-eye" aria-hidden="true"></i></button></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                @* Tai san ban giao *@
+                                <div class="tab-pane fade " id="DC_asset">
+                                    <div class="tile">
+                                        <div class="tile" style="width:850px;border:solid 1px;border-color:darkgray">
+                                            <table class="table table-bordered" style="width:800px ;text-align:center">
+                                                <thead>
+                                                    <tr>
+                                                        <th>STT</th>
+                                                        <th>Loại tài sản</th>
+                                                        <th>Tên tài sản</th>
+                                                        <th>Số lượng</th>
+                                                        <th>Ngày bàn giao</th>
+                                                        <th>Trạng thái</th>
+                                                        <th>Hình ảnh</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Tủ lạnh</td>
+                                                        <td>Panasonic</td>
+                                                        <td>1</td>
+                                                        <td>18/11/2019</td>
+                                                        <td>Tốt</td>
+                                                        <td id="1"><a onclick="myView"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Tivi</td>
+                                                        <td>Sony</td>
+                                                        <td>4</td>
+                                                        <td>18/11/2019</td>
+                                                        <td>Tốt</td>
+                                                        <td id="1"><a onclick="myView"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>Bàn</td>
+                                                        <td>10.000.000</td>
+                                                        <td>5</td>
+                                                        <td>18/11/2019</td>
+                                                        <td>Tốt</td>
+                                                        <td id="1"><a onclick="myView"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                @* Phuong tiện *@
+                                <div class="tab-pane fade active show " id="DC_expediency">
+                                    <div class="tile" style="height:auto">
+                                        <div class="tile" style="width:800px;border:solid 1px;border-color:darkgray">
+                                            <a class="btn btn-outline-primary" style="border:1px solid;border-color:black " onclick="AddExpediency(0)"><i class="fa fa-plus"></i>Thêm phương tiện</a>
+                                            <p></p>
+                                            <hr />
+                                            <div class="tile-body">
+                                                <form class="form-horizontal">
+                                                    <div class="form-group row">
+                                                        <label class="control-label col-md-4" style="padding-left:40px">Tên xe: </label>
+                                                        <div class="col-md-8">
+                                                            <input class="text-body col-md-8 " type="text" value="BWM ">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="control-label col-md-4" style="padding-left:40px">Biển số xe: </label>
+                                                        <div class="col-md-8">
+                                                            <input class="text-body col-md-8 " type="text" value="dsdwdwd ">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="control-label col-md-4" style="padding-left:40px">Loại xe: </label>
+                                                        <div class="col-md-8">
+                                                            <input class="text-body col-md-8 " type="text" value="Xe số ">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="control-label col-md-4" style="padding-left:40px">Chủ phương tiện: </label>
+                                                        <div class="col-md-8">
+                                                            <input class="text-body col-md-8 " type="text" value="Nguyên San San ">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="control-label col-md-4" style="padding-left:40px">Màu xe: </label>
+                                                        <div class="col-md-8">
+                                                            <input class="text-body col-md-8 " type="text" value="Hồng ">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="control-label col-md-4" style="padding-left:40px">Phí dịch vụ xe: </label>
+                                                        <div class="col-md-8">
+                                                            <input class="text-body col-md-8 " type="text" value="80.000 ">
+                                                        </div>
+                                                    </div>
+
+                                                </form>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+
+@* Add dich vu *@
+
+<div class="modal fade" id="myModalService">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <text class="form-control" style="background-color:#007065; height:50px;color:aliceblue;border:hidden; text-align:center;font-size:25px; padding-left:0px;border-radius:unset" id="modalTitleService;">
+                Thêm dịch vụ
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white; font-size:30px">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </text>
+           
+            <div class="modal-body">
+                <form id="form">
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Loại dịch vụ</label>
+                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập loại dịch vụ">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Số lượng</label>
+                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập số lượng">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Đơn giá</label>
+                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập đơn giá">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Đơn vị</label>
+                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập đơn vị">
+                    </div>
+
+
+                </form>
+                <div class="modal-footer">
+                    <a class="btn btn-primary" style="background-color: #007065;color:white">Lưu</a>
+                    <button class="btn btn-primary" style="background-color: #007065;color:white" data-dismiss="modal">Hủy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* Xem lich su *@
+
+<div class="modal fade" id="myModalHistory">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <text class="form-control" style="background-color:#007065; height:50px;color:aliceblue;border:hidden; text-align:center;font-size:25px; padding-left:0px;border-radius:unset" id="modalTitleHistory;">
+                Thông tin hóa đơn
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white; font-size:30px">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </text>
+           
+            <div class="modal-body">
+                <form id="form">
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">STT</label>
+                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" value="1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Ngày đóng tiền</label>
+                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" value="29/12/2019">
+                    </div>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Tên phí</th>
+                                <th>Số lượng(kj)</th>
+                                <th>Đơn giá</th>
+                                <th>Đơn vị</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tiền phòng</td>
+                                <td>1</td>
+                                <td>8.000.000</td>
+                                <td>Đồng/tháng</td>
+                            </tr>
+                            <tr>
+                                <td>Tiền điện</td>
+                                <td>300(kj)</td>
+                                <td>320.000</td>
+                                <td>Đồng</td>
+                            </tr>
+                            <tr>
+                                <td>Tiền nước</td>
+                                <td>200(kj)</td>
+                                <td>100.000</td>
+                                <td>Đồng</td>
+                            </tr>
+                            <tr>
+                                <td>Tiền mạng</td>
+                                <td>1</td>
+                                <td>200.000</td>
+                                <td>Đồng/tháng</td>
+                            </tr>
+                            <tr>
+                                <td>Tiền đổ rác</td>
+                                <td>1</td>
+                                <td>40.000</td>
+                                <td>Đồng/tháng</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="form-group row">
+                        <label class="control-label col-md-5" style="text-align:right">Thành tiền: </label>
+                        <div class="col-md-6">
+                            <input class="text-body col-md-6 " type="text" value="dsdwdwd " style="margin-left:25px">
+                            <label class="control-label col-md-4" style="text-align:right">Đồng/tháng</label> 
+                        </div>
+                        
+                    </div>
+
+
+                </form>
+                <div class="modal-footer">
+                    <a class="btn btn-primary" style="background-color: #007065;color:white">Lưu</a>
+                    <button class="btn btn-primary" style="background-color: #007065;color:white" data-dismiss="modal">Hủy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@* Add nguoi cung thue *@
+<div class="modal fade" id="myModalMoreTenants">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <text class="form-control" style="background-color:#007065; height:50px;color:aliceblue;border:hidden; text-align:center;font-size:25px; padding-left:0px;border-radius:unset" id="modalTitleMoreTenants;">
+                Thêm người cùng thuê
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white; font-size:30px">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </text>
+            <p></p>
+            <div class="tile-body">
+                <form class="form-horizontal">
+                    <div class="form-group row">
+                        <label class="control-label col-md-4" style="padding-left:40px">Tên khách thuê</label>
+                        <div class="col-md-8">
+                            <input class="text-body col-md-8 " type="text" value=" ">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="control-label col-md-4" style="padding-left:40px">Điện thoại</label>
+                        <div class="col-md-8">
+                            <input class="text-body col-md-8 " type="text" value=" ">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="control-label col-md-4" style="padding-left:40px">CMND</label>
+                        <div class="col-md-8">
+                            <input class="text-body col-md-8 " type="text" value=" ">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="control-label col-md-4" style="padding-left:40px">Email</label>
+                        <div class="col-md-8">
+                            <input class="text-body col-md-8 " type="text" value=" ">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="control-label col-md-3" style="padding-left:40px">Ghi chú</label>
+                        <div class="col-md-9">
+                            <textarea class="text-body" rows="4" placeholder="Note" style="width:290px"></textarea>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="modal-footer">
+                    <a class="btn btn-primary" style="background-color: #007065;color:white">Lưu</a>
+                    <button class="btn btn-primary" style="background-color: #007065;color:white" data-dismiss="modal">Hủy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* Add phuong tien *@
+<div class="modal fade" id="myModalExpedincy">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <text class="form-control" style="background-color:#007065; height:50px;color:aliceblue;border:hidden; text-align:center;font-size:25px; padding-left:0px;border-radius:unset" id="modalTitleExpedincy;">
+                Thêm phương tiện
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white; font-size:30px">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </text>
+           
+            <div class="modal-body">
+                <form id="form">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Tên xe</label>
+                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập tên xe">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Biển số xe</label>
+                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập biển số xe">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleSelect1">Loại</label>
+                        <select class="form-control" id="exampleSelect1">
+                            <option>Xe số</option>
+                            <option>Xe tay ga</option>
+                            <option>Xe 3 bánh</option>
+                            <option>Xe 4 bánh</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Chủ phương tiện</label>
+                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập chủ phương tiện">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Màu xe</label>
+                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập màu xe">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Phí dịch vụ xe</label>
+                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập phí dịch vụ xe">
+                    </div>
+
+
+                </form>
+                <div class="modal-footer">
+                    <a class="btn btn-primary" style="background-color: #007065;color:white">Lưu</a>
+                    <button class="btn btn-primary" style="background-color: #007065;color:white" data-dismiss="modal">Hủy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*  *@
+<script>
+    function AddService(addservice) {
+        $("#form")[0].reset();
+        $("#modalTitleService").html("Thêm dịch vụ");
+        $("#myModalService").modal();
+    }
+
+    function AddMoreTenants(addpeople) {
+        $("#form")[0].reset();
+        $("#modalTitleMoreTenants").html("Thêm người cùng thuê");
+        $("#myModalMoreTenants").modal();
+    }
+    Editinfo
+    function Editinfo(editpeople) {
+        $("#form")[0].reset();
+        $("#modalTitleMoreTenants").html("Thêm người cùng thuê");
+        $("#myModalMoreTenants").modal();
+    }
+    function AddExpediency(addExpedincy) {
+        $("#form")[0].reset();
+        $("#modalTitleExpedincy").html("Thêm phương tiện");
+        $("#myModalExpedincy").modal();
+    }
+    function ViewHistory(viewhistory) {
+        $("#form")[0].reset();
+        $("#modalTitleHistory").html("Thêm phương tiện");
+        $("#myModalHistory").modal();
+    }
+
+</script>

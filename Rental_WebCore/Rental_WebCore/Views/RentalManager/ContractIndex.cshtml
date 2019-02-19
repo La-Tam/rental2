@@ -1,0 +1,252 @@
+﻿
+@{
+    ViewData["Title"] = "ContractIndex";
+}
+<head>
+    <link href="~/css/main.css" rel="stylesheet" />
+    
+    
+</head>
+
+<body>
+
+    <main class="app-content">
+        <div class="page-item" style="height: 100%;">
+
+            <!--PAGE CONTENT BEGINS HERE-->
+            @* Tua de *@
+            <div>
+                <div class="alert alert-warning" style="background-color:#009688;">
+                    <h4 style="margin-bottom:0px; text-align:center;color:aliceblue">QUẢN LÝ HỢP ĐỒNG SẢN PHẨM</h4>
+                </div>
+            </div>
+            @* Chia 2 cot *@
+            <div class="row">
+                @* Cot loc *@
+                <div class="col-md-2">
+                    @* Chon du an *@
+                    <div class="form-group">
+                        <select class="form-control" id="exampleSelect1">
+                            <option>TNN</option>
+                            <option>An Lạc</option>
+                            <option>Bình Minh</option>
+                            <option>Thiên Đường</option>
+                            <option>BBC</option>
+                        </select>
+                    </div>
+                    @* Loc theo nha *@
+                    <div class="tile">
+                        <div class="widget-header">
+                            @*<h5><i class="fa fa-home" ></i> Tên nhà</h5>*@
+                            <h5 style="text-align:center">Tên nhà</h5>
+                        </div>
+                        <hr style="width:153px;margin-left:-20px" />
+                        <div class="widget-body">
+                            <p>
+                                <label>
+                                    <input name="REHouseId" type="radio" checked="checked">
+                                    <span> Viettel (6)</span>
+                                </label>
+                                <label>
+                                    <input name="REHouseId" type="radio" checked="checked">
+                                    <span> Vina-phone (4)</span>
+                                </label>
+                            </p>
+                        </div>
+                    </div>
+                    @* Lọc theo loai phòng *@
+                    <div class="tile">
+                        <div class="widget-header">
+                            @*<h5><i class="ace-icon fa fa-cubes" ></i> Loại phòng</h5>*@
+                            <h5 style="text-align:center">Loại phòng</h5>
+                            <hr style="width:153px;margin-left:-20px" />
+                        </div>
+                        <div class="widget-body">
+                            <p>
+                                <label>
+                                    <input name="REProductTypeId" type="radio" checked="">
+                                    <span>Phòng đơn (40)</span>
+                                </label>
+                                <label>
+                                    <input name="REProductTypeId" type="radio" checked="">
+                                    <span>Phòng đa (30)</span>
+                                </label>
+                            </p>
+                        </div>
+                    </div>
+                    @* Loc theo trang thai *@
+                    <div class="tile">
+                        <div class="widget-header">
+                            @*<h5 class="widget-title"><i class="fa fa-renren" ></i> Trạng thái</h5>*@
+                            <h5 style="text-align:center"> Trạng thái</h5>
+                        </div>
+                        <hr style="width:153px;margin-left:-20px" />
+                        <div class="widget-body">
+                            <div class="widget-main">
+                                <p>
+                                    <label>
+                                        <input name="Status" type="radio" checked="checked">
+                                        <span class="lbl"> tất cả (50)</span>
+                                    </label>
+
+                                    <label>
+                                        <input name="Status" type="radio">
+                                        <span class="lbl"> đã thuê (37)</span>
+                                    </label>
+
+                                    <label>
+                                        <input name="Status" type="radio">
+                                        <span class="lbl"> trống (13)</span>
+                                    </label>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                @* Cot du lieu *@
+                <div class="col-md-10">
+                    <div class="tile" style="height:593px">
+                        <div style=" height:555px; border:1px solid black; padding:20px; overflow:auto;border-color:darkgray">
+                            @* Tang 2 *@
+                            <h5 style="color:#009688"><b><i class="ace-icon fa fa-plus-square"></i> Tầng 2 (2)</b></h5>
+                            <p></p>
+                            <div class="top-10 clearfix">
+                                <style>
+                                    .btn-outline-primary{
+                                        background-color: white;
+                                        color: black;
+                                        font-size: 16px;
+                                        border: solid 1px;
+                                        border-color: darkgray;
+                                        width:171px;
+                                        height:240px;
+                                    }
+
+                                    .dropbtn:hover, .dropbtn:focus {
+                                        background-color: #009688;
+                                    }
+                                    .dropdown-menu {
+                                        display: none;
+                                        background-color: white;
+                                        max-width:10px;
+                                        margin-top: -150px;
+                                        margin-left:5px;
+                                        border:solid 1px;
+                                        border-color:darkgray;
+                                    }
+                                    .dropdown a:hover {
+                                        background-color: #009688;
+                                        color:white;
+                                    }
+                                </style>
+                                <div class="row">
+                                    <div class="col-sm-3 top-5">
+                                        <div class="dropdown"id="HD">
+                                            <button class="btn btn-outline-primary " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <p>
+                                                    <img src="~/images/Rental/Contract/icons8-profile-48.png" /><br />
+                                                    <b>Vina-phone</b> <br>
+                                                    <b>Tầng 2</b> <br>
+                                                    <b>P.103</b> <br>
+                                                    <b>A.kien</b><br>
+                                                    <b style="font-style: italic;">8.000.000</b><br />
+                                                    <b>Đang hợp đồng</b><br />
+
+                                                </p>
+                                            </button>
+
+                                            @if (true)
+                                            {
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                                                    <a class="dropdown-item " asp-area="" asp-controller="RentalManager" asp-action="CreatContract"><i>Tạo hợp đồng</i></a>
+                                                    <a class="dropdown-item " asp-area="" asp-controller="RentalManager" asp-action="DetailContract"><i>Chi tiết hợp đồng</i></a>
+
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <a class="dropdown-item " asp-area="" asp-controller="RentalManager" asp-action="DetailContract"><i>Chi tiết hợp đồng</i></a>
+                                            }
+                                        </div>
+                                    </div>
+                                    @*  *@
+                                    <div class="col-sm-3 top-5">
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-primary " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <p>
+                                                    <img src="~/images/Rental/Contract/icons8-profile-48.png" /><br />
+                                                    <b>Vina-phone</b> <br>
+                                                    <b>Tầng 2</b> <br>
+                                                    <b>P.123</b> <br>
+                                                    <b>(Tên người thuê)</b><br>
+                                                    <b style="font-style: italic;">(Số tiền)</b><br />
+                                                    <b>Trống</b>
+                                                </p>
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" asp-area="" asp-controller="RentalManager" asp-action="CreatContract"><i>Tạo hợp đồng</i></a>
+                                                <a class="dropdown-item" asp-area="" asp-controller="RentalManager" asp-action="DetailContract"><i>Chi tiết hợp đồng</i></a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p></p>
+                            <br />
+                            @* Tang 4 *@
+                            <h5 style="color:#009688;"><b><i class="ace-icon fa fa-plus-square"></i> Tầng 4 (1)</b></h5>
+                            <p></p>
+                            <div class="top-10 clearfix">
+                                <div class="row">
+                                    <div class="col-sm-3 top-5">
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-primary " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <p>
+                                                    <img src="~/images/Rental/Contract/icons8-profile-48.png" /><br />
+                                                    <b>Vina-phone</b><br>
+                                                    <b>Tầng 4</b><br>
+                                                    <b>P.105</b><br>
+                                                    <b>C.Liên</b><br>
+                                                    <b style="font-style: italic;">(10.000.000)</b>
+                                                </p>
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" asp-area="" asp-controller="RentalManager" asp-action="CreatContract"><i>Tạo hợp đồng</i></a>
+                                                <a class="dropdown-item" asp-area="" asp-controller="RentalManager" asp-action="DetailContract"><i>Chi tiết hợp đồng</i></a>
+
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </div>
+                            </div>
+
+
+                            <hr style="margin-top:900px" />
+                            @* tạo qua trang *@
+                            <ul class="pagination" style="margin-left:500px">
+                                <li class="page-item disabled"><a class="page-link" href="#">«</a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#">»</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <!--PAGE CONTENT ENDS HERE-->
+
+    </main>
+</body>

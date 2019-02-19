@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewData["Title"] = "AddTask";
+}
+
+<main class="app-content">
+    <div class="tile">
+        <h2>Thêm công việc</h2>
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Tiêu đề</label>
+            <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập Tiêu đề">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Ngày bắt đầu</label>
+            <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập ngày bắt đầu">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Ngày kết thúc</label>
+            <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập ngày kết thúc">
+        </div>
+
+
+        <div class="form-group">
+            <label for="exampleSelect1">Độ ưu tiên</label>
+            <select class="form-control" id="exampleSelect1">
+                <option>Cao</option>
+                <option>Thấp</option>
+                <option>Trung bình</option>
+
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleTextarea">mô tả</label>
+            <textarea class="form-control" id="mota" rows="3"></textarea>
+        </div>
+        <a class="btn btn-primary" style="background-color: #007065;color:white">Lưu</a>
+        <a class="btn btn-primary" style="background-color: #007065" asp-controller="Maintenance" asp-action="Task">Hủy</a>
+    </div>
+</main>
+

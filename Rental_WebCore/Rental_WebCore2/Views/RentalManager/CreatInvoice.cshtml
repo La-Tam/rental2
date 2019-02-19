@@ -1,0 +1,206 @@
+﻿
+@{
+    ViewData["Title"] = "CreatInvoice";
+}
+
+<head>
+    <link href="~/CSS_Rental/css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <main class="app-content">
+        <div class="page-item" style="height: 100%;">
+
+            @* Tieu de *@
+            <div>
+                <div class="alert alert-warning" style="background-color:#009688;">
+                    <div class="row">
+                        <div class="col-lg-11">
+                            <h4 style="margin-bottom:0px;margin-left:10px;color:aliceblue">Tạo hóa đơn</h4>
+                        </div>
+                        <div class="col-lg-1" align="right">
+                            <a class="btn-outline-primary" href="@Url.Action("InvoiceIndex","RentalManager")" >
+                                <span aria-hidden="true">
+                                    <img src="~/wwwroot/images/Rental/Contract/icons8-delete-60.png" style="width:25px" />
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                @* Thông tin hóa đơn *@
+                <div class="tile">
+                    <div class="tile">
+                        <h5>Thông tin hóa đơn</h5>
+                        <hr />
+                        @*  *@
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="tile" style="border:1px solid;border-color:darkgray;">
+                                    <div class="tile-body">
+                                        <form class="form-horizontal">
+                                            <div class="form-group row">
+                                                <label class="control-label col-md-4">Tên dự án</label>
+                                                <div class="col-md-8">
+                                                    <input class="text-body col-md-8 " type="text" value="" disabled="">
+                                                </div>
+
+                                                <label class="control-label col-md-4">Tên tòa nhà</label>
+                                                <div class="col-md-8">
+                                                    <input class="text-body col-md-8 " type="text" value="H3" disabled="">
+                                                </div>
+
+                                                <label class="control-label col-md-4">Số tầng</label>
+                                                <div class="col-md-8">
+                                                    <input class="text-body col-md-8 " type="text" value="21" disabled="">
+                                                </div>
+
+                                                <label class="control-label col-md-4">Số phòng</label>
+                                                <div class="col-md-8">
+                                                    <input class="text-body col-md-8 " type="text" value="P.105" disabled="">
+                                                </div>
+
+                                                <label class="control-label col-md-4">Tháng đóng</label>
+                                                <div class="col-md-8">
+                                                    <input class="text-body col-md-8 " type="text" value="3/2019 " disabled="">
+                                                </div>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            @* VP *@
+                            <div class="col-md-6">
+                                <div class="tile" style="border:1px solid;border-color:darkgray;">
+                                    <div class="tile-body">
+                                        <form class="form-horizontal">
+                                            <div class="form-group row">
+                                                <label class="control-label col-md-4">Tên khách thuê</label>
+                                                <div class="col-md-8">
+                                                    <input class="text-body col-md-8 " type="text" value="Lê Văn Đạt" disabled="">
+                                                </div>
+
+                                                <label class="control-label col-md-4">Người thanh toán</label>
+                                                <div class="col-md-8">
+                                                    <input class="text-body col-md-8 " type="text" value="Lê Văn Đạt">
+                                                </div>
+
+                                                <label class="control-label col-md-4">SĐT</label>
+                                                <div class="col-md-8">
+                                                    <input class="text-body col-md-8 " type="text" value="01203327195" disabled="">
+                                                </div>
+
+                                                <label class="control-label col-md-4">Thanh toán bằng</label>
+                                                <div class="col-md-8">
+                                                    <select class="form-control-sm col-md-8" style="border:solid 1px;border-color:darkgray;">
+                                                        <option>Tiền mặt</option>
+                                                        <option>Chuyển khoản</option>
+                                                    </select>
+                                                </div>
+
+                                                <label class="control-label col-md-4"style="margin-top:2px">Ghi chú</label>
+                                                <div class="col-md-8">
+                                                    <textarea class="text-body" rows="4" placeholder="Note" style="width:273px;height:50px;margin-top:2px"></textarea>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tile" style="margin-top:-25px;">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th style="text-align:center;width:30px">STT</th>
+                                    <th style="width:300px;">Loại phí</th>
+                                    <th style="width:100px">Đơn giá</th>
+                                    <th style="text-align:center;width:90px;">CS đầu</th>
+                                    <th style="text-align:center;width:90px;">CS cuối</th>
+                                    <th style="text-align:center;width:90px;">Số lượng</th>
+                                    <th style="width:110px;">Thành tiền</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="text-align:center;">1</td>
+                                    <td>Tiền phòng</td>
+                                    <td>8.000.000</td>
+                                    <td style="text-align:center;">-</td>
+                                    <td style="text-align:center;">-</td>
+                                    <td style="text-align:center;">1</td>
+                                    <td>8.000.000</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center;">2</td>
+                                    <td>Tiền điện</td>
+                                    <td>2.000</td>
+                                    <td style="text-align:center;">100</td>
+                                    <td style="text-align:center;">200</td>
+                                    <td style="text-align:center;">-</td>
+                                    <td>200.000</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center;">3</td>
+                                    <td>Tiền nước</td>
+                                    <td>8.000</td>
+                                    <td style="text-align:center;">100</td>
+                                    <td style="text-align:center;">120</td>
+                                    <td style="text-align:center;">-</td>
+                                    <td>160.000</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center;">4</td>
+                                    <td>Tiền mạng</td>
+                                    <td>200.000</td>
+                                    <td style="text-align:center;">-</td>
+                                    <td style="text-align:center;">-</td>
+                                    <td style="text-align:center;">1</td>
+                                    <td>200.000</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center;">5</td>
+                                    <td>Tiền cáp</td>
+                                    <td>150.000</td>
+                                    <td style="text-align:center;">-</td>
+                                    <td style="text-align:center;">-</td>
+                                    <td style="text-align:center;">1</td>
+                                    <td>150.000</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center;">6</td>
+                                    <td>Tiền rác</td>
+                                    <td>50.000</td>
+                                    <td style="text-align:center;">-</td>
+                                    <td style="text-align:center;">-</td>
+                                    <td style="text-align:center;">1</td>
+                                    <td>50.000</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <div class="row">
+                            <label class="control-label" style="margin-left:785px">Tổng tiền</label>
+                            <div>
+                                <input class="text-body " style="margin-left:20px;width:130px" type="text" value="    8.760.000" disabled="">
+                            </div>
+                        </div>
+                    </div>
+                    @*  *@
+                    <div >
+                        <a class="btn btn-primary" style="background-color: #007065;color:white">Lưu</a>
+                        <a class="btn btn-primary" style="background-color: #007065;color:white;margin-left:20px;"href="@Url.Action("InvoiceIndex","RentalManager")">Hủy</a>
+                    </div>
+
+
+                </div>
+                 
+                
+
+
+            </div>
+        </div>
+    </main>
+</body>

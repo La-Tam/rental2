@@ -1,0 +1,133 @@
+﻿@{
+    string[] name = new string[12];
+    int i = 0;
+}
+<style>
+    .app-menu__item.property, app-menu__item:hover, app-menu__item:focus {
+        background: #0d1214;
+        text-decoration: none;
+        color: #fff;
+    }
+</style>
+<main class="app-content" style="margin-top:20px">
+    <div class="row">
+        <div class="col-lg-3">
+            <p class="bs-component">
+                <div class="form-group">
+                    <select class="form-control" id="exampleSelect1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="tile mb-4" style="min-height: calc(90vh - 50px);">
+            <div class="page-header">
+                <div class="tile-title-w-btn">
+                    <h2 class="title" id="navs" style="color:#009688">Danh sách bất động sản</h2>
+                </div>
+            </div>
+            @for (var k = 0; k < 4; k++)
+            {
+                <div class="row">
+                    @for (var j = 0; j < 3; j++)
+                    {
+                        <div class="col-lg-4">
+                            @{name[i] = "Bất động sản " + (i + 1);
+                                <a class="list-group-item list-group-item-action" href="/Property?=@name[i]" style="border-color:#009688">
+                                    <h4 class="list-group-item-heading">@name[i]</h4>
+                                    <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                </a>
+                                i = i + 1;
+                            }
+                        </div>
+                    }
+                </div>
+                <br />
+            }
+        </div>
+    </div>
+</main>
+
+<div class="modal fade" id="Mymodal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <text class="form-control" style="background-color:#007065; height:50px;color:aliceblue;border:hidden; text-align:center;font-size:25px; padding-left:0px;border-radius:unset" id="modalTitle1 ;">
+                Thêm mới
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white; font-size:30px">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </text>
+            <div class="modal-header">
+            </div>
+            <div class="modal-body">
+                <form id="form1">
+                    <div class="form-group">
+                        <label class="control-label" style="font-size:20px">Tên bất động sản</label>
+                        <input class="form-control" type="text" placeholder="Tên bất động sản">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" style="font-size:20px">Địa chỉ</label>
+                        <input class="form-control" type="text" placeholder="Số nhà & tên đường">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" style="font-size:20px">Tỉnh/Thành phố</label>
+                        <select class="form-control" id="exampleSelect1">
+                            <option>TP.Hà Nội</option>
+                            <option>Huế</option>
+                            <option>Đà Nẵng</option>
+                            <option>Nha Trang</option>
+                            <option>TP.Hồ Chí Minh</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" style="font-size:20px">Quận/Huyện</label>
+                        <select class="form-control" id="exampleSelect1">
+                            <option>TP.Hà Nội</option>
+                            <option>Huế</option>
+                            <option>Đà Nẵng</option>
+                            <option>Nha Trang</option>
+                            <option>TP.Hồ Chí Minh</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" style="font-size:20px">Phường/Xã</label>
+                        <select class="form-control" id="exampleSelect1">
+                            <option>TP.Hà Nội</option>
+                            <option>Huế</option>
+                            <option>Đà Nẵng</option>
+                            <option>Nha Trang</option>
+                            <option>TP.Hồ Chí Minh</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" style="font-size:20px">Loại hình bất động sản</label>
+                        <select class="form-control" id="exampleSelect1">
+                            <option>TP.Hà Nội</option>
+                            <option>Huế</option>
+                            <option>Đà Nẵng</option>
+                            <option>Nha Trang</option>
+                            <option>TP.Hồ Chí Minh</option>
+                        </select>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <a class="btn btn-primary" style="background-color: #007065;color:white">Lưu</a>
+                    <a class="btn btn-primary" style="background-color: #007065;color:white" data-dismiss="modal">Hủy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function EditMaintenance(EditId) {
+        $("#form1")[0].reset();
+        $("#modalTitle1").html("Chỉnh sửa bảo trì");
+        $("#Mymodal1").modal();
+    }
+</script>

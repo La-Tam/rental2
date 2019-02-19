@@ -1,0 +1,288 @@
+﻿
+@{
+    ViewData["Title"] = "CreatContract";
+}
+
+<head>
+    <link href="~/CSS_Rental/css/main.css" rel="stylesheet" />
+
+</head>
+<body>
+    <main class="app-content">
+        @*  *@
+        <div class="col-12">
+            <div class="alert alert-warning" style="background-color:#009688;">
+                <div class="row">
+                    <div class="col-lg-11">
+                        <h4 style="margin-bottom:0px; text-align:left;color:aliceblue">TẠO HỢP ĐỒNG</h4>
+                    </div>
+                    <div class="col-lg-1" align="right">
+                        <a class="btn-outline-primary" href="@Url.Action("ContractIndex","RentalManager")">
+                            <span aria-hidden="true">
+                                <img src="~/wwwroot/images/Rental/Contract/icons8-delete-60.png" style="width:25px" />
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @* From thông tin *@
+        <div class="col-12">
+            <div class="tile" style="margin-top:-17px">
+                <div class="row">
+                    @* VT *@
+                    <div class="col-md-5">
+                        <div class="tile">
+                            <h5>Thông tin hợp đồng</h5>
+                            <hr />
+                            <div class="tile-body">
+                                <form class="form-horizontal">
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-4">Mã hợp đồng</label>
+                                        <div class="col-md-8">
+                                            <input class="text-body " type="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-4">Ngày tạo hợp đồng</label>
+                                        <div class="col-md-8">
+                                            <input class="text-body  " type="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-4">Ngày hiệu lực</label>
+                                        <div class="col-md-8">
+                                            <input class="text-body  " type="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-4">Đến ngày</label>
+                                        <div class="col-md-8">
+                                            <input class="text-body  " type="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-4">Dự án</label>
+                                        <div class="col-md-8">
+                                            <input class="text-body col-md-12 " type="text" disabled="" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-4">Tòa nhà</label>
+                                        <div class="col-md-8">
+                                            <input class="text-body col-md-12 " type="text" disabled="" value="Vina-phone">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-4">Tầng</label>
+                                        <div class="col-md-8">
+                                            <input class="text-body col-md-12 " type="text" disabled="" value="Tầng 2">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-4">Phòng</label>
+                                        <div class="col-md-8">
+                                            <input class="text-body col-md-12 " type="text" disabled="" value="P.123">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-4">Loại sản phẩm</label>
+                                        <div class="col-md-8">
+                                            <input class="text-body col-md-12 " type="text" disabled="" value="2 phòng ngủ">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-4">Giá</label>
+                                        <div class="col-md-8">
+                                            <input class="text-body col-md-12 " type="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-4">Tiền cọc</label>
+                                        <div class="col-md-8">
+                                            <input class="text-body col-md-12 " type="text" value="">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-3">Ghi chú</label>
+                                        <div class="col-md-8">
+                                            <textarea class="text-body" rows="4" placeholder="Note" style="width:259px"></textarea>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    @*VP *@
+                    @* Thong tin khach thue *@
+                    <div class="col-md-7">
+                        <div class="tile">
+                            <h5>Thông tin khách thuê</h5>
+                            <hr />
+                            <div class="tile-body">
+                                <form class="form-horizontal">
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-4">Tên khách thuê</label>
+                                        <div class="col-md-8">
+                                            <input class="text-body col-md-8 " type="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-4">Điện thoại</label>
+                                        <div class="col-md-8">
+                                            <input class="text-body col-md-8 " type="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-4">CMND</label>
+                                        <div class="col-md-8">
+                                            <input class="text-body col-md-8 " type="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-4">Email</label>
+                                        <div class="col-md-8">
+                                            <input class="text-body col-md-8 " type="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-3">Ghi chú</label>
+                                        <div class="col-md-9">
+                                            <textarea class="text-body" rows="4" placeholder="Note" style="width:273px"></textarea>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        @* Dich vu *@
+                        <div class="tile">
+                            <h5>Đăng ký dịch vụ</h5>
+                            <a class="btn btn-outline-primary" style="border:1px solid;border-color:black; margin-top:10px" onclick="AddService(0)"><i class="fa fa-plus"></i>Thêm dịch vụ</a>
+                            <p></p>
+                            <hr style="margin-top:-0px" />
+                            <div style="  height:181px; border:1px solid black; padding:20px; overflow:auto;border-color:darkgray">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th><input class="checkbox" type="checkbox" disabled="disabled" /></th>
+                                            <th class="col-md-2" style="text-align:center">Loại dịch vụ</th>
+                                            <th style="text-align:center;width:15px">Số lượng</th>
+                                            <th>Đơn giá</th>
+                                            <th>Đơn vị</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input class="checkbox" type="checkbox" /></td>
+                                            <td>
+                                                <input class="text-body  " style="width:120px" type="text" value="Internet  ">
+                                            </td>
+                                            <td><input class="text-center " type="text" style="width:25px" value="1" /></td>
+                                            <td><input class="text-dark " style="width:80px" type="text" value="" /></td>
+                                            <td>
+                                                <input class="text-body  " style="width:80px" disabled="" type="text" value="Đồng/Tháng">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input class="checkbox" type="checkbox" /></td>
+                                            <td>
+                                                <input class="text-body " style="width:120px" type="text" value="Cáp  ">
+                                            </td>
+                                            <td><input class="text-center " type="text" style="width:25px" value="1" /></td>
+                                            <td><input class="text-dark " style="width:80px" type="text" value="" /></td>
+                                            <td>
+                                                <input class="text-body  " style="width:80px" disabled="" type="text" value="Đồng/Tháng">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input class="checkbox" type="checkbox" /></td>
+                                            <td>
+                                                <input class="text-body  " style="width:120px" type="text" value="Đổ rác  ">
+                                            </td>
+                                            <td><input class="text-center " style="width:25px" type="text" value="1" /></td>
+                                            <td><input class="text-dark " style="width:80px" type="text" value="" /></td>
+                                            <td>
+                                                <input class="text-body  " style="width:80px" disabled="" type="text" value="Đồng/Tháng">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <hr style="margin-top:-10px" />
+                <div class="row">
+                    
+                    <a class="btn btn-primary" style="background-color: #007065;color:white;margin-left:15px">Lưu</a>
+                    <a class="btn btn-primary" style="background-color: #007065;color:white;margin-left:20px;" href="@Url.Action("ContractIndex","RentalManager")">Hủy</a>
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+</body>
+
+@* Add dich vu *@
+
+<div class="modal fade" id="myModalService">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <text class="form-control" style="background-color:#007065; height:50px;color:aliceblue;border:hidden; text-align:center;font-size:25px; padding-left:0px;border-radius:unset" id="modalTitleService;">
+                Thêm dịch vụ
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white; font-size:30px">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </text>
+            <div class="modal-header">
+            </div>
+            <div class="modal-body">
+                <form id="form">
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Loại dịch vụ</label>
+                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập loại dịch vụ">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Số lượng</label>
+                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập số lượng">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Đơn giá</label>
+                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập đơn giá">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Đơn vị</label>
+                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập đơn vị">
+                    </div>
+
+
+                </form>
+                @*  *@
+                <div class="modal-footer">
+                    <a class="btn btn-primary" style="background-color: #007065;color:white">Lưu</a>
+                    <button class="btn btn-primary" style="background-color: #007065;color:white" data-dismiss="modal">Hủy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function AddService(addservice) {
+        $("#form")[0].reset();
+        $("#modalTitleService").html("Thêm dịch vụ");
+        $("#myModalService").modal();
+    }
+</script>
+
