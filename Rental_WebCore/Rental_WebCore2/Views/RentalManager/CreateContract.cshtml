@@ -1,0 +1,254 @@
+﻿@{
+    ViewData["Title"] = "CreatContract";
+}
+
+<head>
+    <link href="~/wwwroot/CSS_Rental/css/main.css" rel="stylesheet" />
+
+</head>
+<body>
+    <main class="app-content">
+        @*  *@
+        <div class="col-12">
+            <div class="alert alert-warning" style="background-color:#009688;height:45px">
+                <div class="row">
+                    <div class="col-lg-6" align="left">
+                        <h5 style="margin-bottom:0px; text-align:left;color:aliceblue">@Rental_WebCore2.Resources.Rental_Manager.Rental.Creat_Contract_2</h5>
+                    </div>
+                    <div class="col-lg-6" align="right">
+                        <a class="btn-outline-primary" href="@Url.Action("ContractIndex","RentalManager")">
+                            <span aria-hidden="true">
+                                <img src="~/wwwroot/images/Rental/Contract/icons8-delete-60.png" style="width:25px" />
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @* From thông tin *@
+        <div class="col-12">
+            <div class="tile" style="margin-top:-17px">
+                <div class="row">
+                    @* VT *@
+                    <div class="col-md-5">
+                        <div class="tile">
+                            <h5 style="margin-top:-15px">@Rental_WebCore2.Resources.Rental_Manager.Rental.Contract_Infor_1</h5>
+                            <hr style="margin-top:-6px" />
+                            <div class="tile-body">
+                               
+                                    <div class="tile" style="border:1px solid;border-color:darkgray;">
+                                        <table class="table table-bordered" border="1" style="border-color:black;">
+                                            <thead>
+                                                <tr>
+                                                    <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Contract_ID</th>
+                                                    <th><input class="text-body col-md-10 " type="text" value="" ></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Contract_Creation_Date</th>
+                                                    <th><input class="text-body col-md-10 " type="text" value="" ></th>
+                                                </tr>
+                                                <tr>
+                                                    <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Effective_Date</th>
+                                                    <th> <input class="text-body col-md-10 " type="text" value="" ></th>
+                                                </tr>
+                                                <tr>
+                                                    <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.To_Date</th>
+                                                    <th> <input class="text-body col-md-10 " type="text" value=""></th>
+                                                </tr>
+                                                <tr>
+                                                    <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Property</th>
+                                                    <th> <input class="text-body col-md-10 " type="text" value=""></th>
+                                                </tr>
+                                                <tr>
+                                                    <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Price</th>
+                                                    <th> <input class="text-body col-md-10 " type="text" value=""></th>
+                                                </tr>
+                                                <tr>
+                                                    <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Deposit</th>
+                                                    <th> <input class="text-body col-md-10 " type="text" value=""></th>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <label class="control-label col-md-3">@Rental_WebCore2.Resources.Rental_Manager.Rental.Note</label>
+                                     
+                                        <div style="margin-top:0px">
+                                            <textarea class="text-body col-12" rows="4" placeholder=@Rental_WebCore2.Resources.Rental_Manager.Rental.Note></textarea>
+                                        </div>
+                                    </div>
+                                   
+                                
+                            </div>
+                        </div>
+                    </div>
+                    @*VP *@
+                    @* Thong tin khach thue *@
+                    <div class="col-md-7">
+                        <div class="tile">
+                            <h5 style="margin-top:-15px">@Rental_WebCore2.Resources.Rental_Manager.Rental.Customer_Infor</h5>
+                            <hr style="margin-top:-6px" />
+                            <div class="tile-body">
+                                
+                                    <table class="table table-bordered" border="1" style="border-color:black;">
+                                        <thead>
+                                            <tr>
+                                                <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Customer_Name</th>
+                                                <th><input class="text-body col-md-10 " type="text" value=""></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Phone_Number</th>
+                                                <th><input class="text-body col-md-10 " type="text" value=""></th>
+                                            </tr>
+                                            <tr>
+                                                <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Identity_Card</th>
+                                                <th> <input class="text-body col-md-10 " type="text" value=""></th>
+                                            </tr>
+                                            <tr>
+                                                <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Email</th>
+                                                <th> <input class="text-body col-md-10 " type="text" value=""></th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <label class="control-label col-md-3">@Rental_WebCore2.Resources.Rental_Manager.Rental.Note</label>
+                                    <div style="margin-top:0px">
+                                        <textarea class="text-body col-12" rows="4" placeholder=@Rental_WebCore2.Resources.Rental_Manager.Rental.Note></textarea>
+                                    </div>
+
+                                
+                               
+                            </div>
+                        </div>
+                        @* Dich vu *@
+                        <div class="tile">
+                            <h5 style="margin-top:-15px">@Rental_WebCore2.Resources.Rental_Manager.Rental.Register_Service</h5>
+                            @*<a class="btn btn-outline-primary" style="border:1px solid;border-color:black; margin-top:10px" onclick="AddService(0)"><i class="fa fa-plus"></i>@Rental_WebCore2.Resources.Rental_Manager.Rental.Add_Service</a>
+                                <p></p>*@
+                            <hr style="margin-top:-6px" />
+                            <div style="  height:281px; border:1px solid black; padding:20px; overflow:auto;border-color:darkgray">
+                                <table class="table table-bordered" style="margin-left:-5px">
+                                    <thead>
+                                        <tr>
+                                            <th style="background-color:lavender"><input class="checkbox" type="checkbox" disabled="disabled" /></th>
+                                            <th class="col-md-2" style="text-align:center;background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Type_Of_Service</th>
+                                            <th style="text-align:center;width:15px;background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Quantity</th>
+                                            <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Unit_Price</th>
+                                            <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Unit</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input class="checkbox" type="checkbox" /></td>
+                                            <td>
+                                                <input class="text-body  " style="width:120px" type="text" value="Internet  ">
+                                            </td>
+                                            <td><input class="text-center " type="text" style="width:50px;margin-left:5px" value="1" /></td>
+                                            <td><input class="text-dark " style="width:80px" type="text" value="" /></td>
+                                            <td>
+                                                <input class="text-body  " style="width:80px" disabled="" type="text" value="Đồng/Tháng">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input class="checkbox" type="checkbox" /></td>
+                                            <td>
+                                                <input class="text-body " style="width:120px" type="text" value="Cáp  ">
+                                            </td>
+                                            <td><input class="text-center " type="text" style="width:50px;margin-left:5px" value="1" /></td>
+                                            <td><input class="text-dark " style="width:80px" type="text" value="" /></td>
+                                            <td>
+                                                <input class="text-body  " style="width:80px" disabled="" type="text" value="Đồng/Tháng">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input class="checkbox" type="checkbox" /></td>
+                                            <td>
+                                                <input class="text-body  " style="width:120px" type="text" value="Đổ rác  ">
+                                            </td>
+                                            <td><input class="text-center " style="width:50px;margin-left:5px" type="text" value="1" /></td>
+                                            <td><input class="text-dark " style="width:80px" type="text" value="" /></td>
+                                            <td>
+                                                <input class="text-body  " style="width:80px" disabled="" type="text" value="Đồng/Tháng">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <hr style="margin-top:-10px" />
+                <div class="row">
+
+                    <a class="btn btn-primary" style="background-color: #007065;color:white;margin-left:15px">@Rental_WebCore2.Resources.Rental_Manager.Rental.Save</a>
+                    <a class="btn btn-primary" style="background-color: #007065;color:white;margin-left:20px;" href="@Url.Action("ContractIndex","RentalManager")">@Rental_WebCore2.Resources.Rental_Manager.Rental.Cancel</a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+</body>
+
+@* Add dich vu *@
+
+<div class="modal fade" id="myModalService">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <text class="form-control" style="background-color:#007065; height:50px;color:aliceblue;border:hidden; text-align:center;font-size:25px; padding-left:0px;border-radius:unset" id="modalTitleService;">
+                @Rental_WebCore2.Resources.Rental_Manager.Rental.Add_Service
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white; font-size:30px">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </text>
+            <div class="modal-header">
+            </div>
+            <div class="modal-body">
+                <form id="form">
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">@Rental_WebCore2.Resources.Rental_Manager.Rental.Type_Of_Service</label>
+                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập loại dịch vụ">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">@Rental_WebCore2.Resources.Rental_Manager.Rental.Quantity</label>
+                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập số lượng">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">@Rental_WebCore2.Resources.Rental_Manager.Rental.Unit_Price</label>
+                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập đơn giá">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">@Rental_WebCore2.Resources.Rental_Manager.Rental.Unit</label>
+                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập đơn vị">
+                    </div>
+
+
+                </form>
+                @*  *@
+                <div class="modal-footer">
+                    <a class="btn btn-primary" style="background-color: #007065;color:white">@Rental_WebCore2.Resources.Rental_Manager.Rental.Save</a>
+                    <button class="btn btn-primary" style="background-color: #007065;color:white" data-dismiss="modal">@Rental_WebCore2.Resources.Rental_Manager.Rental.Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function AddService(addservice) {
+        $("#form")[0].reset();
+        $("#modalTitleService").html("Thêm dịch vụ");
+        $("#myModalService").modal();
+    }
+</script>
+

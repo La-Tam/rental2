@@ -1,0 +1,137 @@
+﻿
+@{
+    ViewBag.Title = "Nodepositinvoice";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main class="app-content">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="tile">
+                <h2>@Rental_WebCore2.Resources.RentalTexts.hoadontiencoc</h2>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>@Rental_WebCore2.Resources.RentalTexts.mahopdong</td>
+                            <td>HD2019000021</td>
+                        </tr>
+                        <tr>
+                            <td>@Rental_WebCore2.Resources.RentalTexts.tensanpham</td>
+                            <td>Estella Heights - Nhà khách - P003</td>
+                        </tr>
+                        <tr>
+                            <td>@Rental_WebCore2.Resources.RentalTexts.tenkhachthue</td>
+                            <td>Nguyễn Linh</td>
+                        </tr>
+                        <tr>
+                            <td>@Rental_WebCore2.Resources.RentalTexts.sotien</td>
+                            <td>5.000.000</td>
+                        </tr>
+                        <tr>
+                            <td>@Rental_WebCore2.Resources.RentalTexts.dathanhtoan</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>@Rental_WebCore2.Resources.RentalTexts.conloai</td>
+                            <td>5.000.000 <button style="background-color:aqua" onclick="deposit(0)"><i class="fa fa-plus"></i> Thu cọc</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="tile">
+                <h2>@Rental_WebCore2.Resources.RentalTexts.danhsachphieuthu</h2>
+                <table class="table table-bordered">
+                    <tr style="background-color:lavender">
+                        <th>
+                            @Rental_WebCore2.Resources.RentalTexts.ngaychungtu
+                        </th>
+                        <th>
+                            @Rental_WebCore2.Resources.RentalTexts.machungtu
+                        </th>
+                        <th>
+                            @Rental_WebCore2.Resources.RentalTexts.loaichungtu
+                        </th>
+                        <th>
+                            @Rental_WebCore2.Resources.RentalTexts.sotien
+                        </th>
+                        <th>
+                            @Rental_WebCore2.Resources.RentalTexts.print
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            21/01/2019 01:42
+                        </th>
+                        <th>
+                            BN005823
+                        </th>
+                        <th>
+                            Thu tiền đặt cọc
+                        </th>
+                        <th>
+                            5.000.000
+                        </th>
+                        <th>
+                            <i class="glyphicon glyphicon-hand-up"></i>
+                        </th>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+<!--Thu coc-->
+<div class="modal fade" id="Mymodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <text class="form-control" style="background-color:#007065; height:50px;color:aliceblue;border:hidden; text-align:center;font-size:25px; padding-left:0px;border-radius:unset" id="modalTitle ;">
+                Thanh Toán Hóa Đơn
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white; font-size:30px">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </text>
+            <div class="modal-header">
+            </div>
+            <div class="modal-body">
+                <form id="form">
+                    <div class="form-group">
+                        <label for="exampleSelect1">@Rental_WebCore2.Resources.RentalTexts.sotien</label>
+                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleSelect1">@Rental_WebCore2.Resources.RentalTexts.nguoithanhtoan</label>
+                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleSelect1">@Rental_WebCore2.Resources.RentalTexts.thanhtoanbang</label>
+                        <select data-val="true" class="form-control" id="Type" name="Type" aria-required="true" aria-describedby="Type-error" aria-invalid="false">
+                            <option>Tiền mặt</option>
+                            <option>Chuyển Khoản</option>
+                        </select>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <a class="btn btn-primary" style="background-color: #007065;color:white">@Rental_WebCore2.Resources.RentalTexts.Save</a>
+                    <button class="btn btn-primary" style="background-color: #007065;color:white" data-dismiss="modal">@Rental_WebCore2.Resources.RentalTexts.Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    function deposit(DepositID) {
+        $("#form")[0].reset();
+        $("#modalTitle").html("Thanh Toán");
+        $("#Mymodal").modal();
+    }
+</script>

@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Add_Photos" xml:space="preserve">
+    <value>Add photos</value>
+  </data>
+  <data name="Add_Service" xml:space="preserve">
+    <value>Add Service</value>
+  </data>
+  <data name="Add_Tenants" xml:space="preserve">
+    <value>Add co-tenants</value>
+  </data>
+  <data name="Add_Transport" xml:space="preserve">
+    <value>Add transport</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Asset_Handover" xml:space="preserve">
+    <value>Asset handover</value>
+  </data>
+  <data name="Asset_Name" xml:space="preserve">
+    <value>Asset name</value>
+  </data>
+  <data name="Asset_Type" xml:space="preserve">
+    <value>Asset Type</value>
+  </data>
+  <data name="Attention_1" xml:space="preserve">
+    <value>Products with 1 -&gt; 5 days to pay.</value>
+  </data>
+  <data name="Attention_2" xml:space="preserve">
+    <value>Products with 1-&gt; 5 days are due to pay and products not paid.</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Car_Color" xml:space="preserve">
+    <value>Car color</value>
+  </data>
+  <data name="Car_Name" xml:space="preserve">
+    <value>Car name</value>
+  </data>
+  <data name="Car_Service_Fee" xml:space="preserve">
+    <value>Car service fee</value>
+  </data>
+  <data name="Car_Type" xml:space="preserve">
+    <value>Car type</value>
+  </data>
+  <data name="Contract_Creation_Date" xml:space="preserve">
+    <value>Contract creation date</value>
+  </data>
+  <data name="Contract_ID" xml:space="preserve">
+    <value>Contract ID</value>
+  </data>
+  <data name="Contract_Infor_1" xml:space="preserve">
+    <value>Contract information</value>
+  </data>
+  <data name="Contract_Infor_2" xml:space="preserve">
+    <value>CONTRACT INFORMATION</value>
+  </data>
+  <data name="Creat_Contract_1" xml:space="preserve">
+    <value>Creat contract</value>
+  </data>
+  <data name="Creat_Contract_2" xml:space="preserve">
+    <value>CREAT CONTRACT</value>
+  </data>
+  <data name="Creat_Invoice" xml:space="preserve">
+    <value>Creat invoice</value>
+  </data>
+  <data name="Customer_Infor" xml:space="preserve">
+    <value>Customer information</value>
+  </data>
+  <data name="Customer_Name" xml:space="preserve">
+    <value>Customer name</value>
+  </data>
+  <data name="Date_Of_Delivery" xml:space="preserve">
+    <value>Date of delivery</value>
+  </data>
+  <data name="Date_Of_Payment" xml:space="preserve">
+    <value>Date of payment</value>
+  </data>
+  <data name="Day_Month_Year" xml:space="preserve">
+    <value>Day/Month/Year</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Delete_Information" xml:space="preserve">
+    <value>Delete information</value>
+  </data>
+  <data name="Deposit" xml:space="preserve">
+    <value>Deposit</value>
+  </data>
+  <data name="Detail" xml:space="preserve">
+    <value>Detail</value>
+  </data>
+  <data name="Detail_Contract" xml:space="preserve">
+    <value>Detail contract</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Edit_Informatin" xml:space="preserve">
+    <value>Edit information</value>
+  </data>
+  <data name="Effective_Date" xml:space="preserve">
+    <value>Effective date</value>
+  </data>
+  <data name="Electricity_Water_Management" xml:space="preserve">
+    <value>ELECTRICITY WATER MANAGEMENT</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Empty" xml:space="preserve">
+    <value>Empty</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="Floor" xml:space="preserve">
+    <value>Floor</value>
+  </data>
+  <data name="Hired" xml:space="preserve">
+    <value>Hired</value>
+  </data>
+  <data name="House" xml:space="preserve">
+    <value>House</value>
+  </data>
+  <data name="Identity_Card" xml:space="preserve">
+    <value>Identity card</value>
+  </data>
+  <data name="ID_Number" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Index" xml:space="preserve">
+    <value>Index</value>
+  </data>
+  <data name="Index_Final" xml:space="preserve">
+    <value>Index final</value>
+  </data>
+  <data name="Index_Head" xml:space="preserve">
+    <value>Index head</value>
+  </data>
+  <data name="Invoice_History" xml:space="preserve">
+    <value>Invoice History</value>
+  </data>
+  <data name="Invoice_Infor" xml:space="preserve">
+    <value>Invoice information</value>
+  </data>
+  <data name="Invoice_Management" xml:space="preserve">
+    <value>INVOICE MANAGEMENT</value>
+  </data>
+  <data name="Latched" xml:space="preserve">
+    <value>Latched</value>
+  </data>
+  <data name="Latch_Date" xml:space="preserve">
+    <value>Latch date</value>
+  </data>
+  <data name="Latch_Hour" xml:space="preserve">
+    <value>Latch hour</value>
+  </data>
+  <data name="License_Plate" xml:space="preserve">
+    <value>License plate</value>
+  </data>
+  <data name="Name_Of_Cost" xml:space="preserve">
+    <value>Name of cost</value>
+  </data>
+  <data name="Note" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="Not_Yet_Latch" xml:space="preserve">
+    <value>Not yet latch</value>
+  </data>
+  <data name="Payer" xml:space="preserve">
+    <value>Payer</value>
+  </data>
+  <data name="Payment_By" xml:space="preserve">
+    <value>Payment by</value>
+  </data>
+  <data name="Payment_Month" xml:space="preserve">
+    <value>Payment month</value>
+  </data>
+  <data name="Phone_Number" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="Picture" xml:space="preserve">
+    <value>Picture</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="Print_Contract" xml:space="preserve">
+    <value>Print contract</value>
+  </data>
+  <data name="Product_Contract_Management" xml:space="preserve">
+    <value>PRODUCT CONTRACT MANAGAMENT</value>
+  </data>
+  <data name="Project" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="Property" xml:space="preserve">
+    <value>Property</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="Record_Electricity_Water" xml:space="preserve">
+    <value>Record electricity/water</value>
+  </data>
+  <data name="Register_Service" xml:space="preserve">
+    <value>Register service</value>
+  </data>
+  <data name="Room" xml:space="preserve">
+    <value>Room</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Select_Project" xml:space="preserve">
+    <value>Select the project </value>
+  </data>
+  <data name="Service_Management" xml:space="preserve">
+    <value>SERVICE MANAGEMENT</value>
+  </data>
+  <data name="Shared_Tenants" xml:space="preserve">
+    <value>Shared tenants</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Table_Service" xml:space="preserve">
+    <value>Table service</value>
+  </data>
+  <data name="Tenant" xml:space="preserve">
+    <value>Tenant</value>
+  </data>
+  <data name="Total_Money" xml:space="preserve">
+    <value>Total money</value>
+  </data>
+  <data name="To_Date" xml:space="preserve">
+    <value>To date</value>
+  </data>
+  <data name="Transport" xml:space="preserve">
+    <value>Transport</value>
+  </data>
+  <data name="Type_Of_Service" xml:space="preserve">
+    <value>Type of service</value>
+  </data>
+  <data name="Unit" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="Unit_Price" xml:space="preserve">
+    <value>Unit price</value>
+  </data>
+  <data name="Vehicle_Owner" xml:space="preserve">
+    <value>Vehicle owner</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="Name_Property" xml:space="preserve">
+    <value>Name property</value>
+  </data>
+  <data name="Amount_Money" xml:space="preserve">
+    <value>Amount of money</value>
+  </data>
+  <data name="Into_Money" xml:space="preserve">
+    <value>Into money</value>
+  </data>
+  <data name="Person_Signing_Contract" xml:space="preserve">
+    <value>The person signing the contract</value>
+  </data>
+  <data name="Type_Of_Fee" xml:space="preserve">
+    <value>Type of fee</value>
+  </data>
+  <data name="Contract" xml:space="preserve">
+    <value>Contract</value>
+  </data>
+  <data name="Contract_Exp" xml:space="preserve">
+    <value>The contract is about to expire</value>
+  </data>
+  <data name="Contract_Liquidate" xml:space="preserve">
+    <value>Contracts need to liquidate</value>
+  </data>
+  <data name="Electricity_Water" xml:space="preserve">
+    <value>Electricity and water</value>
+  </data>
+  <data name="Empty_House" xml:space="preserve">
+    <value>Empty house</value>
+  </data>
+  <data name="Empty_Room" xml:space="preserve">
+    <value>Empty room</value>
+  </data>
+  <data name="Finance" xml:space="preserve">
+    <value>Finance</value>
+  </data>
+  <data name="Hired_House" xml:space="preserve">
+    <value>Hired house</value>
+  </data>
+  <data name="Hired_Room" xml:space="preserve">
+    <value>Hired room</value>
+  </data>
+  <data name="Products_Month_Payment" xml:space="preserve">
+    <value>Products up to the month of payment</value>
+  </data>
+  <data name="Product_Overdue_Payment" xml:space="preserve">
+    <value>Product overdue payment</value>
+  </data>
+  <data name="Product_Record_Elect_Water" xml:space="preserve">
+    <value>Products need to record electricity and water</value>
+  </data>
+  <data name="Rental_Fee" xml:space="preserve">
+    <value>Rental fee</value>
+  </data>
+  <data name="Statistic" xml:space="preserve">
+    <value>Statistic</value>
+  </data>
+  <data name="Latch_For_Month" xml:space="preserve">
+    <value>Latch for month</value>
+  </data>
+  <data name="Liquidation_Date" xml:space="preserve">
+    <value>Liquidation date</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Enter_Unit_Prive_And_Quantity_Service" xml:space="preserve">
+    <value>Enter unit price and quantity for service</value>
+  </data>
+  <data name="Liquidation_Of_Contracts" xml:space="preserve">
+    <value>Liquidation of contracts</value>
+  </data>
+  <data name="Overdue_Payment" xml:space="preserve">
+    <value>! Overdue payment</value>
+  </data>
+  <data name="Rental_And_Service_Fees" xml:space="preserve">
+    <value>Rental and service fees</value>
+  </data>
+  <data name="Renter" xml:space="preserve">
+    <value>Renter</value>
+  </data>
+  <data name="Service" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="Setting_Price_Service" xml:space="preserve">
+    <value>Setting price service</value>
+  </data>
+  <data name="Term_Payment" xml:space="preserve">
+    <value>Term payment</value>
+  </data>
+  <data name="Customer_ID" xml:space="preserve">
+    <value>Customer ID</value>
+  </data>
+  <data name="Attention_3" xml:space="preserve">
+    <value>The contracts are about to expire</value>
+  </data>
+  <data name="Attention_4" xml:space="preserve">
+    <value>The contracts need to be liquidated</value>
+  </data>
+  <data name="Contract_Liquidate_Button" xml:space="preserve">
+    <value />
+  </data>
+  <data name="From_date" xml:space="preserve">
+    <value>From date</value>
+  </data>
+</root>

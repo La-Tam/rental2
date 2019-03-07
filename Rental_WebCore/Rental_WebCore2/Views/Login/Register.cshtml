@@ -1,0 +1,72 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/wwwroot/CSS_Login_Register/LoginCSS.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="login-page">
+
+        <div class="form">
+
+            <form class="needs-validation" novalidate>
+                <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>@Rental_WebCore2.Resources.Login.Login.Register</h3>
+                <label class="control-label">@Rental_WebCore2.Resources.Login.Login.Username</label>
+                <input type="text" id="txtUsername" class="form-control" placeholder="@Rental_WebCore2.Resources.Login.Login.Username" autofocus required />
+
+                <label class="control-label">Email</label>
+                <input type="email" id="txtEmail" class="form-control" placeholder="Email" required />
+
+                <label class="control-label">@Rental_WebCore2.Resources.Login.Login.Password</label>
+                <input type="password" id="txtPassword" class="form-control" placeholder="@Rental_WebCore2.Resources.Login.Login.Password" required />
+
+                <label class="control-label">@Rental_WebCore2.Resources.Login.Login.ConfirmPassword</label>
+                <input type="password" id="txtConfirmPassword" class="form-control" placeholder="@Rental_WebCore2.Resources.Login.Login.ConfirmPassword" required />
+                <label for="inputState">Loại tài khoản(Xem chi tiết tại <a href="@Url.Action("Index","PricingTable")">đây</a>)</label>
+                <select id="inpAccount" class="form-control">
+                    <option id="1">Cơ bản</option>
+                    <option id="2">Tiêu chuẩn</option>
+                    <option id="3">Nâng cao</option>
+                </select>
+
+                &nbsp;        &nbsp;
+                &nbsp;    &nbsp;
+                <button id="btnRegister" type="submit" class="btn">@Rental_WebCore2.Resources.Login.Login.Register</button>
+                <p class="message">@Rental_WebCore2.Resources.Login.Login.Account <a href="@Url.Action("Login","Login")">@Rental_WebCore2.Resources.Login.Login.Account1</a></p>
+            </form>
+
+        </div>
+
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#btnRegister').click(function () {
+                var Username = $('#txtUsername').val();
+                var Password = $('#txtPassword').val();
+                var ConfirmPassword = $('#txtConfirmPassword').val();
+                var selector = document.getElementById('inpAccount');
+                var value = selector[selector.selectedIndex].id;
+                console.log(Username);
+                console.log(Password);
+                console.log(ConfirmPassword);
+                console.log(value);
+            })
+        })
+    </script>
+    <script src="~/wwwroot/CSS_Login_Register/LoginValidation.js"></script>
+</body>
+</html>

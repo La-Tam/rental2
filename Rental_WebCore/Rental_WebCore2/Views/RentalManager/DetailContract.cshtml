@@ -1,24 +1,25 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "DetailContract";
 }
 <head>
-    <link href="~/CSS_Rental/css/main.css" rel="stylesheet" />
+    <link href="~/wwwroot/CSS_Rental/css/main.css" rel="stylesheet" />
+
+
 </head>
 
 <body>
     <main class="app-content">
         <div class="tile">
             <div class="page-header">
-                <div class="alert alert-warning" style="background-color:#009688;">
+                <div class="alert alert-warning" style="background-color:#009688;height:45px">
                     <div class="row">
-                        <div class="col-lg-11">
-                            <h4 style="margin-bottom:0px; text-align:left;color:aliceblue">THÔNG TIN HỢP ĐỒNG</h4>
+                        <div class="col-lg-6">
+                            <h5 style="margin-top:0px; text-align:left;color:aliceblue">@Rental_WebCore2.Resources.Rental_Manager.Rental.Contract_Infor_2</h5>
                         </div>
-                        <div class="col-lg-1" align="right">
-                            <a class="btn-outline-primary" href="@Url.Action("DetailContractIndex","RentalManager")">
+                        <div class="col-lg-6" align="right">
+                            <a class="btn-outline-primary" href="@Url.Action("ContractIndex","RentalManager")">
                                 <span aria-hidden="true">
-                                    <img src="~/wwwroot/images/Rental/Contract/icons8-delete-60.png" style="width:25px" />
+                                    <img src="~/wwwroot/images/Rental/Contract/icons8-multiply-30.png" style="width:25px;margin-top:-3px;" />
                                 </span>
                             </a>
                         </div>
@@ -27,17 +28,17 @@
                 @* Duong dan tab  *@
                 <div class="row" style="margin-bottom:2rem;">
                     <div class="col-lg-12">
-                        <div class="bs-component">
+                        <div class="bs-component" style="margin-top:-10px">
                             <ul class="nav nav-tabs">
-                                <li class="nav-item"><a class="nav-link " data-toggle="tab" href="#DC_detail"><i class="icon fa fa-info"></i> Chi tiết hợp đồng</a></li>
-                                <li class="nav-item"><a class="nav-link " data-toggle="tab" href="#DC_customer"><i><img src="~/wwwroot/images/Rental/Contract/icons8-user-30.png" style="margin-top:-6px;width:20px" /></i> Khách thuê</a></li>
-                                <li class="nav-item"><a class="nav-link " data-toggle="tab" href="#DC_history"><i><img src="~/wwwroot/images/Rental/Contract/icons8-time-machine-30.png" style="width:20px;margin-top:-6px" /></i> Lịch sử hóa đơn</a></li>
-                                <li class="nav-item"><a class="nav-link " data-toggle="tab" href="#DC_asset"><i class="icon fa fa-diamond"></i> Tài sản bàn giao</a></li>
-                                <li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#DC_expediency"><i><img src="~/wwwroot/images/Rental/Contract/icons8-dirt-bike-30.png" style="margin-top:-6px" /></i> Phương tiện</a></li>
+                                <li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#DC_detail"><i class="icon fa fa-info"></i> @Rental_WebCore2.Resources.Rental_Manager.Rental.Detail_Contract</a></li>
+                                <li class="nav-item"><a class="nav-link " data-toggle="tab" href="#DC_customer"><i><img src="~/wwwroot/images/Rental/Contract/icons8-user-30.png" style="margin-top:-6px;width:20px" /></i> @Rental_WebCore2.Resources.Rental_Manager.Rental.Tenant</a></li>
+                                <li class="nav-item"><a class="nav-link " data-toggle="tab" href="#DC_history"><i><img src="~/wwwroot/images/Rental/Contract/icons8-time-machine-30.png" style="width:20px;margin-top:-6px" /></i> @Rental_WebCore2.Resources.Rental_Manager.Rental.Invoice_History</a></li>
+                                <li class="nav-item"><a class="nav-link " data-toggle="tab" href="#DC_asset"><i class="icon fa fa-diamond"></i> @Rental_WebCore2.Resources.Rental_Manager.Rental.Asset_Handover</a></li>
+                                <li class="nav-item"><a class="nav-link " data-toggle="tab" href="#DC_expediency"><i><img src="~/wwwroot/images/Rental/Contract/icons8-dirt-bike-30.png" style="margin-top:-6px" /></i> @Rental_WebCore2.Resources.Rental_Manager.Rental.Transport</a></li>
                             </ul>
                             @* Chi tiet *@
                             <div class="tab-content " id="myTabContent">
-                                <div class="tab-pane fade" id="DC_detail">
+                                <div class="tab-pane fade active show" id="DC_detail">
                                     <div class="tile">
 
                                         <div class="row">
@@ -45,84 +46,66 @@
                                             @* Thong tin hop dong *@
                                             <div class="col-md-5">
                                                 <div class="tile">
-                                                    <h5>Thông tin hợp đồng</h5>
-                                                    <hr />
+                                                    <h5 style="margin-top:-15px">@Rental_WebCore2.Resources.Rental_Manager.Rental.Contract_Infor_1</h5>
+                                                    <hr style="margin-top:-5px" />
                                                     <div class="tile-body">
                                                         <form class="form-horizontal">
-                                                            <div class="form-group row">
-                                                                <label class="control-label col-md-4">Mã hợp đồng</label>
-                                                                <div class="col-md-8">
+                                                            <div class="tile" style="border:1px solid;border-color:darkgray;">
+                                                                <table class="table table-bordered" border="1" style="border-color:black;">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Contract_ID</th>
+                                                                            <th><input class="text-body col-md-10 " type="text" value="" disabled=""></th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Status</th>
+                                                                            <th><label class="label label-primary"style="background-color:#82AF6F"><i>Đang hợp đồng</i></label></th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Liquidation_Date</th>
+                                                                            <th><input class="text-body col-md-10 " type="ba" value="H3" disabled=""></th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Contract_Creation_Date</th>
+                                                                            <th><input class="text-body col-md-10 " type="text" value="H3" disabled=""></th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Effective_Date</th>
+                                                                            <th> <input class="text-body col-md-10 " type="text" value="3/2019 " disabled=""></th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.To_Date</th>
+                                                                            <th> <input class="text-body col-md-10 " type="text" value="3/2019 " disabled=""></th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Property</th>
+                                                                            <th> <input class="text-body col-md-10 " type="text" value="3/2019 " disabled=""></th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Price</th>
+                                                                            <th> <input class="text-body col-md-10 " type="text" value="3/2019 " disabled=""></th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Deposit</th>
+                                                                            <th> <input class="text-body col-md-10 " type="text" value="3/2019 " disabled=""></th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Tenant</th>
+                                                                            <th><input class="text-body col-md-10 " type="text" value="H3" disabled=""></th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Phone_Number</th>
+                                                                            <th><input class="text-body col-md-10 " type="text" value="H3" disabled=""></th>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
 
-                                                                    <input class="text-body col-md-8" type="text" disabled="" value="HD-123456789">
+                                                                <label class="control-label col-md-3">@Rental_WebCore2.Resources.Rental_Manager.Rental.Note</label>
 
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group row">
-                                                                <label class="control-label col-md-4">Ngày tạo hợp đồng</label>
-                                                                <div class="col-md-8">
-                                                                    <input class="text-body col-md-8" type="text" disabled="" value="18/1/2019">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group row">
-                                                                <label class="control-label col-md-4">Ngày hiệu lực</label>
-                                                                <div class="col-md-8">
-                                                                    <input class="text-body col-md-8" type="text" disabled="" value="25/1/2019">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group row">
-                                                                <label class="control-label col-md-4">Đến ngày</label>
-                                                                <div class="col-md-8">
-                                                                    <input class="text-body col-md-8" type="text" disabled="" value="25/6/2019">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group row">
-                                                                <label class="control-label col-md-4">Dự án</label>
-                                                                <div class="col-md-8">
-                                                                    <input class="text-body col-md-12 " type="text" disabled="" value="">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group row">
-                                                                <label class="control-label col-md-4">Tòa nhà</label>
-                                                                <div class="col-md-8">
-                                                                    <input class="text-body col-md-12 " type="text" disabled="" value="Vina-phone">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group row">
-                                                                <label class="control-label col-md-4">Tầng</label>
-                                                                <div class="col-md-8">
-                                                                    <input class="text-body col-md-12 " type="text" disabled="" value="Tầng 2">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group row">
-                                                                <label class="control-label col-md-4">Phòng</label>
-                                                                <div class="col-md-8">
-                                                                    <input class="text-body col-md-12 " type="text" disabled="" value="P.103">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group row">
-                                                                <label class="control-label col-md-4">Loại sản phẩm</label>
-                                                                <div class="col-md-8">
-                                                                    <input class="text-body col-md-12 " type="text" disabled="" value="3 phòng ngủ">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group row">
-                                                                <label class="control-label col-md-4">Giá</label>
-                                                                <div class="col-md-8">
-                                                                    <input class="text-body col-md-12 " type="text" disabled="" value="8.000.000">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group row">
-                                                                <label class="control-label col-md-4">Tiền cọc</label>
-                                                                <div class="col-md-8">
-                                                                    <input class="text-body col-md-12 " type="text" disabled="" value="5.000.000">
-
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="form-group row">
-                                                                <label class="control-label col-md-3">Ghi chú</label>
-                                                                <div class="col-md-8">
-                                                                    <textarea class="text-body" rows="4" placeholder="Note" disabled="" style="width:267px"></textarea>
+                                                                <div style="margin-top:0px">
+                                                                    <textarea class="text-body col-12" rows="4" placeholder=@Rental_WebCore2.Resources.Rental_Manager.Rental.Note></textarea>
                                                                 </div>
                                                             </div>
 
@@ -135,19 +118,19 @@
 
                                             <div class="col-md-7">
                                                 <div class="tile">
-                                                    <h5>Đăng ký dịch vụ</h5>
-                                                    <a class="btn btn-outline-primary" style="border:1px solid;border-color:black; margin-top:10px" onclick="AddService(0)"><i class="fa fa-plus"></i>Thêm dịch vụ</a>
-                                                    <p></p>
-                                                    <hr style="margin-top:-0px" />
-                                                    <div style="  height:575px; border:1px solid black; padding:20px; overflow:auto;border-color:darkgray">
-                                                        <table class="table table-bordered">
+                                                    <h5 style="margin-top:-15px">@Rental_WebCore2.Resources.Rental_Manager.Rental.Service</h5>
+                                                    <a class="btn btn-outline-primary" style="border:1px solid;border-color:black; margin-top:0px" onclick="SettingPriceSerice(0)"><i class="fa fa-plus"></i>@Rental_WebCore2.Resources.Rental_Manager.Rental.Setting_Price_Service</a>
+
+                                                    <hr style="margin-top:8px" />
+                                                    <div style="  height:437px; border:1px solid black; margin-top:-8px; overflow:auto;border-color:darkgray">
+                                                        <table class="table table-bordered" style="margin-left:0px">
                                                             <thead>
-                                                                <tr>
-                                                                    <th style="width:25px"><img src="~/wwwroot/images/Rental/Contract/icons8-checkmark-filled-50.png" style="width:20px" /></th>
-                                                                    <th class="col-md-3">Loại dịch vụ</th>
-                                                                    <th style="text-align:center;width:15px">Số lượng</th>
-                                                                    <th>Đơn giá</th>
-                                                                    <th>Đơn vị</th>
+                                                                <tr class="col-12">
+                                                                    <th style="background-color:lavender"><input class="checkbox" type="checkbox" disabled="disabled" /></th>
+                                                                    <th class="col-3" style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Type_Of_Service</th>
+                                                                    <th class="col-2" style="text-align:center;background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Quantity</th>
+                                                                    <th class="col-3"style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Unit_Price</th>
+                                                                    <th class="col-3"style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Unit</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
@@ -156,7 +139,7 @@
                                                                     <td>
                                                                         <input class="text-body  " style="width:150px" disabled="" type="text" value="Internet  ">
                                                                     </td>
-                                                                    <td><input class="text-center " type="text" style="width:25px" value="1" disabled="" /></td>
+                                                                    <td><input class="text-center" type="text" style="width:50px;margin-left:5px" value="1" disabled="" /></td>
                                                                     <td><input class="text-dark " style="width:80px" type="text" value="200.000" disabled="" /></td>
                                                                     <td>
                                                                         <input class="text-body  " style="width:80px" disabled="" type="text" value="Đồng/Tháng">
@@ -167,7 +150,7 @@
                                                                     <td>
                                                                         <input class="text-body " style="width:150px" disabled="" type="text" value="Cáp  ">
                                                                     </td>
-                                                                    <td><input class="text-center " type="text" style="width:25px" value="1" disabled="" /></td>
+                                                                    <td><input class="text-center " type="text" style="width:50px;margin-left:5px" value="1" disabled="" /></td>
                                                                     <td><input class="text-dark " style="width:80px" type="text" value="150.000" disabled="" /></td>
                                                                     <td>
                                                                         <input class="text-body  " style="width:80px" disabled="" type="text" value="Đồng/Tháng">
@@ -178,7 +161,7 @@
                                                                     <td>
                                                                         <input class="text-body  " style="width:150px" disabled="" type="text" value="Đổ rác  ">
                                                                     </td>
-                                                                    <td><input class="text-center " style="width:25px" type="text" value="1" disabled="" /></td>
+                                                                    <td><input class="text-center " style="width:50px;margin-left:5px" type="text" value="1" disabled="" /></td>
                                                                     <td><input class="text-dark " style="width:80px" type="text" value="30.000" disabled="" /></td>
                                                                     <td>
                                                                         <input class="text-body  " style="width:80px" disabled="" type="text" value="Đồng/Tháng">
@@ -194,132 +177,139 @@
                                         </div>
                                         <hr style="margin-top:-10px" />
                                         <div class="row">
-                                            <a class="btn-outline-primary" href="@Url.Action("CreatContract","RentalManager")" style="margin-left:20px;width:110px;border:1px solid"><i><img src="~/wwwroot/images/Rental/Contract/icons8-edit-file-30.png" style="width:20px; margin-top:-6px;" /></i> Chỉnh sửa</a>
-                                            <a class="btn-outline-primary" style="margin-left:30px;width:120px;border:1px solid"><i><img src="~/wwwroot/images/Rental/Contract/icons8-print-30.png" style="width:20px; margin-top:-6px" /></i> In hợp đồng</a>
-                                            <a class="btn-outline-primary" href="@Url.Action("ContractIndex","RentalManager")" style="margin-left:30px;width:90px;border:1px solid;border-color:black"><i><img src="~/wwwroot/images/Rental/Contract/icons8-exit-30.png" style="width:20px; margin-top:-6px" /></i> Thoát ra</a>
+                                           
+                                            <a class="btn btn-primary" href="@Url.Action("CreateContract","RentalManager")" style="background-color: #007065;color:white;margin-left:20px;"><i><img src="~/wwwroot/images/Rental/Contract/icons8-edit-file-filled-50.png" style="width:20px; margin-top:-6px;" /></i> @Rental_WebCore2.Resources.Rental_Manager.Rental.Edit</a>
+                                            <a class="btn btn" style="background-color: red;color:white;margin-left:20px;border-color:orangered"><i><img src="~/wwwroot/images/Rental/Contract/icons8-print-filled-50.png" style="width:20px; margin-top:-6px" /></i> @Rental_WebCore2.Resources.Rental_Manager.Rental.Print_Contract</a>
+                                            <a class="btn btn" onclick="Liquidation_Contract(0)" style="background-color: red;color:white;margin-left:20px;border-color:orangered"><i><img src="~/wwwroot/images/Rental/Contract/icons8-planner-64.png" style="width:20px; margin-top:-6px" /></i> @Rental_WebCore2.Resources.Rental_Manager.Rental.Liquidation_Of_Contracts</a>
+                                            
+                                            <a class="btn btn-primary" style="background-color: #007065;color:white;margin-left:20px;" href="@Url.Action("ContractIndex","RentalManager")"><i><img src="~/wwwroot/images/Rental/Contract/icons8-exit.png" style="width:20px; margin-top:-6px" /></i>@Rental_WebCore2.Resources.Rental_Manager.Rental.Exit</a>                                                
                                         </div>
                                     </div>
                                 </div>
                                 @* Khach thue *@
                                 <div class="tab-pane fade " id="DC_customer">
-                                    <div class="tile" style="height:100%">
-                                        <div class="tile" style="height:auto;width:850px;border:solid 1px;border-color:darkgray">
-                                            <h5>Người thuê</h5>
-                                            <a class="btn btn-outline-primary" style="border:1px solid;border-color:black" onclick="AddMoreTenants(0)"><i class="fa fa-plus"></i>Thêm người cùng thuê</a>
+                                    <div class="tile">
+                                        <a class="btn btn-outline-primary" style="border:1px solid;border-color:black;margin-top:-5px" onclick="AddMoreTenants(0)"><i class="fa fa-plus"></i>@Rental_WebCore2.Resources.Rental_Manager.Rental.Add_Tenants</a>
+                                        <p></p>
+                                        <div class="tile" style="height:auto;width:100%;border:solid 1px;border-color:darkgray;">
+                                            <div class="row">
+                                                <div class="col-lg-10">
+                                                    <h6 style="margin-top:-10px">@Rental_WebCore2.Resources.Rental_Manager.Rental.Tenant</h6>
+                                                </div>
+                                                <div class="col-lg-2"align="right"style="margin-top:-10px">
+                                                    <div class="widget-toolbar " >
+                                                        <button data-toggle="dropdown" class="btn btn-info btn-primary dropdown-toggle " aria-expanded="true" style="padding:0px 3px;">@Rental_WebCore2.Resources.Rental_Manager.Rental.Edit</button>
+                                                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" onclick="Editinfo(0)"> @Rental_WebCore2.Resources.Rental_Manager.Rental.Edit_Informatin</a></li>
+                                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"> @Rental_WebCore2.Resources.Rental_Manager.Rental.Delete_Information</a></li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <p></p>
-                                            <hr />
+                                            <hr style="margin-top:-8px" />
 
                                             <div class="row">
                                                 <div class="col-md-4">
-                                                    <div class="">
-                                                        <a class="btn btn-primary" style="background-color:aliceblue;margin-left: 50px; width: 200px;height: 200px;padding-top:80px;border:solid 2px;border-color:black;">+ Thêm ảnh</a>
-                                                    </div>
+                                                    <div id="square" style="background-color:aliceblue;margin-left: 0px; width: 50%;height: 150px;text-align:center;border:solid 1px;border-color:black;">+ @Rental_WebCore2.Resources.Rental_Manager.Rental.Add_Photos</div><p></p>
+                                                    <input type="file" />
                                                 </div>
                                                 <div class="col-md-7">
                                                     <div class="tile-body">
                                                         <form class="form-horizontal">
-                                                            <div class="form-group row">
-                                                                <label class="control-label col-md-4">Tên khách thuê</label>
-                                                                <div class="col-md-8">
-                                                                    <input class="text-body col-md-8 " type="text" value="AAA" disabled="disabled">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group row">
-                                                                <label class="control-label col-md-4">Điện thoại</label>
-                                                                <div class="col-md-8">
-                                                                    <input class="text-body col-md-8 " type="text" value="01254851313" disabled="disabled">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group row">
-                                                                <label class="control-label col-md-4">CMND</label>
-                                                                <div class="col-md-8">
-                                                                    <input class="text-body col-md-8 " type="text" value="012365487" disabled="disabled">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group row">
-                                                                <label class="control-label col-md-4">Email</label>
-                                                                <div class="col-md-8">
-                                                                    <input class="text-body col-md-8 " type="text" value="mnh@gmail.com" disabled="disabled">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group row">
-                                                                <label class="control-label col-md-3">Ghi chú</label>
-                                                                <div class="col-md-9">
-                                                                    <textarea class="text-body" rows="4" placeholder="Note" style="width:290px"></textarea>
-                                                                </div>
+                                                            <table class="table table-bordered" border="1" style="border-color:black;">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Customer_Name</th>
+                                                                        <th><input class="text-body col-md-10 " type="text" value="BBBB" disabled=""></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Phone_Number</th>
+                                                                        <th><input class="text-body col-md-10 " type="text" value="541515151" disabled=""></th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Identity_Card</th>
+                                                                        <th> <input class="text-body col-md-10 " type="text" value="0125556688" disabled=""></th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Email</th>
+                                                                        <th> <input class="text-body col-md-10 " type="text" value="awdawd@gmail.com" disabled=""></th>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <label class="control-label col-md-3">@Rental_WebCore2.Resources.Rental_Manager.Rental.Note</label>
+                                                            <div style="margin-top:0px">
+                                                                <textarea class="text-body col-12" rows="4" placeholder=@Rental_WebCore2.Resources.Rental_Manager.Rental.Note></textarea>
                                                             </div>
                                                         </form>
                                                     </div>
 
                                                 </div>
-                                                <div class="widget-toolbar " style="margin-left:40px">
 
-                                                    <button data-toggle="dropdown" class="btn btn-info btn-primary dropdown-toggle" aria-expanded="true" style="padding:0px 3px;"></button>
-                                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                                                        <li role="presentation"><a role="menuitem" tabindex="-1"asp-area="" onclick="Editinfo(0)">Chỉnh sửa thông tin</a></li>
-                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Xóa</a></li>
-
-                                                    </ul>
-                                                </div>
                                             </div>
 
 
                                         </div>
                                         @* Khach cung thue *@
-                                        <div class="tile" style="height:auto;width:850px;border:solid 1px;border-color:darkgray">
-                                            <h5>Người cùng thuê</h5>
-
-                                            <hr />
+                                        <div class="tile" style="height:auto;width:100%;border:solid 1px;border-color:darkgray">
+                                            <div class="row">
+                                                <div class="col-lg-10">
+                                                    <h6 style="margin-top:-10px">@Rental_WebCore2.Resources.Rental_Manager.Rental.Shared_Tenants</h6>
+                                                </div>
+                                                <div class="col-lg-2"align="right">
+                                                    <div class="widget-toolbar " style="margin-top:-10px">
+                                                        <button data-toggle="dropdown" class="btn btn-info btn-primary dropdown-toggle" aria-expanded="true" style="padding:0px 3px;">@Rental_WebCore2.Resources.Rental_Manager.Rental.Edit</button>
+                                                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" onclick="Editinfo(0)"> @Rental_WebCore2.Resources.Rental_Manager.Rental.Edit_Informatin</a></li>
+                                                            <li role="presentation"><a role="menuitem" tabindex="-1" href=" "> @Rental_WebCore2.Resources.Rental_Manager.Rental.Delete_Information</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p></p>
+                                            <hr style="margin-top:-8px" />
                                             <div class="row">
                                                 <div class="col-md-4">
-                                                    <div class="">
-                                                        <a class="btn btn-primary" style="background-color:aliceblue;margin-left: 50px; width: 200px;height: 200px;padding-top:80px;border:solid 2px;border-color:black;">+ Thêm ảnh</a>
-                                                    </div>
+                                                    <div id="square" style="background-color:aliceblue;margin-left: 0px; width: 50%;height: 150px;text-align:center;border:solid 1px;border-color:black;">+ @Rental_WebCore2.Resources.Rental_Manager.Rental.Add_Photos</div><p></p>
+                                                    <input type="file" />
                                                 </div>
                                                 <div class="col-md-7">
                                                     <div class="tile-body">
                                                         <form class="form-horizontal">
-                                                            <div class="form-group row">
-                                                                <label class="control-label col-md-4">Tên khách thuê</label>
-                                                                <div class="col-md-8">
-                                                                    <input class="text-body col-md-8 " type="text" value="AAA" disabled="disabled">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group row">
-                                                                <label class="control-label col-md-4">Điện thoại</label>
-                                                                <div class="col-md-8">
-                                                                    <input class="text-body col-md-8 " type="text" value="01254851313" disabled="disabled">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group row">
-                                                                <label class="control-label col-md-4">CMND</label>
-                                                                <div class="col-md-8">
-                                                                    <input class="text-body col-md-8 " type="text" value="012365487" disabled="disabled">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group row">
-                                                                <label class="control-label col-md-4">Email</label>
-                                                                <div class="col-md-8">
-                                                                    <input class="text-body col-md-8 " type="text" value="mnh@gmail.com" disabled="disabled">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group row">
-                                                                <label class="control-label col-md-3">Ghi chú</label>
-                                                                <div class="col-md-9">
-                                                                    <textarea class="text-body" rows="4" placeholder="Note" style="width:290px"></textarea>
-                                                                </div>
+                                                            <table class="table table-bordered" border="1" style="border-color:black;">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Customer_Name</th>
+                                                                        <th><input class="text-body col-md-10 " type="text" value="BBBB" disabled=""></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Phone_Number</th>
+                                                                        <th><input class="text-body col-md-10 " type="text" value="541515151" disabled=""></th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Identity_Card</th>
+                                                                        <th> <input class="text-body col-md-10 " type="text" value="0125556688" disabled=""></th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Email</th>
+                                                                        <th> <input class="text-body col-md-10 " type="text" value="awdawd@gmail.com" disabled=""></th>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <label class="control-label col-md-3">@Rental_WebCore2.Resources.Rental_Manager.Rental.Note</label>
+                                                            <div style="margin-top:0px">
+                                                                <textarea class="text-body col-12" rows="4" placeholder=@Rental_WebCore2.Resources.Rental_Manager.Rental.Note></textarea>
                                                             </div>
                                                         </form>
                                                     </div>
                                                 </div>
                                                 @* Dropdown *@
-                                                <div class="widget-toolbar " style="margin-left:40px">
-                                                    <button data-toggle="dropdown" class="btn btn-info btn-primary dropdown-toggle" aria-expanded="true" style="padding:0px 3px;"></button>
-                                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                                                        <li role="presentation" ><a role="menuitem" tabindex="-1" onclick="Editinfo(0)">Chỉnh sửa thông tin</a></li>
-                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href=" ">Xóa</a></li>
-                                                    </ul>
-                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -328,14 +318,14 @@
                                 @* lich su hoa don *@
                                 <div class="tab-pane fade  " id="DC_history">
                                     <div class="tile">
-                                        <div class="tile" style="width:850px;border:solid 1px;border-color:darkgray">
-                                            <table class="table table-bordered" style="width:800px ;text-align:center">
+                                        <div class="tile" style="width:100%;border:solid 1px;border-color:darkgray">
+                                            <table class="table table-bordered" style="width:100% ;text-align:center">
                                                 <thead>
                                                     <tr>
-                                                        <th>STT</th>
-                                                        <th>Ngày/Tháng/Năm</th>
-                                                        <th>Số tiền đóng</th>
-                                                        <th>Chi tiết</th>
+                                                        <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.ID_Number</th>
+                                                        <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Day_Month_Year</th>
+                                                        <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Amount_Money</th>
+                                                        <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Detail</th>
 
                                                     </tr>
                                                 </thead>
@@ -344,19 +334,19 @@
                                                         <td>1</td>
                                                         <td>18/11/2019</td>
                                                         <td>10.000.000</td>
-                                                        <td id="11"><button onclick="ViewHistory(0)"><i class="fa fa-eye" aria-hidden="true"></i></button></td>
+                                                        <td id="1"><a href="#" onclick="ViewHistory(0)"><img src="~/wwwroot/images/Rental/Contract/icons8-show-property-48.png" style="width:35px;height:35px" /></a></td>
                                                     </tr>
                                                     <tr>
-                                                        <td>1</td>
+                                                        <td>2</td>
                                                         <td>18/12/2019</td>
                                                         <td>10.000.000</td>
-                                                        <td id="12"><button onclick="ViewHistory(0)"><i class="fa fa-eye" aria-hidden="true"></i></button></td>
+                                                        <td id="1"><a href="#" onclick="ViewHistory(0)"><img src="~/wwwroot/images/Rental/Contract/icons8-show-property-48.png" style="width:35px;height:35px" /></a></td>
                                                     </tr>
                                                     <tr>
-                                                        <td>1</td>
+                                                        <td>3</td>
                                                         <td>18/1/2019</td>
                                                         <td>10.000.000</td>
-                                                        <td id="1"><button onclick="ViewHistory(0)"><i class="fa fa-eye" aria-hidden="true"></i></button></td>
+                                                        <td id="1"><a href="#" onclick="ViewHistory(0)"><img src="~/wwwroot/images/Rental/Contract/icons8-show-property-48.png" style="width:35px;height:35px" /></a></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -368,17 +358,17 @@
                                 @* Tai san ban giao *@
                                 <div class="tab-pane fade " id="DC_asset">
                                     <div class="tile">
-                                        <div class="tile" style="width:850px;border:solid 1px;border-color:darkgray">
-                                            <table class="table table-bordered" style="width:800px ;text-align:center">
+                                        <div class="tile" style="width:100%;border:solid 1px;border-color:darkgray">
+                                            <table class="table table-bordered" style="width:100% ;text-align:center">
                                                 <thead>
                                                     <tr>
-                                                        <th>STT</th>
-                                                        <th>Loại tài sản</th>
-                                                        <th>Tên tài sản</th>
-                                                        <th>Số lượng</th>
-                                                        <th>Ngày bàn giao</th>
-                                                        <th>Trạng thái</th>
-                                                        <th>Hình ảnh</th>
+                                                        <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.ID_Number</th>
+                                                        <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Asset_Type</th>
+                                                        <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Asset_Name</th>
+                                                        <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Quantity</th>
+                                                        <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Date_Of_Delivery</th>
+                                                        <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Status</th>
+                                                        <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Picture</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -416,50 +406,43 @@
 
                                 </div>
                                 @* Phuong tiện *@
-                                <div class="tab-pane fade active show " id="DC_expediency">
+                                <div class="tab-pane fade  " id="DC_expediency">
                                     <div class="tile" style="height:auto">
-                                        <div class="tile" style="width:800px;border:solid 1px;border-color:darkgray">
-                                            <a class="btn btn-outline-primary" style="border:1px solid;border-color:black " onclick="AddExpediency(0)"><i class="fa fa-plus"></i>Thêm phương tiện</a>
-                                            <p></p>
-                                            <hr />
+                                        <a class="btn btn-outline-primary" style="border:1px solid;border-color:black;margin-top:-15px " onclick="AddExpediency(0)"><i class="fa fa-plus"></i>@Rental_WebCore2.Resources.Rental_Manager.Rental.Add_Transport</a>
+                                        <p></p>
+                                        <hr style="margin-top:-7px" />
+                                        <div class="tile" style="width:70%;border:solid 1px;border-color:darkgray">
                                             <div class="tile-body">
                                                 <form class="form-horizontal">
-                                                    <div class="form-group row">
-                                                        <label class="control-label col-md-4" style="padding-left:40px">Tên xe: </label>
-                                                        <div class="col-md-8">
-                                                            <input class="text-body col-md-8 " type="text" value="BWM ">
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group row">
-                                                        <label class="control-label col-md-4" style="padding-left:40px">Biển số xe: </label>
-                                                        <div class="col-md-8">
-                                                            <input class="text-body col-md-8 " type="text" value="dsdwdwd ">
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group row">
-                                                        <label class="control-label col-md-4" style="padding-left:40px">Loại xe: </label>
-                                                        <div class="col-md-8">
-                                                            <input class="text-body col-md-8 " type="text" value="Xe số ">
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group row">
-                                                        <label class="control-label col-md-4" style="padding-left:40px">Chủ phương tiện: </label>
-                                                        <div class="col-md-8">
-                                                            <input class="text-body col-md-8 " type="text" value="Nguyên San San ">
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group row">
-                                                        <label class="control-label col-md-4" style="padding-left:40px">Màu xe: </label>
-                                                        <div class="col-md-8">
-                                                            <input class="text-body col-md-8 " type="text" value="Hồng ">
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group row">
-                                                        <label class="control-label col-md-4" style="padding-left:40px">Phí dịch vụ xe: </label>
-                                                        <div class="col-md-8">
-                                                            <input class="text-body col-md-8 " type="text" value="80.000 ">
-                                                        </div>
-                                                    </div>
+                                                    <table class="table table-bordered" border="1" style="border-color:black;">
+                                                        <thead>
+                                                            <tr>
+                                                                <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Car_Name</th>
+                                                                <th><input class="text-body col-md-10 " type="text" value="BWM" disabled=""></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.License_Plate</th>
+                                                                <th><input class="text-body col-md-10 " type="text" value="ds5d4515" disabled=""></th>
+                                                            </tr>
+                                                            <tr>
+                                                                <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Car_Type</th>
+                                                                <th>
+                                                                    <select class="form-control col-md-10" id="exampleSelect1" disabled="">
+                                                                        <option>Xe số</option>
+                                                                        <option>Xe tay ga</option>
+                                                                        <option>Xe 3 bánh</option>
+                                                                        <option>Xe 4 bánh</option>
+                                                                    </select>
+                                                                </th>
+                                                            </tr>
+                                                            <tr>
+                                                                <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Vehicle_Owner</th>
+                                                                <th> <input class="text-body col-md-10 " type="text" value="Nguyễn SS" disabled=""></th>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
 
                                                 </form>
 
@@ -480,83 +463,268 @@
 </body>
 
 
-@* Add dich vu *@
+@* Setting bảng giá dịch vụ *@
 
-<div class="modal fade" id="myModalService">
+<div class="modal fade" id="myModalSettingPriceService">
     <div class="modal-dialog">
-        <div class="modal-content">
-            <text class="form-control" style="background-color:#007065; height:50px;color:aliceblue;border:hidden; text-align:center;font-size:25px; padding-left:0px;border-radius:unset" id="modalTitleService;">
-                Thêm dịch vụ
+        <div class="modal-content" style="height:610px;width:1000px;margin-left:-250px">
+            <text class="form-control" style="background-color:#007065; height:40px;color:aliceblue;border:hidden; text-align:center;font-size:20px; padding-left:0px;border-radius:unset" id="modalTitleSettingPriceService;">
+                @Rental_WebCore2.Resources.Rental_Manager.Rental.Setting_Price_Service
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white; font-size:30px">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </text>
-           
+
             <div class="modal-body">
                 <form id="form">
 
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Loại dịch vụ</label>
-                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập loại dịch vụ">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Số lượng</label>
-                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập số lượng">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Đơn giá</label>
-                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập đơn giá">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Đơn vị</label>
-                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập đơn vị">
-                    </div>
-
+                    <table class="table table-bordered" style="width:300px">
+                        <thead>
+                            <tr>
+                                <th style="width:20px;background-color:lavender"><input class="checkbox" type="checkbox" disabled="disabled" /></th>
+                                <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Type_Of_Service</th>
+                                <th style="text-align:center;background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Quantity</th>
+                                <th style="text-align:center;background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Unit_Price</th>
+                                <th style="text-align:center;background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Unit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input class="checkbox" type="checkbox" /></td>
+                                <td>
+                                    <input class="text-body" style="width:300px" type="text" value="Internet  ">
+                                </td>
+                                <td><input class="text-center" style="width:60px" type="text" value="1" /></td>
+                                <td><input class="text-dark " style="width:150px" type="text" value="" /></td>
+                                <td>
+                                    <input class="text-body  " disabled="" type="text" value="Đồng/Tháng">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input class="checkbox" type="checkbox" /></td>
+                                <td>
+                                    <input class="text-body " style="width:300px" type="text" value="Cáp  ">
+                                </td>
+                                <td><input class="text-center" style="width:60px" type="text" value="1" /></td>
+                                <td><input class="text-dark " style="width:150px" type="text" value="" /></td>
+                                <td>
+                                    <input class="text-body  " disabled="" type="text" value="Đồng/Tháng">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input class="checkbox" type="checkbox" /></td>
+                                <td>
+                                    <input class="text-body" style="width:300px" type="text" value="Đổ rác  ">
+                                </td>
+                                <td><input class="text-center" style="width:60px" type="text" value="1" /></td>
+                                <td><input class="text-dark " style="width:150px" type="text" value="" /></td>
+                                <td>
+                                    <input class="text-body  " disabled="" type="text" value="Đồng/Tháng">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                 </form>
-                <div class="modal-footer">
-                    <a class="btn btn-primary" style="background-color: #007065;color:white">Lưu</a>
-                    <button class="btn btn-primary" style="background-color: #007065;color:white" data-dismiss="modal">Hủy</button>
+                <div>
+                    <a class="btn btn-primary" style="background-color: #007065;color:white">@Rental_WebCore2.Resources.Rental_Manager.Rental.Save</a>
+                    <a class="btn btn-primary" style="background-color: #007065;color:white;margin-left:15px" onclick="AddService(0)">+ @Rental_WebCore2.Resources.Rental_Manager.Rental.Add_Service</a>
+                    <a class="btn btn-primary" style="background-color: #007065;color:white;margin-left:15px" data-dismiss="modal">@Rental_WebCore2.Resources.Rental_Manager.Rental.Cancel</a>
+
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+@* THêm dịch vụ *@
+<div class="modal fade" id="myModalService">
+    <div class="modal-dialog">
+        <div class="modal-content" style="height:560px;width:963px;margin-left:-267px;margin-top:68px">
+            <text class="form-control" style="background-color:#007065; height:40px;color:aliceblue;border:hidden; text-align:center;font-size:20px; padding-left:0px;border-radius:unset" id="modalTitleService;">
+                Thêm dịch vụ
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white; font-size:30px">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </text>
+
+            <div class="modal-body">
+                <form id="form">
+
+                    <table class="table table-bordered" style="width:300px">
+                        <thead>
+                            <tr>
+                                <th style="text-align:center;background-color:lavender" ">STT</th>
+                                <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Type_Of_Service</th>
+                                <th style="text-align:center;background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Quantity</th>
+                                <th style="text-align:center;background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Unit</th>
+                                <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Add</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="text-align:center">1</td>
+                                <td>
+                                    <input class="text-body" style="width:450px" type="text" value="Dọn vê sinh nhà cửa  ">
+                                </td>
+                                <td><input class="text-center" style="width:60px" type="text" value="1" /></td>
+                                <td>
+                                    <input class="text-body" disabled="" type="text" value="Đồng/Lần">
+                                </td>
+                                <td><a class="btn btn-primary " style="width:28px;height:28px;background-color: #007065;color:white" onclick="EnterPriceService(0)"><img src="~/wwwroot/images/Rental/Contract/icons8-add-new-30.png" style="width:36px;height:36px;margin-left:-18px;margin-top:-12px" /></a></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center">2</td>
+                                <td>
+                                    <input class="text-body " style="width:450px" type="text" value="Nước  ">
+                                </td>
+                                <td><input class="text-center" style="width:60px" type="text" value="1" /></td>
+                                <td>
+                                    <input class="text-body  " disabled="" type="text" value="Đồng/Khối">
+                                </td>
+                                <td><a class="btn btn-primary " style="width:28px;height:28px;background-color: #007065;color:white" onclick="EnterPriceService(0)"><img src="~/wwwroot/images/Rental/Contract/icons8-add-new-30.png" style="width:36px;height:36px;margin-left:-18px;margin-top:-12px" /></a></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center">3</td>
+                                <td>
+                                    <input class="text-body  " style="width:450px" type="text" value="Điện  ">
+                                </td>
+                                <td><input class="text-center" style="width:60px" type="text" value="1" /></td>
+                                <td>
+                                    <input class="text-body  " disabled="" type="text" value="Đồng/Khối">
+                                </td>
+                                <td><a class="btn btn-primary " style="width:28px;height:28px;background-color: #007065;color:white" onclick="EnterPriceService(0)"><img src="~/wwwroot/images/Rental/Contract/icons8-add-new-30.png" style="width:36px;height:36px;margin-left:-18px;margin-top:-12px" /></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </form>
+                <div>
+                    <a class="btn btn-primary" style="background-color: #007065;color:white">@Rental_WebCore2.Resources.Rental_Manager.Rental.Save</a>
+                    <a class="btn btn-primary" style="background-color: #007065;color:white;margin-left:15px" data-dismiss="modal">@Rental_WebCore2.Resources.Rental_Manager.Rental.Cancel</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* Nhập giá dịch vụ *@
+<div class="modal fade" id="myModalPriceService">
+    <div class="modal-dialog">
+        <div class="modal-content" style="height:510px;width:926px;margin-left:-268px;margin-top:108px">
+            <text class="form-control" style="background-color:#007065; height:40px;color:aliceblue;border:hidden; text-align:center;font-size:20px; padding-left:0px;border-radius:unset" id="modalPriceService;">
+                @Rental_WebCore2.Resources.Rental_Manager.Rental.Enter_Unit_Prive_And_Quantity_Service
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white; font-size:30px">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </text>
+
+            <div class="modal-body">
+                <form id="form">
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">@Rental_WebCore2.Resources.Rental_Manager.Rental.Type_Of_Service</label>
+                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" disabled="">
+
+                        <label for="exampleInputEmail1">@Rental_WebCore2.Resources.Rental_Manager.Rental.Quantity</label>
+                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập số lượng">
+
+                        <label for="exampleInputEmail1">@Rental_WebCore2.Resources.Rental_Manager.Rental.Unit_Price</label>
+                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập đơn giá">
+
+                        <label for="exampleInputEmail1">@Rental_WebCore2.Resources.Rental_Manager.Rental.Unit</label>
+                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" disabled="">
+                    </div>
+
+                </form>
+                <div>
+                    <a class="btn btn-primary" style="background-color: #007065;color:white">@Rental_WebCore2.Resources.Rental_Manager.Rental.Save</a>
+                    <a class="btn btn-primary" style="background-color: #007065;color:white;margin-left:15px" data-dismiss="modal">@Rental_WebCore2.Resources.Rental_Manager.Rental.Cancel</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@* Thanh lý hóa đơn *@
+<div class="modal fade" id="myModalLiquidate_Contract">
+    <div class="modal-dialog">
+        <div class="modal-content" style="width:1300px;height:601px;margin-left:-400px">
+            <text class="form-control" style="background-color:#007065; height:40px;color:aliceblue;border:hidden; text-align:center;font-size:20px; padding-left:0px;border-radius:unset" id="modalTitleLiquidate_Contract;">
+                @Rental_WebCore2.Resources.Rental_Manager.Rental.Liquidation_Of_Contracts
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white; font-size:30px">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </text>
+            <p></p>
+            <div class="tile-body">
+                <form class="form-horizontal">
+                    <div class="form-group row">
+                        <label class="control-label col-md-4" style="padding-left:40px">@Rental_WebCore2.Resources.Rental_Manager.Rental.Customer_Name</label>
+                        <div class="col-md-8">
+                            <input class="text-body col-md-8 " type="text" value=" ">
+                        </div>
+
+                        <label class="control-label col-md-4" style="padding-left:40px">@Rental_WebCore2.Resources.Rental_Manager.Rental.Phone_Number</label>
+                        <div class="col-md-8">
+                            <input class="text-body col-md-8 " type="text" value=" ">
+                        </div>
+
+                        <label class="control-label col-md-4" style="padding-left:40px">@Rental_WebCore2.Resources.Rental_Manager.Rental.Identity_Card</label>
+                        <div class="col-md-8">
+                            <input class="text-body col-md-8 " type="text" value=" ">
+                        </div>
+
+                        <label class="control-label col-md-4" style="padding-left:40px">@Rental_WebCore2.Resources.Rental_Manager.Rental.Email</label>
+                        <div class="col-md-8">
+                            <input class="text-body col-md-8 " type="text" value=" ">
+                        </div>
+
+                        <label class="control-label col-md-3" style="padding-left:40px">@Rental_WebCore2.Resources.Rental_Manager.Rental.Note</label>
+                        <div class="col-md-9">
+                            <textarea class="text-body" rows="4" placeholder=@Rental_WebCore2.Resources.Rental_Manager.Rental.Note style="width:290px"></textarea>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="modal-footer">
+                    <a class="btn btn-primary" style="background-color: #007065;color:white">@Rental_WebCore2.Resources.Rental_Manager.Rental.Save</a>
+                    <button class="btn btn-primary" style="background-color: #007065;color:white" data-dismiss="modal">@Rental_WebCore2.Resources.Rental_Manager.Rental.Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @* Xem lich su *@
 
 <div class="modal fade" id="myModalHistory">
     <div class="modal-dialog">
         <div class="modal-content">
-            <text class="form-control" style="background-color:#007065; height:50px;color:aliceblue;border:hidden; text-align:center;font-size:25px; padding-left:0px;border-radius:unset" id="modalTitleHistory;">
-                Thông tin hóa đơn
+            <text class="form-control" style="background-color:#007065; height:40px;color:aliceblue;border:hidden; text-align:center;font-size:20px; padding-left:0px;border-radius:unset" id="modalTitleHistory;">
+                @Rental_WebCore2.Resources.Rental_Manager.Rental.Invoice_Infor
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white; font-size:30px">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </text>
-           
+
             <div class="modal-body">
                 <form id="form">
 
                     <div class="form-group">
-                        <label for="exampleInputEmail1">STT</label>
+                        <label for="exampleInputEmail1">@Rental_WebCore2.Resources.Rental_Manager.Rental.ID_Number</label>
                         <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" value="1">
-                    </div>
 
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Ngày đóng tiền</label>
+                        <label for="exampleInputEmail1">@Rental_WebCore2.Resources.Rental_Manager.Rental.Date_Of_Payment</label>
                         <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" value="29/12/2019">
                     </div>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th>Tên phí</th>
-                                <th>Số lượng(kj)</th>
-                                <th>Đơn giá</th>
-                                <th>Đơn vị</th>
+                                <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Name_Of_Cost</th>
+                                <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Quantity</th>
+                                <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Unit_Price</th>
+                                <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Unit</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -593,19 +761,19 @@
                         </tbody>
                     </table>
                     <div class="form-group row">
-                        <label class="control-label col-md-5" style="text-align:right">Thành tiền: </label>
+                        <label class="control-label col-md-5" style="text-align:right">@Rental_WebCore2.Resources.Rental_Manager.Rental.Total_Money: </label>
                         <div class="col-md-6">
                             <input class="text-body col-md-6 " type="text" value="dsdwdwd " style="margin-left:25px">
-                            <label class="control-label col-md-4" style="text-align:right">Đồng/tháng</label> 
+                            <label class="control-label col-md-4" style="text-align:right">Đồng/tháng</label>
                         </div>
-                        
+
                     </div>
 
 
                 </form>
                 <div class="modal-footer">
-                    <a class="btn btn-primary" style="background-color: #007065;color:white">Lưu</a>
-                    <button class="btn btn-primary" style="background-color: #007065;color:white" data-dismiss="modal">Hủy</button>
+                    <a class="btn btn-primary" style="background-color: #007065;color:white">@Rental_WebCore2.Resources.Rental_Manager.Rental.Save</a>
+                    <button class="btn btn-primary" style="background-color: #007065;color:white" data-dismiss="modal">@Rental_WebCore2.Resources.Rental_Manager.Rental.Cancel</button>
                 </div>
             </div>
         </div>
@@ -615,50 +783,46 @@
 <div class="modal fade" id="myModalMoreTenants">
     <div class="modal-dialog">
         <div class="modal-content">
-            <text class="form-control" style="background-color:#007065; height:50px;color:aliceblue;border:hidden; text-align:center;font-size:25px; padding-left:0px;border-radius:unset" id="modalTitleMoreTenants;">
-                Thêm người cùng thuê
+            <text class="form-control" style="background-color:#007065; height:40px;color:aliceblue;border:hidden; text-align:center;font-size:20px; padding-left:0px;border-radius:unset" id="modalTitleMoreTenants;">
+                @Rental_WebCore2.Resources.Rental_Manager.Rental.Add_Tenants
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white; font-size:30px">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </text>
             <p></p>
-            <div class="tile-body">
+            <div class="tile-body col-12">
                 <form class="form-horizontal">
-                    <div class="form-group row">
-                        <label class="control-label col-md-4" style="padding-left:40px">Tên khách thuê</label>
-                        <div class="col-md-8">
-                            <input class="text-body col-md-8 " type="text" value=" ">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="control-label col-md-4" style="padding-left:40px">Điện thoại</label>
-                        <div class="col-md-8">
-                            <input class="text-body col-md-8 " type="text" value=" ">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="control-label col-md-4" style="padding-left:40px">CMND</label>
-                        <div class="col-md-8">
-                            <input class="text-body col-md-8 " type="text" value=" ">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="control-label col-md-4" style="padding-left:40px">Email</label>
-                        <div class="col-md-8">
-                            <input class="text-body col-md-8 " type="text" value=" ">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="control-label col-md-3" style="padding-left:40px">Ghi chú</label>
-                        <div class="col-md-9">
-                            <textarea class="text-body" rows="4" placeholder="Note" style="width:290px"></textarea>
-                        </div>
+                    <table class="table table-bordered" border="1" style="border-color:black;">
+                        <thead>
+                            <tr>
+                                <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Customer_Name</th>
+                                <th><input class="text-body col-md-10 " type="text" value=""></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Phone_Number</th>
+                                <th><input class="text-body col-md-10 " type="text" value=""></th>
+                            </tr>
+                            <tr>
+                                <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Identity_Card</th>
+                                <th> <input class="text-body col-md-10 " type="text" value=""></th>
+                            </tr>
+                            <tr>
+                                <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Email</th>
+                                <th> <input class="text-body col-md-10 " type="text" value=""></th>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <label class="control-label col-md-3">@Rental_WebCore2.Resources.Rental_Manager.Rental.Note</label>
+                    <div style="margin-top:0px">
+                        <textarea class="text-body col-12" rows="4" placeholder=@Rental_WebCore2.Resources.Rental_Manager.Rental.Note></textarea>
                     </div>
                 </form>
 
                 <div class="modal-footer">
-                    <a class="btn btn-primary" style="background-color: #007065;color:white">Lưu</a>
-                    <button class="btn btn-primary" style="background-color: #007065;color:white" data-dismiss="modal">Hủy</button>
+                    <a class="btn btn-primary" style="background-color: #007065;color:white">@Rental_WebCore2.Resources.Rental_Manager.Rental.Save</a>
+                    <button class="btn btn-primary" style="background-color: #007065;color:white" data-dismiss="modal">@Rental_WebCore2.Resources.Rental_Manager.Rental.Cancel</button>
                 </div>
             </div>
         </div>
@@ -669,55 +833,47 @@
 <div class="modal fade" id="myModalExpedincy">
     <div class="modal-dialog">
         <div class="modal-content">
-            <text class="form-control" style="background-color:#007065; height:50px;color:aliceblue;border:hidden; text-align:center;font-size:25px; padding-left:0px;border-radius:unset" id="modalTitleExpedincy;">
-                Thêm phương tiện
+            <text class="form-control" style="background-color:#007065; height:40px;color:aliceblue;border:hidden; text-align:center;font-size:20px; padding-left:0px;border-radius:unset" id="modalTitleExpedincy;">
+                @Rental_WebCore2.Resources.Rental_Manager.Rental.Add_Transport
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white; font-size:30px">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </text>
-           
+
             <div class="modal-body">
                 <form id="form">
+
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Tên xe</label>
+                        <label for="exampleInputEmail1">@Rental_WebCore2.Resources.Rental_Manager.Rental.Car_Name</label>
                         <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập tên xe">
-                    </div>
 
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Biển số xe</label>
+                        <label for="exampleInputEmail1">@Rental_WebCore2.Resources.Rental_Manager.Rental.License_Plate</label>
                         <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập biển số xe">
-                    </div>
 
-                    <div class="form-group">
-                        <label for="exampleSelect1">Loại</label>
+                        <label for="exampleSelect1">@Rental_WebCore2.Resources.Rental_Manager.Rental.Car_Type</label>
                         <select class="form-control" id="exampleSelect1">
                             <option>Xe số</option>
                             <option>Xe tay ga</option>
                             <option>Xe 3 bánh</option>
                             <option>Xe 4 bánh</option>
                         </select>
-                    </div>
 
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Chủ phương tiện</label>
+                        <label for="exampleInputEmail1">@Rental_WebCore2.Resources.Rental_Manager.Rental.Vehicle_Owner</label>
                         <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập chủ phương tiện">
+
+
                     </div>
 
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Màu xe</label>
-                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập màu xe">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Phí dịch vụ xe</label>
-                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập phí dịch vụ xe">
-                    </div>
+                    @*<div class="form-group">
+                            <label for="exampleInputEmail1">@Rental_WebCore2.Resources.Rental_Manager.Rental.Car_Service_Fee</label>
+                            <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập phí dịch vụ xe">
+                        </div>*@
 
 
                 </form>
                 <div class="modal-footer">
-                    <a class="btn btn-primary" style="background-color: #007065;color:white">Lưu</a>
-                    <button class="btn btn-primary" style="background-color: #007065;color:white" data-dismiss="modal">Hủy</button>
+                    <a class="btn btn-primary" style="background-color: #007065;color:white">@Rental_WebCore2.Resources.Rental_Manager.Rental.Save</a>
+                    <button class="btn btn-primary" style="background-color: #007065;color:white" data-dismiss="modal">@Rental_WebCore2.Resources.Rental_Manager.Rental.Cancel</button>
                 </div>
             </div>
         </div>
@@ -726,12 +882,27 @@
 
 @*  *@
 <script>
+    function SettingPriceSerice(SettingPriceService) {
+        $("#form")[0].reset();
+        $("#modalTitleSettingPriceService").html("Cài đặt bảng giá dịch vụ");
+        $("#myModalSettingPriceService").modal();
+    }
     function AddService(addservice) {
         $("#form")[0].reset();
-        $("#modalTitleService").html("Thêm dịch vụ");
+        $("#modalService").html("Thêm dịch vụ");
         $("#myModalService").modal();
     }
+    function EnterPriceService(EnterPriceService) {
+        $("#form")[0].reset();
+        $("#modalPriceService").html("Nhâp đơn giá dịch vụ");
+        $("#myModalPriceService").modal();
+    }
 
+    function Liquidation_Contract(viewhistory) {
+        $("#form")[0].reset();
+        $("#modalTitleLiquidate_Contract").html("Thanh lý hợp đồng");
+        $("#myModalLiquidate_Contract").modal();
+    }
     function AddMoreTenants(addpeople) {
         $("#form")[0].reset();
         $("#modalTitleMoreTenants").html("Thêm người cùng thuê");
@@ -743,7 +914,7 @@
         $("#modalTitleMoreTenants").html("Chỉnh sửa thông tin");
         $("#myModalMoreTenants").modal();
     }
-       
+
     function AddExpediency(addExpedincy) {
         $("#form")[0].reset();
         $("#modalTitleExpedincy").html("Thêm phương tiện");

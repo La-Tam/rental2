@@ -225,4 +225,250 @@
   <data name="Update_Pro" xml:space="preserve">
     <value>Cập nhật bất động sản</value>
   </data>
+  <data name="DBDS" xml:space="preserve">
+    <value>Duyệt Bất Động Sản</value>
+  </data>
+  <data name="QLTK" xml:space="preserve">
+    <value>Quản lý Tài Khoản</value>
+  </data>
+  <data name="Dia_Chi" xml:space="preserve">
+    <value>Địa Chỉ</value>
+  </data>
+  <data name="Hanh_Dong" xml:space="preserve">
+    <value>Hành Động</value>
+  </data>
+  <data name="Loai_Hinh" xml:space="preserve">
+    <value>Loại Hình</value>
+  </data>
+  <data name="Ten_DA" xml:space="preserve">
+    <value>Tên Dự Án</value>
+  </data>
+  <data name="Trang_Thai" xml:space="preserve">
+    <value>Trạng Thái</value>
+  </data>
+  <data name="Main" xml:space="preserve">
+    <value>Danh sách bảo trì</value>
+  </data>
+  <data name="Main_Man" xml:space="preserve">
+    <value>Quản lý bảo trì</value>
+  </data>
+  <data name="cscuoi" xml:space="preserve">
+    <value>Cs Cuối</value>
+  </data>
+  <data name="csdau" xml:space="preserve">
+    <value>Cs đầu</value>
+  </data>
+  <data name="dongia" xml:space="preserve">
+    <value>Đơn Giá</value>
+  </data>
+  <data name="example" xml:space="preserve">
+    <value>Những sản phẩm còn 1-&gt;5 ngày đến ngày đóng tiền và sản phẩm chưa đóng tiền</value>
+  </data>
+  <data name="ghichu" xml:space="preserve">
+    <value>Ghi Chú</value>
+  </data>
+  <data name="giamgia" xml:space="preserve">
+    <value>Giảm Giá</value>
+  </data>
+  <data name="hesodieuchinh" xml:space="preserve">
+    <value>Hệ Số Điều Chỉnh</value>
+  </data>
+  <data name="loaiphi" xml:space="preserve">
+    <value>Loại Phí</value>
+  </data>
+  <data name="Loctheonha" xml:space="preserve">
+    <value>Lọc Theo Nhà</value>
+  </data>
+  <data name="Loctheotrangthai" xml:space="preserve">
+    <value>Lọc Theo Trạng Thái</value>
+  </data>
+  <data name="nguoithanhtoan" xml:space="preserve">
+    <value>Người Thanh Toán</value>
+  </data>
+  <data name="QLTC" xml:space="preserve">
+    <value>Quản lý thu chi</value>
+  </data>
+  <data name="soluong" xml:space="preserve">
+    <value>Số Lượng</value>
+  </data>
+  <data name="sotien" xml:space="preserve">
+    <value>Số Tiền</value>
+  </data>
+  <data name="taohoadon" xml:space="preserve">
+    <value>Tạo Hóa Đơn</value>
+  </data>
+  <data name="tenduan" xml:space="preserve">
+    <value>Tên Dự Án</value>
+  </data>
+  <data name="tenkhachthue" xml:space="preserve">
+    <value>Tên Khách Thuê</value>
+  </data>
+  <data name="tentoanha" xml:space="preserve">
+    <value>Tên Tòa Nhà</value>
+  </data>
+  <data name="thangdong" xml:space="preserve">
+    <value>Tháng Đóng</value>
+  </data>
+  <data name="thanhtien" xml:space="preserve">
+    <value>Thành Tiền</value>
+  </data>
+  <data name="thanhtoanbang" xml:space="preserve">
+    <value>Thanh Toán Bằng</value>
+  </data>
+  <data name="thongtinhoadon" xml:space="preserve">
+    <value>Thông Tin Hóa Đơn</value>
+  </data>
+  <data name="tongcong" xml:space="preserve">
+    <value>Tổng Cổng</value>
+  </data>
+  <data name="tongsaugiamgia" xml:space="preserve">
+    <value>Tổng Sau Giảm Giá</value>
+  </data>
+  <data name="tongtien" xml:space="preserve">
+    <value>Tổng Tiền</value>
+  </data>
+  <data name="Approve" xml:space="preserve">
+    <value>Cho phép</value>
+  </data>
+  <data name="bangdichvu" xml:space="preserve">
+    <value>Bảng Dịch Vụ</value>
+  </data>
+  <data name="chiphi" xml:space="preserve">
+    <value>Chi phí</value>
+  </data>
+  <data name="chontenduan" xml:space="preserve">
+    <value>chọn tên dự án</value>
+  </data>
+  <data name="donvi" xml:space="preserve">
+    <value>Đơn vị</value>
+  </data>
+  <data name="DSBTSC" xml:space="preserve">
+    <value>Danh sách bảo trì sữa chữa</value>
+  </data>
+  <data name="loaidichvu" xml:space="preserve">
+    <value>Loại dịch vụ</value>
+  </data>
+  <data name="ngaycapnhat" xml:space="preserve">
+    <value>Ngày cập nhật</value>
+  </data>
+  <data name="nguoisuachua" xml:space="preserve">
+    <value>Người sữa chữa</value>
+  </data>
+  <data name="noidung" xml:space="preserve">
+    <value>Nội dung</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Mật khẩu</value>
+  </data>
+  <data name="QLDV" xml:space="preserve">
+    <value>Quản lý dịch vụ</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Tìm kiếm</value>
+  </data>
+  <data name="taisan" xml:space="preserve">
+    <value>Tài sản</value>
+  </data>
+  <data name="them" xml:space="preserve">
+    <value>Thêm</value>
+  </data>
+  <data name="themdichvu" xml:space="preserve">
+    <value>Thêm dịch vụ</value>
+  </data>
+  <data name="UserID" xml:space="preserve">
+    <value>ID người dùng</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>Tên người dùng</value>
+  </data>
+  <data name="xem" xml:space="preserve">
+    <value>Xem</value>
+  </data>
+  <data name="xoa" xml:space="preserve">
+    <value>xóa</value>
+  </data>
+  <data name="chinhsua" xml:space="preserve">
+    <value>Chỉnh sửa</value>
+  </data>
+  <data name="conloai" xml:space="preserve">
+    <value>Còn lại</value>
+  </data>
+  <data name="danhsachphieuthu" xml:space="preserve">
+    <value>Danh sách phiếu thu</value>
+  </data>
+  <data name="dathanhtoan" xml:space="preserve">
+    <value>Đã thanh toán</value>
+  </data>
+  <data name="duan" xml:space="preserve">
+    <value>Dự án</value>
+  </data>
+  <data name="Form_date" xml:space="preserve">
+    <value>Từ ngày</value>
+  </data>
+  <data name="hanthanhtoan" xml:space="preserve">
+    <value>Hạn thanh toán</value>
+  </data>
+  <data name="hoadontiencoc" xml:space="preserve">
+    <value>Hóa đơn tiền cọc</value>
+  </data>
+  <data name="khachthue" xml:space="preserve">
+    <value>Khách thuê</value>
+  </data>
+  <data name="loaichungtu" xml:space="preserve">
+    <value>Loại chứng từ</value>
+  </data>
+  <data name="loaisanpham" xml:space="preserve">
+    <value>Loại sản phẩm</value>
+  </data>
+  <data name="Ma" xml:space="preserve">
+    <value>Mã</value>
+  </data>
+  <data name="machungtu" xml:space="preserve">
+    <value>Mã chứng từ</value>
+  </data>
+  <data name="mahopdong" xml:space="preserve">
+    <value>Mã hợp đồng</value>
+  </data>
+  <data name="Nam" xml:space="preserve">
+    <value>Năm</value>
+  </data>
+  <data name="ngaychungtu" xml:space="preserve">
+    <value>Ngày chứng từ</value>
+  </data>
+  <data name="Ngaytao" xml:space="preserve">
+    <value>Ngày tạo</value>
+  </data>
+  <data name="ngaythu" xml:space="preserve">
+    <value>Ngày thu</value>
+  </data>
+  <data name="nha" xml:space="preserve">
+    <value>Nhà</value>
+  </data>
+  <data name="Noidungthuphi" xml:space="preserve">
+    <value>Nội dung thu phí</value>
+  </data>
+  <data name="print" xml:space="preserve">
+    <value>In</value>
+  </data>
+  <data name="sotienthanhtoan" xml:space="preserve">
+    <value>Số tiền thanh toán</value>
+  </data>
+  <data name="tensanpham" xml:space="preserve">
+    <value>Tên sản phẩm</value>
+  </data>
+  <data name="Thang" xml:space="preserve">
+    <value>Tháng</value>
+  </data>
+  <data name="thanhtoan" xml:space="preserve">
+    <value>Thanh toán</value>
+  </data>
+  <data name="thanhtoanhoadon" xml:space="preserve">
+    <value>Thanh toán hóa đơn</value>
+  </data>
+  <data name="thongtinsanpham" xml:space="preserve">
+    <value>Thông tin sản phẩm</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
 </root>

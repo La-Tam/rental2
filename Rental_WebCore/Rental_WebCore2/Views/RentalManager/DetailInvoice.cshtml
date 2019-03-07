@@ -1,0 +1,228 @@
+﻿
+@{
+    ViewBag.Title = "DetailInvoice";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main class="app-content">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="tile">
+                <h2>@Rental_WebCore2.Resources.RentalTexts.thongtinhoadon</h2>
+                <table class="table table-bordered" border="1">
+                    <thead>
+                        <tr>
+                            <th style="background-color:lavender">@Rental_WebCore2.Resources.RentalTexts.Trang_Thai</th>
+                            <th><a style="background-color:chocolate">quá hạn</a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th style="background-color:lavender">@Rental_WebCore2.Resources.RentalTexts.hanthanhtoan</th>
+                            <th>21/02/2019</th>
+                        </tr>
+                        <tr>
+                            <th style="background-color:lavender">@Rental_WebCore2.Resources.RentalTexts.Ma</th>
+                            <th>PT009837</th>
+                        </tr>
+                        <tr>
+                            <th style="background-color:lavender">@Rental_WebCore2.Resources.RentalTexts.Ngaytao</th>
+                            <th>21/02/2019</th>
+                        </tr>
+                        <tr>
+                            <th style="background-color:lavender">@Rental_WebCore2.Resources.RentalTexts.Noidungthuphi</th>
+                            <th>Thu phí thuê & dịch vụ</th>
+                        </tr>
+                        <tr>
+                            <th style="background-color:lavender">@Rental_WebCore2.Resources.RentalTexts.Thang</th>
+                            <th>2</th>
+                        </tr>
+                        <tr>
+                            <th style="background-color:lavender">@Rental_WebCore2.Resources.RentalTexts.Nam</th>
+                            <th>2019</th>
+                        </tr>
+                        <tr>
+                            <th style="background-color:lavender">@Rental_WebCore2.Resources.RentalTexts.sotien</th>
+                            <th>6.430.000</th>
+                        <tr>
+                            <th style="background-color:lavender">@Rental_WebCore2.Resources.RentalTexts.dathanhtoan</th>
+                            <th>0</th>
+                        </tr>
+                        <tr>
+                            <th style="background-color:lavender">@Rental_WebCore2.Resources.RentalTexts.conloai</th>
+                            <th>6.430.000</th>
+                        </tr>
+                        <tr>
+                            <th style="background-color:lavender">@Rental_WebCore2.Resources.RentalTexts.ghichu</th>
+                            <th>Hóa đơn thu tiền hợp đồng mới!</th>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table table-bordered">
+                    <tr style="background-color:lavender">
+                        <th>STT</th>
+                        <th>@Rental_WebCore2.Resources.RentalTexts.loaiphi</th>
+                        <th>@Rental_WebCore2.Resources.RentalTexts.csdau</th>
+                        <th>@Rental_WebCore2.Resources.RentalTexts.cscuoi</th>
+                        <th>@Rental_WebCore2.Resources.RentalTexts.soluong</th>
+                        <th>@Rental_WebCore2.Resources.RentalTexts.dongia</th>
+                        <th>@Rental_WebCore2.Resources.RentalTexts.sotien</th>
+                        <th>@Rental_WebCore2.Resources.RentalTexts.hesodieuchinh</th>
+                        <th>@Rental_WebCore2.Resources.RentalTexts.thanhtien</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>tiền cọc</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>1</th>
+                        <th>50000000</th>
+                        <th>50000000</th>
+                        <th>1</th>
+                        <th>50000000</th>
+                    </tr>
+                </table>
+                <table class="table table-bordered">
+                    <tr>
+                        <th>
+                            <text style="font-weight:bold;font-size:16px">@Rental_WebCore2.Resources.RentalTexts.tongtien</text>
+                        </th>
+                        <th>
+                            <text style="font-weight:bold;font-size:16px">6430000</text>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <text style="font-weight:bold;font-size:16px">@Rental_WebCore2.Resources.RentalTexts.giamgia</text>
+                        </th>
+                        <th>
+                            <text style="font-weight:bold;font-size:16px">0</text>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <text style="font-weight:bold;font-size:16px">@Rental_WebCore2.Resources.RentalTexts.tongsaugiamgia</text>
+                        </th>
+                        <th>
+                            <text style="font-weight:bold;font-size:16px">6430000</text>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <text style="font-weight:bold;font-size:16px">VAT (0%)</text>
+                        </th>
+                        <th>
+                            <text style="font-weight:bold;font-size:16px">0</text>
+                        </th>
+                    </tr>
+                </table>
+                <a class="btn btn-primary icon-btn" style="background-color:#007d71; margin-top:25px;color:white"><i class="fa fa-edit"></i>@Rental_WebCore2.Resources.RentalTexts.chinhsua</a>
+                <a class="btn btn-primary icon-btn" style="background-color:#007d71; margin-top:25px;color:white" onclick="Pay(0)"><i class="glyphicon glyphicon-piggy-bank"></i>     @Rental_WebCore2.Resources.RentalTexts.thanhtoan</a>
+                <a class="btn btn-primary icon-btn" style="background-color:aliceblue; margin-top:25px;color:red"><i class="fa fa-trash"></i>@Rental_WebCore2.Resources.RentalTexts.xoa</a>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="tile">
+                <h2>@Rental_WebCore2.Resources.RentalTexts.thongtinsanpham</h2>
+                <table class="table table-bordered">
+                    <tr>
+                        <th style="background-color:lavender">
+                            @Rental_WebCore2.Resources.RentalTexts.duan
+                        </th>
+                        <th>
+                            Nhà Trắng
+                        </th>
+                    </tr>
+                    <tr>
+                        <th style="background-color:lavender">
+                            @Rental_WebCore2.Resources.RentalTexts.nha
+                        </th>
+                        <th>
+                            Nhà Khách
+                        </th>
+                    </tr>
+                    <tr>
+                        <th style="background-color:lavender">
+                            @Rental_WebCore2.Resources.RentalTexts.loaisanpham
+                        </th>
+                        <th>
+                            Phong đơn
+                        </th>
+                    </tr>
+                    <tr>
+                        <th style="background-color:lavender">
+                            @Rental_WebCore2.Resources.RentalTexts.tensanpham
+                        </th>
+                        <th>
+                            P005
+                        </th>
+                    </tr>
+                    <tr>
+                        <th style="background-color:lavender">
+                            @Rental_WebCore2.Resources.RentalTexts.khachthue
+                        </th>
+                        <th>
+                            Nguyễn Văn A
+                        </th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+<!--Thanh Toán-->
+
+<div class="modal fade" id="Mymodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <text class="form-control" style="background-color:#007065; height:50px;color:aliceblue;border:hidden; text-align:center;font-size:25px; padding-left:0px;border-radius:unset" id="modalTitle ;">
+                @Rental_WebCore2.Resources.RentalTexts.thanhtoanhoadon
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white; font-size:30px">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </text>
+            <div class="modal-header">
+            </div>
+            <div class="modal-body">
+                <form id="form">
+                    <div class="form-group">
+                        <label for="exampleSelect1"> @Rental_WebCore2.Resources.RentalTexts.ngaythu</label>
+                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleSelect1"> @Rental_WebCore2.Resources.RentalTexts.nguoithanhtoan</label>
+                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleSelect1"> @Rental_WebCore2.Resources.RentalTexts.sotienthanhtoan</label>
+                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleSelect1"> @Rental_WebCore2.Resources.RentalTexts.loaiphi</label>
+                        <select data-val="true" class="form-control" id="Type" name="Type" aria-required="true" aria-describedby="Type-error" aria-invalid="false">
+                            <option>Tiền mặt</option>
+                            <option>Chuyển Khoản</option>
+                        </select>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <a class="btn btn-primary" style="background-color: #007065;color:white"> @Rental_WebCore2.Resources.RentalTexts.Save</a>
+                    <button class="btn btn-primary" style="background-color: #007065;color:white" data-dismiss="modal"> @Rental_WebCore2.Resources.RentalTexts.Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function Pay(PayID) {
+        $("#form")[0].reset();
+        $("#modalTitle").html("Thanh Toán");
+        $("#Mymodal").modal();
+    }
+</script>
+
+
+

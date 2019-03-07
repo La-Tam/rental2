@@ -5,15 +5,49 @@ using System.Linq;
 using System.Threading;
 using System.Web;
 using System.Web.Mvc;
-namespace Rental_WebCore.Controllers
+
+namespace Rental_WebCore2.Controllers
 {
     public class RentalManagerController : Controller
     {
-        public ActionResult DashboardIndex()
+        // GET: RentalManager
+        public ActionResult DashboardIndex(string language)
         {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(language);
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);
+            return View();
+        }
+        public ActionResult ContractAboutExp(string language)
+        {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(language);
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);
             return View();
         }
         public ActionResult ContractIndex(string language)
+        {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(language);
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);
+            return View();
+        }
+        public ActionResult ContractLiquiddate(string language)
+        {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(language);
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);
+            return View();
+        }
+        public ActionResult CreateContract(string language)
+        {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(language);
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);
+            return View();
+        }
+        public ActionResult CreateInvoice(string language)
+        {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(language);
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);
+            return View();
+        }
+        public ActionResult DetailContract(string language)
         {
             Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(language);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);
@@ -31,35 +65,36 @@ namespace Rental_WebCore.Controllers
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);
             return View();
         }
-        public ActionResult ServicePriceSettingIndex(string language)
+        public ActionResult ServiceSettingIndex(string language)
         {
             Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(language);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);
             return View();
         }
-        public ActionResult CreatContract(string language)
+        public ActionResult ViewService(string language)
         {
             Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(language);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);
             return View();
         }
-        public ActionResult DetailContract(string language)
+        public ActionResult DetailInvoice(string language)
         {
             Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(language);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);
             return View();
         }
-        public ActionResult CreatInvoice(string language)
+        public ActionResult Depositinvoice(string language)
         {
             Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(language);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);
             return View();
         }
-        public ActionResult CreatService(string language)
+        public ActionResult Nodepositinvoice(string language)
         {
             Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(language);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);
             return View();
         }
+
     }
 }

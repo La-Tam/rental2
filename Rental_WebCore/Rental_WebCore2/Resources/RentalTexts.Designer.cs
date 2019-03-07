@@ -88,6 +88,15 @@ namespace Rental_WebCore2.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Approve.
+        /// </summary>
+        public static string Approve {
+            get {
+                return ResourceManager.GetString("Approve", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Asset Allocation.
         /// </summary>
         public static string Asset_Alloca {
@@ -115,11 +124,47 @@ namespace Rental_WebCore2.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Service table.
+        /// </summary>
+        public static string bangdichvu {
+            get {
+                return ResourceManager.GetString("bangdichvu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         public static string Cancel {
             get {
                 return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string chinhsua {
+            get {
+                return ResourceManager.GetString("chinhsua", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cost.
+        /// </summary>
+        public static string chiphi {
+            get {
+                return ResourceManager.GetString("chiphi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select the project name.
+        /// </summary>
+        public static string chontenduan {
+            get {
+                return ResourceManager.GetString("chontenduan", resourceCulture);
             }
         }
         
@@ -133,11 +178,47 @@ namespace Rental_WebCore2.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to remain.
+        /// </summary>
+        public static string conloai {
+            get {
+                return ResourceManager.GetString("conloai", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Contract.
         /// </summary>
         public static string Contract {
             get {
                 return ResourceManager.GetString("Contract", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last Index.
+        /// </summary>
+        public static string cscuoi {
+            get {
+                return ResourceManager.GetString("cscuoi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to First Index.
+        /// </summary>
+        public static string csdau {
+            get {
+                return ResourceManager.GetString("csdau", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to List of receipts.
+        /// </summary>
+        public static string danhsachphieuthu {
+            get {
+                return ResourceManager.GetString("danhsachphieuthu", resourceCulture);
             }
         }
         
@@ -151,11 +232,74 @@ namespace Rental_WebCore2.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Paid.
+        /// </summary>
+        public static string dathanhtoan {
+            get {
+                return ResourceManager.GetString("dathanhtoan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Browse Real Estate.
+        /// </summary>
+        public static string DBDS {
+            get {
+                return ResourceManager.GetString("DBDS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Address.
+        /// </summary>
+        public static string Dia_Chi {
+            get {
+                return ResourceManager.GetString("Dia_Chi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to District.
         /// </summary>
         public static string District {
             get {
                 return ResourceManager.GetString("District", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unit price.
+        /// </summary>
+        public static string dongia {
+            get {
+                return ResourceManager.GetString("dongia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unit.
+        /// </summary>
+        public static string donvi {
+            get {
+                return ResourceManager.GetString("donvi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Maintenance List.
+        /// </summary>
+        public static string DSBTSC {
+            get {
+                return ResourceManager.GetString("DSBTSC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Project.
+        /// </summary>
+        public static string duan {
+            get {
+                return ResourceManager.GetString("duan", resourceCulture);
             }
         }
         
@@ -169,6 +313,15 @@ namespace Rental_WebCore2.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Email.
+        /// </summary>
+        public static string Email {
+            get {
+                return ResourceManager.GetString("Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enligsh.
         /// </summary>
         public static string Enligsh {
@@ -178,11 +331,83 @@ namespace Rental_WebCore2.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Products with 1-&gt; 5 days up to the date of payment and unpaid products.
+        /// </summary>
+        public static string example {
+            get {
+                return ResourceManager.GetString("example", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Financial Management.
         /// </summary>
         public static string Fin_Man {
             get {
                 return ResourceManager.GetString("Fin_Man", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Form date.
+        /// </summary>
+        public static string Form_date {
+            get {
+                return ResourceManager.GetString("Form_date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Note.
+        /// </summary>
+        public static string ghichu {
+            get {
+                return ResourceManager.GetString("ghichu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Discount.
+        /// </summary>
+        public static string giamgia {
+            get {
+                return ResourceManager.GetString("giamgia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Action.
+        /// </summary>
+        public static string Hanh_Dong {
+            get {
+                return ResourceManager.GetString("Hanh_Dong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment term.
+        /// </summary>
+        public static string hanthanhtoan {
+            get {
+                return ResourceManager.GetString("hanthanhtoan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adjustment Factor.
+        /// </summary>
+        public static string hesodieuchinh {
+            get {
+                return ResourceManager.GetString("hesodieuchinh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deposit invoice.
+        /// </summary>
+        public static string hoadontiencoc {
+            get {
+                return ResourceManager.GetString("hoadontiencoc", resourceCulture);
             }
         }
         
@@ -205,11 +430,236 @@ namespace Rental_WebCore2.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Rented guests.
+        /// </summary>
+        public static string khachthue {
+            get {
+                return ResourceManager.GetString("khachthue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Type_Project.
+        /// </summary>
+        public static string Loai_Hinh {
+            get {
+                return ResourceManager.GetString("Loai_Hinh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Type of voucher.
+        /// </summary>
+        public static string loaichungtu {
+            get {
+                return ResourceManager.GetString("loaichungtu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Service.
+        /// </summary>
+        public static string loaidichvu {
+            get {
+                return ResourceManager.GetString("loaidichvu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fee Type.
+        /// </summary>
+        public static string loaiphi {
+            get {
+                return ResourceManager.GetString("loaiphi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product Type.
+        /// </summary>
+        public static string loaisanpham {
+            get {
+                return ResourceManager.GetString("loaisanpham", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter by house.
+        /// </summary>
+        public static string Loctheonha {
+            get {
+                return ResourceManager.GetString("Loctheonha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter by status.
+        /// </summary>
+        public static string Loctheotrangthai {
+            get {
+                return ResourceManager.GetString("Loctheotrangthai", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ID.
+        /// </summary>
+        public static string Ma {
+            get {
+                return ResourceManager.GetString("Ma", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Voucher-ID.
+        /// </summary>
+        public static string machungtu {
+            get {
+                return ResourceManager.GetString("machungtu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ID contract.
+        /// </summary>
+        public static string mahopdong {
+            get {
+                return ResourceManager.GetString("mahopdong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to List Maintenance.
+        /// </summary>
+        public static string Main {
+            get {
+                return ResourceManager.GetString("Main", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Maintenance Manager.
+        /// </summary>
+        public static string Main_Man {
+            get {
+                return ResourceManager.GetString("Main_Man", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Year.
+        /// </summary>
+        public static string Nam {
+            get {
+                return ResourceManager.GetString("Nam", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Name of property.
         /// </summary>
         public static string Name_Pro {
             get {
                 return ResourceManager.GetString("Name_Pro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update.
+        /// </summary>
+        public static string ngaycapnhat {
+            get {
+                return ResourceManager.GetString("ngaycapnhat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Voucher-date.
+        /// </summary>
+        public static string ngaychungtu {
+            get {
+                return ResourceManager.GetString("ngaychungtu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DATE CREATED.
+        /// </summary>
+        public static string Ngaytao {
+            get {
+                return ResourceManager.GetString("Ngaytao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Collection date.
+        /// </summary>
+        public static string ngaythu {
+            get {
+                return ResourceManager.GetString("ngaythu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The repairer.
+        /// </summary>
+        public static string nguoisuachua {
+            get {
+                return ResourceManager.GetString("nguoisuachua", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payer.
+        /// </summary>
+        public static string nguoithanhtoan {
+            get {
+                return ResourceManager.GetString("nguoithanhtoan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Home.
+        /// </summary>
+        public static string nha {
+            get {
+                return ResourceManager.GetString("nha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Content.
+        /// </summary>
+        public static string noidung {
+            get {
+                return ResourceManager.GetString("noidung", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fee content.
+        /// </summary>
+        public static string Noidungthuphi {
+            get {
+                return ResourceManager.GetString("Noidungthuphi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        public static string Password {
+            get {
+                return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Print.
+        /// </summary>
+        public static string print {
+            get {
+                return ResourceManager.GetString("print", resourceCulture);
             }
         }
         
@@ -237,6 +687,33 @@ namespace Rental_WebCore2.Resources {
         public static string Province_City {
             get {
                 return ResourceManager.GetString("Province_City", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Service management.
+        /// </summary>
+        public static string QLDV {
+            get {
+                return ResourceManager.GetString("QLDV", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Revenue and Expenditure Management.
+        /// </summary>
+        public static string QLTC {
+            get {
+                return ResourceManager.GetString("QLTC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Account Managerment.
+        /// </summary>
+        public static string QLTK {
+            get {
+                return ResourceManager.GetString("QLTK", resourceCulture);
             }
         }
         
@@ -286,6 +763,15 @@ namespace Rental_WebCore2.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Search.
+        /// </summary>
+        public static string Search {
+            get {
+                return ResourceManager.GetString("Search", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Service Price Setting.
         /// </summary>
         public static string Ser_Price_Setting {
@@ -304,6 +790,33 @@ namespace Rental_WebCore2.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Quantity.
+        /// </summary>
+        public static string soluong {
+            get {
+                return ResourceManager.GetString("soluong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cost.
+        /// </summary>
+        public static string sotien {
+            get {
+                return ResourceManager.GetString("sotien", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment amount.
+        /// </summary>
+        public static string sotienthanhtoan {
+            get {
+                return ResourceManager.GetString("sotienthanhtoan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Spending.
         /// </summary>
         public static string Spend {
@@ -313,11 +826,38 @@ namespace Rental_WebCore2.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Asset.
+        /// </summary>
+        public static string taisan {
+            get {
+                return ResourceManager.GetString("taisan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create Invoice.
+        /// </summary>
+        public static string taohoadon {
+            get {
+                return ResourceManager.GetString("taohoadon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Task.
         /// </summary>
         public static string Task {
             get {
                 return ResourceManager.GetString("Task", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Project Name.
+        /// </summary>
+        public static string Ten_DA {
+            get {
+                return ResourceManager.GetString("Ten_DA", resourceCulture);
             }
         }
         
@@ -349,6 +889,168 @@ namespace Rental_WebCore2.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Name of project.
+        /// </summary>
+        public static string tenduan {
+            get {
+                return ResourceManager.GetString("tenduan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guest Name.
+        /// </summary>
+        public static string tenkhachthue {
+            get {
+                return ResourceManager.GetString("tenkhachthue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product name.
+        /// </summary>
+        public static string tensanpham {
+            get {
+                return ResourceManager.GetString("tensanpham", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Building Name.
+        /// </summary>
+        public static string tentoanha {
+            get {
+                return ResourceManager.GetString("tentoanha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Month.
+        /// </summary>
+        public static string Thang {
+            get {
+                return ResourceManager.GetString("Thang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Closed Month.
+        /// </summary>
+        public static string thangdong {
+            get {
+                return ResourceManager.GetString("thangdong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Money.
+        /// </summary>
+        public static string thanhtien {
+            get {
+                return ResourceManager.GetString("thanhtien", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pay.
+        /// </summary>
+        public static string thanhtoan {
+            get {
+                return ResourceManager.GetString("thanhtoan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment by.
+        /// </summary>
+        public static string thanhtoanbang {
+            get {
+                return ResourceManager.GetString("thanhtoanbang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pay the bill.
+        /// </summary>
+        public static string thanhtoanhoadon {
+            get {
+                return ResourceManager.GetString("thanhtoanhoadon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add.
+        /// </summary>
+        public static string them {
+            get {
+                return ResourceManager.GetString("them", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add service.
+        /// </summary>
+        public static string themdichvu {
+            get {
+                return ResourceManager.GetString("themdichvu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invoice Information.
+        /// </summary>
+        public static string thongtinhoadon {
+            get {
+                return ResourceManager.GetString("thongtinhoadon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product information.
+        /// </summary>
+        public static string thongtinsanpham {
+            get {
+                return ResourceManager.GetString("thongtinsanpham", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total.
+        /// </summary>
+        public static string tongcong {
+            get {
+                return ResourceManager.GetString("tongcong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total.
+        /// </summary>
+        public static string tongsaugiamgia {
+            get {
+                return ResourceManager.GetString("tongsaugiamgia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Money.
+        /// </summary>
+        public static string tongtien {
+            get {
+                return ResourceManager.GetString("tongtien", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Status.
+        /// </summary>
+        public static string Trang_Thai {
+            get {
+                return ResourceManager.GetString("Trang_Thai", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Type of property.
         /// </summary>
         public static string Type_Pro {
@@ -367,6 +1069,24 @@ namespace Rental_WebCore2.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to UserID.
+        /// </summary>
+        public static string UserID {
+            get {
+                return ResourceManager.GetString("UserID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UserName.
+        /// </summary>
+        public static string UserName {
+            get {
+                return ResourceManager.GetString("UserName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Vietnamese.
         /// </summary>
         public static string Vietnamese {
@@ -381,6 +1101,24 @@ namespace Rental_WebCore2.Resources {
         public static string Wards {
             get {
                 return ResourceManager.GetString("Wards", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Detail.
+        /// </summary>
+        public static string xem {
+            get {
+                return ResourceManager.GetString("xem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to deleta.
+        /// </summary>
+        public static string xoa {
+            get {
+                return ResourceManager.GetString("xoa", resourceCulture);
             }
         }
     }

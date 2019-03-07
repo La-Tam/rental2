@@ -1,0 +1,187 @@
+﻿
+@{
+    ViewData["Title"] = "SettingServiceIndex";
+}
+
+<head>
+    <link href="~/css/main.css" rel="stylesheet" />
+    <link href="~/CSS_Rental/css/rental.css" rel="stylesheet" />
+</head>
+
+<body>
+    <main class="app-content">
+        <div class="page-item" style="height: 100%;">
+
+            @* Tieu de *@
+            <div>
+                <div class="alert alert-warning" style="background-color:#009688;">
+                    <h4 style="margin-bottom:0px; text-align:center;color:aliceblue">@Rental_WebCore2.Resources.RentalTexts.QLDV</h4>
+                </div>
+            </div>
+            <div class="tile" style="height:200px">
+                <div class="tile" style="border:solid 1px;border-color:darkgray;margin-left:50px;width:500px">
+                    <h5 style="text-align:left;background-color:#009688;color:aliceblue;width:200px;padding:5px">@Rental_WebCore2.Resources.RentalTexts.chontenduan</h5>
+                    <div class="row">
+                        <select class="form-control" style="width:250px;margin-left:14px">
+                            <option>h3</option>
+                            <option>an khang</option>
+                            <option>thịnh vượng</option>
+                            <option>phát tài</option>
+                        </select>
+                        <a class="btn btn-primary" data-toggle="collapse" data-target="#demo" style="background-color: #007065;color:white;margin-left:15px">@Rental_WebCore2.Resources.RentalTexts.xem</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tile" >
+                <div id="demo" class="collapse" style="margin-top:50px">
+
+                    @* Tiêu đề *@
+                    <div>
+                        <div class="row">
+                            <div class="col-lg-11">
+                                <h4 style="margin-bottom:5px; text-align:left;color:black;">@Rental_WebCore2.Resources.RentalTexts.bangdichvu <a class="btn btn-primary" style="color:black;margin-left:80%;height:30px;" onclick="AddService(0)">@Rental_WebCore2.Resources.RentalTexts.them</a></h4>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    @*  *@
+
+                    <div>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>@Rental_WebCore2.Resources.RentalTexts.loaidichvu</th>
+                                    <th>@Rental_WebCore2.Resources.RentalTexts.dongia</th>
+                                    <th>@Rental_WebCore2.Resources.RentalTexts.donvi</th>
+                                    <th> </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Internet </td>
+                                    <td><input value="200.000" disabled="" /></td>
+                                    <td>
+                                        <select class="form-control-sm" disabled="">
+                                            <option>Đồng/Tháng </option>
+                                            <option>-Rỗng- </option>
+                                            <option>Đồng/Năm </option>
+                                            <option>Đồng/Chiếc/tháng </option>
+                                            <option>Đồng lần </option>
+                                        </select>
+                                    </td>
+                                    <td style="text-align:center;color:red"><u>Xóa</u></td>
+                                </tr>
+                                <tr>
+                                    <td>Cáp</td>
+                                    <td><input value="150.000" disabled="" /></td>
+                                    <td>
+                                        <select class="form-control-sm" disabled="">
+                                            <option>Đồng/Tháng </option>
+                                            <option>-Rỗng- </option>
+                                            <option>Đồng/Năm </option>
+                                            <option>Đồng/Chiếc/tháng </option>
+                                            <option>Đồng lần </option>
+                                        </select>
+                                    </td>
+                                    <td style="text-align:center;color:red"><u>Xóa</u></td>
+                                </tr>
+                                <tr>
+                                    <td>Đổ rác</td>
+                                    <td><input value=" 50.000" disabled="" /></td>
+                                    <td>
+                                        <select class="form-control-sm" disabled="">
+                                            <option>Đồng/Tháng </option>
+                                            <option>-Rỗng- </option>
+                                            <option>Đồng/Năm </option>
+                                            <option>Đồng/Chiếc/tháng </option>
+                                            <option>Đồng lần </option>
+                                        </select>
+                                    </td>
+                                    <td style="text-align:center;color:red"><u>Xóa</u></td>
+                                </tr>
+                                <tr>
+                                    <td>Giữ xe</td>
+                                    <td><input value="100.000" disabled="" /></td>
+                                    <td>
+                                        <select class="form-control-sm" disabled="">
+                                            <option>Đồng/Chiếc/Tháng </option>
+                                            <option>-Rỗng- </option>
+                                            <option>Đồng/Năm </option>
+                                            <option>Đồng/Tháng </option>
+                                            <option>Đồng lần </option>
+                                        </select>
+                                    </td>
+                                    <td style="text-align:center;color:red"><u>@Rental_WebCore2.Resources.RentalTexts.xoa</u></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div>
+
+                        </div>
+                    </div>
+
+                    <!---->
+
+                    <div class="modal fade" id="myModalService" style="margin-top:100px">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <text class="form-control" style="background-color:#007065; height:50px;color:aliceblue;border:hidden; text-align:center;font-size:25px; padding-left:0px;border-radius:unset" id="modalTitleService;">
+                                    @Rental_WebCore2.Resources.RentalTexts.themdichvu
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white; font-size:30px">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </text>
+                                <div class="modal-header">
+                                </div>
+                                <div class="modal-body">
+                                    <form id="form">
+
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">@Rental_WebCore2.Resources.RentalTexts.loaidichvu</label>
+                                            <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập loại dịch vụ">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">@Rental_WebCore2.Resources.RentalTexts.dongia</label>
+                                            <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập đơn giá">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">@Rental_WebCore2.Resources.RentalTexts.donvi</label>
+                                            <br />
+                                            <select class="form-control-sm">
+                                                <option>-Rỗng- </option>
+                                                <option>Đồng/Chiếc/Tháng </option>
+                                                <option>Đồng/Năm </option>
+                                                <option>Đồng/Tháng </option>
+                                                <option>Đồng lần </option>
+                                            </select>
+                                        </div>
+
+
+                                    </form>
+                                    @*  *@
+                                    <div class="modal-footer">
+                                        <a class="btn btn-primary" style="background-color: #007065;color:white">@Rental_WebCore2.Resources.RentalTexts.Save</a>
+                                        <button class="btn btn-primary" style="background-color: #007065;color:white" data-dismiss="modal">@Rental_WebCore2.Resources.RentalTexts.Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        function AddService(addservice) {
+                            $("#form")[0].reset();
+                            $("#modalTitleService").html("Thêm dịch vụ");
+                            $("#myModalService").modal();
+                        }
+                    </script>
+                </div>
+            </div>
+</main>
+    
+</body>
+

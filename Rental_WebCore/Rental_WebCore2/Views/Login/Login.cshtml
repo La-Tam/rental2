@@ -1,0 +1,123 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/wwwroot/CSS_Login_Register/LoginCSS.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="login-page">
+        <div class="form">
+            <form class="needs-validation" novalidate>
+                <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>@Rental_WebCore2.Resources.Login.Login.Login1</h3>
+                <label class="control-label" for="txtUsername">@Rental_WebCore2.Resources.Login.Login.Username</label>
+                <input type="text" class="form-control" id="txtUsername" placeholder="@Rental_WebCore2.Resources.Login.Login.Username" autofocus required />
+                <label class="control-label">@Rental_WebCore2.Resources.Login.Login.Password</label>
+                <input type="password" class="form-control" id="txtPassword" placeholder="@Rental_WebCore2.Resources.Login.Login.Password" required />
+
+
+                <input class="inp-cbx" id="cbx" type="checkbox" style="display: none;" />
+                <label class="cbx" for="cbx">
+                    <span>
+                        <svg width="12px" height="10px">
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg>
+                    </span>
+                    <span>@Rental_WebCore2.Resources.Login.Login.StaySignedIn</span>
+
+                    <a href="RegisterRental.html" style="margin-left:20px">@Rental_WebCore2.Resources.Login.Login.ForgotPassword</a>
+                    &nbsp;   &nbsp; &nbsp;
+                </label>
+                <div id="Error" class="alert alert-danger alert-dismissible collapse">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    @Rental_WebCore2.Resources.Login.Login.Error
+                </div>
+                <button id="btnLogin" type="submit" class="btn">@Rental_WebCore2.Resources.Login.Login.Login1</button>
+                <p class="message">@Rental_WebCore2.Resources.Login.Login.NotRegister <a href="@Url.Action("Register","Login")">@Rental_WebCore2.Resources.Login.Login.CreateAnAccount</a></p>
+            </form>
+
+            <br>
+            <center>
+                <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter-square fa-2x"></i></a>
+                <a href="#"><i class="fab fa-google-plus-square fa-2x"></i></a>
+            </center>
+        </div>
+        <script src="~/wwwroot/CSS_Login_Register/LoginValidation.js"></script>
+
+
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#btnLogin').click(function () {
+                $('#Error').show();
+            })
+        });
+    </script>
+
+
+    @*<script type="text/javascript">
+        $(document).ready(function () {
+            var ulDiv = $('#ulDiv');
+            var Rental = 'Rental';
+
+            $('#btnSignIn').click(function () {
+                var username = $('#inpUsername').val();
+                var password = $('#inpPassword').val();
+                $.ajax({
+                    url: "http://192.168.1.10:5001/api/login/login?DomainName=" + Rental + "&username=" + username + "&password=" + password,
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: {
+                        //DomainName: 'Rental',
+                        //username: username,
+                        //password: password
+                    },
+                    success: function (response) {
+                        //console.log(response);
+                        if (response.token) {
+                            window.location.href = "/vi/Admin/AccountManager";
+                        } else {
+                            window.location.href = "/vi";
+                        }
+                    },
+                    error: function (err) {
+                        $('#divErrorText').text("Sai thông tin đăng nhập");
+                        $('#divError').show('fade');
+                    }
+
+
+                    //    //type: 'POST',
+                    //    //url: "http://192.168.1.10:5001/api/login/login?DomainName=Rental&username=Tungnt&password=123456",
+                    //    //contentType: 'application/json',
+                    //    //dateType: 'json',
+                    //    //success: function (data) {
+                    //    //    ulDiv.empty();
+                    //    //    $.each(data, function (index, val) {
+                    //    //        var fullname = val ;
+                    //    //        ulDiv.append('<li>' + fullname + '</li>');
+                    //    //    })
+                    //    //    console.log(data);
+                    //    //    if (data.token) {
+                    //    //        window.location.href = "/vi";
+                    //    //    }
+                    //    //}
+                })
+                //window.location.href = "/vi";
+            });
+        })
+    </script>*@
+</body>
+</html>

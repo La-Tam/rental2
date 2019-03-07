@@ -1,0 +1,211 @@
+﻿
+@{
+    ViewData["Title"] = "CreatInvoice";
+}
+
+<head>
+    <link href="~/CSS_Rental/css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <main class="app-content">
+        
+        <div class="page-item" style="height: 100%;">
+
+            @* Tieu de *@
+            <div>
+                <div class="alert alert-warning" style="background-color:#009688;">
+                    <div class="row">
+                        <div class="col-lg-11">
+                            <h4 style="margin-bottom:0px;margin-left:10px;color:aliceblue">@Rental_WebCore2.Resources.RentalTexts.taohoadon</h4>
+                        </div>
+                        <div class="col-lg-1" align="right">
+                            <a class="btn-outline-primary" href="@Url.Action("InvoiceIndex","RentalManager")" >
+                                <span aria-hidden="true">
+                                    <img src="~/wwwroot/images/Rental/Contract/icons8-delete-60.png" style="width:25px" />
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                @* Thông tin hóa đơn *@
+                <div class="tile">
+                    <div class="tile">
+                        <h5>@Rental_WebCore2.Resources.RentalTexts.thongtinhoadon</h5>
+                        <hr />
+                        @*  *@
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="tile" style="border:1px solid;border-color:darkgray;">
+                                            <table class="table table-bordered" border="1" style="border-color:black;">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="background-color:lavender">@Rental_WebCore2.Resources.RentalTexts.tenduan</th>
+                                                        <th><input class="text-body col-md-8 " type="text" value="" disabled=""></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th style="background-color:lavender">@Rental_WebCore2.Resources.RentalTexts.tentoanha</th>
+                                                        <th><input class="text-body col-md-8 " type="text" value="H3" disabled=""></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th style="background-color:lavender">@Rental_WebCore2.Resources.RentalTexts.thangdong</th>
+                                                        <th> <input class="text-body col-md-8 " type="text" value="3/2019 " disabled=""></th>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                      
+                                </div>
+                            </div>
+                            @* VP *@
+                            <div class="col-md-6">
+                                <div class="tile" style="border:1px solid;border-color:darkgray;">
+                                    <div class="tile-body">
+                                        <table class="table table-bordered" border="1" style="border-color:black;">
+                                            <thead>
+                                                <tr>
+                                                    <th style="background-color:lavender">@Rental_WebCore2.Resources.RentalTexts.tenkhachthue</th>
+                                                    <th><input class="text-body col-md-8 " type="text" value="Lê Văn Đạt" disabled=""></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th style="background-color:lavender">@Rental_WebCore2.Resources.RentalTexts.nguoithanhtoan</th>
+                                                    <th><input class="text-body col-md-8 " type="text" value="Lê Văn Đạt"></th>
+                                                </tr>
+                                                <tr>
+                                                    <th style="background-color:lavender">SĐT</th>
+                                                    <th><input class="text-body col-md-8 " type="text" value="01203327195" disabled=""></th>
+                                                </tr>
+                                                <tr>
+                                                    <th style="background-color:lavender">@Rental_WebCore2.Resources.RentalTexts.thanhtoanbang</th>
+                                                    <th><select class="form-control-sm col-md-8" style="border:solid 1px;border-color:darkgray;">
+                                                        <option>Tiền mặt</option>
+                                                        <option>Chuyển khoản</option>
+                                                        </select>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th style="background-color:lavender">@Rental_WebCore2.Resources.RentalTexts.ghichu</th>
+                                                    <th><textarea class="text-body" rows="4" placeholder="Note" style="width:273px;height:50px;margin-top:2px"></textarea></th>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tile" style="margin-top:-25px;">
+                        <table class="table table-bordered">
+                            <thead style="background-color:lavender">
+                                <tr>
+                                    <th style="text-align:center;width:30px">STT</th>
+                                    <th style="width:300px;">@Rental_WebCore2.Resources.RentalTexts.loaiphi</th>
+                                    <th style="width:100px">@Rental_WebCore2.Resources.RentalTexts.dongia</th>
+                                    <th style="text-align:center;width:90px;">@Rental_WebCore2.Resources.RentalTexts.csdau</th>
+                                    <th style="text-align:center;width:90px;">@Rental_WebCore2.Resources.RentalTexts.cscuoi</th>
+                                    <th style="text-align:center;width:90px;">@Rental_WebCore2.Resources.RentalTexts.soluong</th>
+                                    <th style="text-align:center;width:90px;">@Rental_WebCore2.Resources.RentalTexts.sotien</th>
+                                    <th style="text-align:center;width:90px;">@Rental_WebCore2.Resources.RentalTexts.hesodieuchinh</th>
+                                    <th style="width:110px;">@Rental_WebCore2.Resources.RentalTexts.thanhtien</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="text-align:center;">1</td>
+                                    <td style="width:30%">Tiền phòng <select style="margin-left:14%"><option>1</option><option>2</option></select> <select ><option>2019</option><option>2020</option></select></td>
+                                    <td><input value="80000"/></td>
+                                    <td style="text-align:center;">-</td>
+                                    <td style="text-align:center;">-</td>
+                                    <td style="text-align:center;">1</td>
+                                    <td style="text-align:center;">1</td>
+                                    <td><input value="1" /></td>
+                                    <td>8.000.000</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center;">2</td>
+                                    <td style="width:30%">Tiền phòng <select style="margin-left:14%"><option>1</option><option>2</option></select> <select><option>2020</option><option>2021</option></select></td>
+                                    <td><input value="70000" /></td>
+                                    <td style="text-align:center;">100</td>
+                                    <td style="text-align:center;">200</td>
+                                    <td style="text-align:center;">-</td>
+                                    <td style="text-align:center;">1</td>
+                                    <td><input value="1" /></td>
+                                    <td>200.000</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center;">3</td>
+                                    <td style="width:30%">Tiền phòng <select style="margin-left:14%"><option>1</option><option>5</option></select> <select><option>2022</option><option>2024</option></select></td>
+                                    <td><input value="5000" /></td>
+                                    <td style="text-align:center;">100</td>
+                                    <td style="text-align:center;">120</td>
+                                    <td style="text-align:center;">-</td>
+                                    <td style="text-align:center;">1</td>
+                                    <td><input value="1" /></td>
+                                    <td>160.000</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center;">4</td>
+                                    <td style="width:30%">Tiền phòng <select style="margin-left:14%"><option>1</option><option>2</option></select> <select><option>2019</option><option>2020</option></select></td>
+                                    <td><input value="2000" /></td>
+                                    <td style="text-align:center;">-</td>
+                                    <td style="text-align:center;">-</td>
+                                    <td style="text-align:center;">1</td>
+                                    <td style="text-align:center;">1</td>
+                                    <td><input value="1" /></td>
+                                    <td>200.000</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center;">5</td>
+                                    <td style="width:30%">Tiền phòng <select style="margin-left:14%"><option>1</option><option>2</option></select> <select><option>2019</option><option>2020</option></select></td>
+                                    <td><input value="80000" /></td>
+                                    <td style="text-align:center;">-</td>
+                                    <td style="text-align:center;">-</td>
+                                    <td style="text-align:center;">1</td>
+                                    <td style="text-align:center;">1</td>
+                                    <td><input value="1" /></td>
+                                    <td>150.000</td>
+                                </tr>
+                             
+                            </tbody>
+                        </table>
+                        <table class="table table-bordered" border="0">
+                            <tr>
+                                <th style="background-color:lavender">@Rental_WebCore2.Resources.RentalTexts.tongtien</th>
+                                <th><input class="text-body " style="margin-left:70%;width:130px" type="text" value="    8.760.000" disabled=""></th>
+                            </tr>
+                            <tr>
+                                <th style="background-color:lavender">@Rental_WebCore2.Resources.RentalTexts.giamgia</th>
+                                <th><input class="text-body " style="margin-left:70%;width:130px" type="text"></th>
+                            </tr>
+                            <tr>
+                                <th style="background-color:lavender">@Rental_WebCore2.Resources.RentalTexts.tongsaugiamgia</th>
+                                <th><input class="text-body " style="margin-left:70%;width:130px" type="text" value="    8.760.000" disabled=""></th>
+                            </tr>
+                            <tr>
+                                <th style="background-color:lavender">VAT (%)</th>
+                                <th><input class="text-body " style="margin-left:70%;width:130px" type="text"></th>
+                            </tr>
+                            <tr>
+                                <th style="background-color:lavender"> VAT</th>
+                                <th><input class="text-body " style="margin-left:70%;width:130px" type="text" value="    8.760.000" disabled=""></th>
+                            </tr>
+                            <tr>
+                                <th style="background-color:lavender">@Rental_WebCore2.Resources.RentalTexts.tongcong</th>
+                                <th><input class="text-body " style="margin-left:70%;width:130px" type="text" value="    8.760.000" disabled=""></th>
+                            </tr>
+                        </table>
+                    </div>
+                    @*  *@
+                    <div >
+                        <a class="btn btn-primary" style="background-color: #007065;color:white">@Rental_WebCore2.Resources.RentalTexts.Save</a>
+                        <a class="btn btn-primary" style="background-color: #007065;color:white;margin-left:20px;" href="@Url.Action("InvoiceIndex","RentalManager")">@Rental_WebCore2.Resources.RentalTexts.Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>

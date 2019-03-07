@@ -127,13 +127,67 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\AssetManageController.cs" />
+    <Compile Include="Controllers\FinanceManagementController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MaintenanceController.cs" />
+    <Compile Include="Controllers\PricingTableController.cs" />
     <Compile Include="Controllers\PropertyController.cs" />
     <Compile Include="Controllers\RentalManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Finance\Thu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Thu.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Finance\Thu.vi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Thu.vi.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Login\Login.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Login.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Property\Property_Index.Designer.cs">
+      <DependentUpon>Property_Index.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Property\Property_Index.vi.Designer.cs">
+      <DependentUpon>Property_Index.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Property\Property_Detail.vi.Designer.cs">
+      <DependentUpon>Property_Detail.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Property\Property_Detail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Property_Detail.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Register\Register.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Register.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Register\Register.vi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Register.vi.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\RentalTexts.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -144,8 +198,80 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RentalTexts.vi.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Rental_Manager\Rental.Designer.cs" />
+    <Compile Include="Resources\Rental_Manager\Rental.vi.Designer.cs" />
+    <Compile Include="Resources\TypeAsset\TypeAsset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TypeAsset.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\Antlr3.Runtime.pdb" />
+    <Content Include="bin\Microsoft.AspNet.TelemetryCorrelation.dll" />
+    <Content Include="bin\Microsoft.AspNet.TelemetryCorrelation.xml" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\Rental_WebCore2.dll" />
+    <Content Include="bin\Rental_WebCore2.pdb" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\csi.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="bin\roslyn\System.AppContext.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Console.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.StackTrace.dll" />
+    <Content Include="bin\roslyn\System.IO.Compression.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="bin\roslyn\System.IO.Pipes.AccessControl.dll" />
+    <Content Include="bin\roslyn\System.IO.Pipes.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\System.Security.AccessControl.dll" />
+    <Content Include="bin\roslyn\System.Security.Claims.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="bin\roslyn\System.Security.Principal.Windows.dll" />
+    <Content Include="bin\roslyn\System.Text.Encoding.CodePages.dll" />
+    <Content Include="bin\roslyn\System.ValueTuple.dll" />
+    <Content Include="bin\roslyn\System.Xml.ReaderWriter.dll" />
+    <Content Include="bin\roslyn\System.Xml.XmlDocument.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="bin\System.Diagnostics.DiagnosticSource.xml" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Helpers.xml" />
+    <Content Include="bin\System.Web.Mvc.dll" />
+    <Content Include="bin\System.Web.Mvc.xml" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Optimization.xml" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\System.Web.WebPages.Deployment.xml" />
+    <Content Include="bin\System.Web.WebPages.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.xml" />
+    <Content Include="bin\vi\Rental_WebCore2.resources.dll" />
+    <Content Include="bin\WebGrease.dll" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -154,6 +280,18 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="obj\Debug\Rental_WebCore2.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Rental_WebCore2.dll" />
+    <Content Include="obj\Debug\Rental_WebCore2.pdb" />
+    <Content Include="obj\Debug\TempPE\Resources.Finance.ListSpendingTexts.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Resources.Finance.ListSpendingTexts.vi.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Resources.ListSpendingTexts.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Resources.ListSpendingTexts.vi.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Resources.RentalTexts.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Resources.RentalTexts.vi.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Resources.Rental_Manager.Rental.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Resources.Rental_Manager.Rental.vi.Designer.cs.dll" />
+    <Content Include="obj\Debug\vi\Rental_WebCore2.resources.dll" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="wwwroot\css\jquery-ui.css" />
@@ -163,6 +301,8 @@
     <Content Include="wwwroot\css\site.min.css">
       <DependentUpon>site.css</DependentUpon>
     </Content>
+    <Content Include="wwwroot\CSS_Login_Register\LoginCSS.css" />
+    <Content Include="wwwroot\CSS_Login_Register\LoginValidation.js" />
     <Content Include="wwwroot\CSS_Rental\css\main.css" />
     <Content Include="wwwroot\CSS_Rental\css\PricingTable_style.css" />
     <Content Include="wwwroot\CSS_Rental\js\PricingTable_JS.js" />
@@ -174,14 +314,17 @@
     <Content Include="wwwroot\images\favicon.ico" />
     <Content Include="wwwroot\images\iconfinder_flag-usa_748050.png" />
     <Content Include="wwwroot\images\iconfinder_flag-vietnam_748133.png" />
+    <Content Include="wwwroot\images\Rental\Contract\icons8-add-new-30.png" />
     <Content Include="wwwroot\images\Rental\Contract\icons8-add-new-filled-50.png" />
     <Content Include="wwwroot\images\Rental\Contract\icons8-checkmark-filled-50.png" />
     <Content Include="wwwroot\images\Rental\Contract\icons8-delete-60.png" />
     <Content Include="wwwroot\images\Rental\Contract\icons8-dirt-bike-30.png" />
-    <Content Include="wwwroot\images\Rental\Contract\icons8-edit-file-30.png" />
-    <Content Include="wwwroot\images\Rental\Contract\icons8-exit-30.png" />
+    <Content Include="wwwroot\images\Rental\Contract\icons8-edit-file-filled-50.png" />
+    <Content Include="wwwroot\images\Rental\Contract\icons8-exit.png" />
     <Content Include="wwwroot\images\Rental\Contract\icons8-file-delete-30.png" />
-    <Content Include="wwwroot\images\Rental\Contract\icons8-print-30.png" />
+    <Content Include="wwwroot\images\Rental\Contract\icons8-multiply-30.png" />
+    <Content Include="wwwroot\images\Rental\Contract\icons8-planner-64.png" />
+    <Content Include="wwwroot\images\Rental\Contract\icons8-print-filled-50.png" />
     <Content Include="wwwroot\images\Rental\Contract\icons8-profile-48.png" />
     <Content Include="wwwroot\images\Rental\Contract\icons8-right-24.png" />
     <Content Include="wwwroot\images\Rental\Contract\icons8-save-30.png" />
@@ -248,6 +391,23 @@
       <DependentUpon>jquery.js</DependentUpon>
     </Content>
     <Content Include="wwwroot\lib\jquery\LICENSE.txt" />
+    <Content Include="bin\Rental_WebCore2.dll.config" />
+    <Content Include="bin\roslyn\csc.exe.config" />
+    <Content Include="bin\roslyn\csc.rsp" />
+    <Content Include="bin\roslyn\csi.exe.config" />
+    <Content Include="bin\roslyn\csi.rsp" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.Managed.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\vbc.exe.config" />
+    <Content Include="bin\roslyn\vbc.rsp" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\Rental_WebCore2.csproj.CopyComplete" />
+    <Content Include="obj\Debug\Rental_WebCore2.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\Rental_WebCore2.csproj.GenerateResource.cache" />
+    <Content Include="obj\Debug\Rental_WebCore2.csprojAssemblyReference.cache" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -302,18 +462,44 @@
     <Content Include="Views\Property\Index.cshtml" />
     <Content Include="Views\Property\ListProperty.cshtml" />
     <Content Include="Views\Property\Update.cshtml" />
-    <Content Include="Views\RentalManager\ContractIndex.cshtml" />
-    <Content Include="Views\RentalManager\CreatContract.cshtml" />
-    <Content Include="Views\RentalManager\CreatInvoice.cshtml" />
-    <Content Include="Views\RentalManager\CreatService.cshtml" />
+    <Content Include="Views\AssetManage\TypeAsset.cshtml" />
+    <Content Include="Views\FinanceManagement\Chi.cshtml" />
+    <Content Include="Views\FinanceManagement\Thu.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Login\Register.cshtml" />
+    <Content Include="Views\PricingTable\Index.cshtml" />
     <Content Include="Views\RentalManager\DashboardIndex.cshtml" />
+    <Content Include="Views\RentalManager\ContractAboutExp.cshtml" />
+    <Content Include="Views\RentalManager\ContractIndex.cshtml" />
+    <Content Include="Views\RentalManager\ContractLiquiddate.cshtml" />
+    <Content Include="Views\RentalManager\CreateContract.cshtml" />
+    <Content Include="Views\RentalManager\CreateInvoice.cshtml" />
     <Content Include="Views\RentalManager\DetailContract.cshtml" />
     <Content Include="Views\RentalManager\ElectricityAndWaterIndex.cshtml" />
     <Content Include="Views\RentalManager\InvoiceIndex.cshtml" />
-    <Content Include="Views\RentalManager\ServicePriceSettingIndex.cshtml" />
+    <Content Include="Views\RentalManager\ServiceSettingIndex.cshtml" />
+    <Content Include="Views\RentalManager\ViewService.cshtml" />
+    <Content Include="Views\Maintenance\AddMaintenance.cshtml" />
+    <Content Include="Views\Maintenance\AddMaintenance1.cshtml" />
+    <Content Include="Views\Maintenance\AddTask.cshtml" />
+    <Content Include="Views\Maintenance\CreateSuppliers.cshtml" />
+    <Content Include="Views\Maintenance\DashBoarchQLBTT.cshtml" />
+    <Content Include="Views\Maintenance\DetailMaintenance.cshtml" />
+    <Content Include="Views\Maintenance\Detailtask.cshtml" />
+    <Content Include="Views\Maintenance\EditMaintenance.cshtml" />
+    <Content Include="Views\Maintenance\EditSuppliers.cshtml" />
+    <Content Include="Views\Maintenance\EditTask.cshtml" />
+    <Content Include="Views\Maintenance\Maintenance.cshtml" />
+    <Content Include="Views\Maintenance\Suppliers.cshtml" />
+    <Content Include="Views\Maintenance\Task.cshtml" />
+    <Content Include="Views\Maintenance\Text.cshtml" />
+    <Content Include="Views\Admin\AccountManager.cshtml" />
+    <Content Include="Views\Admin\BrowseRealEstate.cshtml" />
+    <Content Include="Views\Admin\_LayoutAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="bin\bin\vi\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -330,6 +516,45 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="obj\Debug\Rental_WebCore2.Resources.RentalTexts.resources" />
+    <EmbeddedResource Include="obj\Debug\Rental_WebCore2.Resources.RentalTexts.vi.resources" />
+    <EmbeddedResource Include="Resources\Finance\Thu.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Thu.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Finance\Thu.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Thu.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Login\Login.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Login.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Login\Login.vi.resx" />
+    <EmbeddedResource Include="Resources\Property\Property_Index.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Property_Index.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Property\Property_Index.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Property_Index.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Property\Property_Detail.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Property_Detail.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Property\Property_Detail.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Property_Detail.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Register\Register.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Register.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Register\Register.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Register.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\RentalTexts.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>RentalTexts.Designer.cs</LastGenOutput>
@@ -338,6 +563,13 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>RentalTexts.vi.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Rental_Manager\Rental.resx" />
+    <EmbeddedResource Include="Resources\Rental_Manager\Rental.vi.resx" />
+    <EmbeddedResource Include="Resources\TypeAsset\TypeAsset.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TypeAsset.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\TypeAsset\TypeAsset.vi.resx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

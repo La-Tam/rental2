@@ -1,44 +1,72 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "ElectricityAndWaterIndex";
 }
-
+@{
+    string[] name = new string[12];
+    int i = 0;
+}
 <head>
-    <link href="~/css/main.css" rel="stylesheet" />
-    <link href="~/CSS_Rental/css/rental.css" rel="stylesheet" />
+    <link href="~/wwwroot/CSS_Rental/css/main.css" rel="stylesheet" />
+    <style type="text/css">
+        a:hover, a:focus {
+            text-decoration: none;
+            word-wrap: break-word;
+        }
+    </style>
+
 </head>
 
 <body>
 
     <main class="app-content">
         <div class="page-item" style="height: 100%;">
+            @* Chon du an *@
 
+            <div class="form-group col-2" style="margin-left:-13px">
+                <select class="form-control" id="exampleSelect1">
+                    <option>TNN</option>
+                    <option>An Lạc</option>
+                    <option>Bình Minh</option>
+                    <option>Thiên Đường</option>
+                    <option>BBC</option>
+                </select>
+            </div>
             @* Tua de *@
             <div>
                 <div class="alert alert-warning" style="background-color:#009688;">
-                    <h4 style="margin-bottom:0px; text-align:center;color:aliceblue">QUẢN LÝ ĐIỆN NƯỚC</h4>
+                    <h5 style="margin-bottom:0px; text-align:center;color:aliceblue">@Rental_WebCore2.Resources.Rental_Manager.Rental.Electricity_Water_Management</h5>
                 </div>
             </div>
             @* Chia 2 cot *@
             <div class="row">
                 @* Cot loc *@
                 <div class="col-md-2">
-                    @* Chon du an *@
-                    <div class="form-group">
-                        <select class="form-control" id="exampleSelect1">
-                            <option>TNN</option>
-                            <option>An Lạc</option>
-                            <option>Bình Minh</option>
-                            <option>Thiên Đường</option>
-                            <option>BBC</option>
-                        </select>
+                    @* Lọc theo BĐS *@
+                    <div class="tile">
+                        <div class="widget-header">
+                            @*<h5><i class="fa fa-home" ></i> Tên nhà</h5>*@
+                            <b style="text-align:left;font-size:16px">@Rental_WebCore2.Resources.Rental_Manager.Rental.Name_Property</b>
+                        </div>
+                        <hr style="width:153px;margin-left:-20px" />
+                        <div class="widget-body">
+                            <p>
+                                <label>
+                                    <input name="REHouseId" type="radio" checked="checked">
+                                    <span> Viettel (6)</span>
+                                </label>
+                                <label>
+                                    <input name="REHouseId" type="radio" checked="checked">
+                                    <span> Vina-phone (4)</span>
+                                </label>
+                            </p>
+                        </div>
                     </div>
 
                     @* Loc theo trang thai *@
                     <div class="tile">
                         <div class="widget-header">
 
-                            <h5 style="text-align:center"> Trạng thái</h5>
+                            <b style="text-align:center;font-size:16px"> @Rental_WebCore2.Resources.Rental_Manager.Rental.Status</b>
                         </div>
                         <hr style="width:153px;margin-left:-20px" />
                         <div class="widget-body">
@@ -46,146 +74,109 @@
                                 <p>
                                     <label>
                                         <input name="Status" type="radio" checked="checked">
-                                        <span class="lbl"> tất cả (50)</span>
+                                        <span class="lbl"> @Rental_WebCore2.Resources.Rental_Manager.Rental.All (50)</span>
                                     </label>
 
                                     <label>
                                         <input name="Status" type="radio">
-                                        <span class="lbl"> đã chốt (37)</span>
+                                        <span class="lbl"> @Rental_WebCore2.Resources.Rental_Manager.Rental.Latched (37)</span>
                                     </label>
 
                                     <label>
                                         <input name="Status" type="radio">
-                                        <span class="lbl"> chưa chốt (13)</span>
+                                        <span class="lbl"> @Rental_WebCore2.Resources.Rental_Manager.Rental.Not_Yet_Latch (13)</span>
                                     </label>
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                @* Cot du lieu *@
+                @* Cột dữ liệu *@
                 <div class="col-md-10">
-                    <div class="tile" style="height:593px">
-                        <div style=" height:555px; border:1px solid ; padding:20px; overflow:auto;border-color:darkgray">
-                            <div class="tile" style="height:30px;border:solid 1px red">
-                                <p style="margin-top:-12px;color:red"><i>Những sản phẩm còn 1->5 ngày đến ngày đóng tiền</i></p>
-                            </div>
-                            <hr style="margin-top:-10px" />
-                            @* Các phòng hiện ra trong cot du lieu *@
-                            <div class="top-10 clearfix">
-                                <style>
-                                    .btn-outline-primary {
-                                        background-color: white;
-                                        color: black;
-                                        font-size: 16px;
-                                        border: solid 1px;
-                                        border-color: darkgray;
-                                        width: 171px;
-                                        height: 240px;
-                                    }
+                    <div class="tile" style="height:693px">
+                        <div class="row">
+                            <input class="app-search__input" type="Search" placeholder=@Rental_WebCore2.Resources.Rental_Manager.Rental.Search style="margin-left:17px;border:solid 1px;border-color:#009688" />
+                            <a class="btn btn-primary" style="background-color: #007065;color:white;margin-left:10px">@Rental_WebCore2.Resources.Rental_Manager.Rental.Search</a>
 
-                                    .dropbtn:hover, .dropbtn:focus {
-                                        background-color: #009688;
-                                    }
+                        </div>
+                        <br />
+                        <div class="tile" style="border:1px solid;border-color:red;height:35px;text-align:match-parent;padding-top:5px"><i style="color:red;">@Rental_WebCore2.Resources.Rental_Manager.Rental.Attention_1</i></div>
+                        <div style=" height:555px; border:1px solid black; padding:20px;margin-top:-20px; overflow:auto;border-color:darkgray">
+                                
+                            <style>
+                                .btn-outline-primary {
+                                    background-color: white;
+                                    color: #009688;
+                                    font-size: 13px;
+                                    border: solid 1px;
+                                    border-color: darkgray;
+                                    text-align: left;
+                                }
 
-                                    .dropdown-menu {
-                                        display: none;
-                                        background-color: white;
-                                        max-width: 10px;
-                                        margin-top: -150px;
-                                        margin-left: 5px;
-                                        border: solid 1px;
-                                        border-color: darkgray;
-                                    }
+                                .tile-menu {
+                                    display: none;
+                                    background-color: white;
+                                    max-width: 10px;
+                                    margin-left: 38px;
+                                    border: solid 1px;
+                                    border-color: darkgray;
+                                }
 
-                                    .dropdown a:hover {
-                                        background-color: #009688;
-                                        color: white;
-                                    }
-                                </style>
-                                <div class="row">
-                                    <div class="col-sm-3 top-5">
-                                        <div class="dropdown" id="HD">
-                                            <button class="btn btn-outline-primary " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <p>
-                                                    <img src="~/wwwroot/images/Rental/Contract/icons8-profile-48.png" /><br />
-                                                    <b>Vina-phone</b> <br>
-                                                    <b>Tầng 2</b> <br>
-                                                    <b>P.103</b> <br>
-                                                    <b>A.kien</b><br>
-                                                    <b style="font-style: italic;">8.000.000</b><br />
-                                                    <b>(Chưa ghi)</b><br />
+                                .dropbtn:hover, .dropbtn:focus {
+                                    background-color: #009688;
+                                }
 
-                                                </p>
-                                            </button>
+                                .tile a:hover {
+                                    background-color: #009688;
+                                    color: white;
+                                }
+                            </style>
+                                
 
-                                            @if (true)
+                            <div class="row">
+                                <div class="tile"style="width:100%">
+                                    @for (var k = 0; k < 4; k++)
+                                    {
+                                        <div class="row">
+                                            @for (var j = 0; j < 3; j++)
                                             {
-                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <div class="col-lg-4">
+                                                    @{name[i] = "Sản phẩm hết hạn HĐ " + (i + 1);
+                                                        <a class="list-group-item list-group-item-action"href="#" onclick="WEAW(0)" style="border-color:#009688">
+                                                            <img src="https://img.icons8.com/ios-glyphs/30/000000/services.png" style="width:30px;height:30px;margin-top:-15px;margin-left:0px" />
+                                                            <samp style="font-size:18px">P.123</samp>
+                                                            <hr style="background-color:#009688;margin-top:0px" />
+                                                            <div style="margin-top:-14px">
+                                                                <div class="row">
+                                                                    @*<samp class="list-group-item-text" style="word-break:break-word"><b>@Rental_WebCore2.Resources.Rental_Manager.Rental.Property</b>: Vina-Tel/HN3/Tầng 12/dsds/dsd/sd/s/ds/ds/dsdsd/</samp>
+                                                                    <samp class="list-group-item-text"><b>@Rental_WebCore2.Resources.Rental_Manager.Rental.Customer_ID</b>: KH000011125</samp>
+                                                                    <samp class="list-group-item-text"><b>@Rental_WebCore2.Resources.Rental_Manager.Rental.Renter</b>: Đương Tam muội</samp>
+                                                                    <samp class="list-group-item-text"><b>@Rental_WebCore2.Resources.Rental_Manager.Rental.From_date</b>: (23/1/2016)</samp>
+                                                                    <samp class="list-group-item-text"><b>@Rental_WebCore2.Resources.Rental_Manager.Rental.To_Date</b>: (22/3/2019)</samp>*@
+                                                                    <samp class="list-group-item-text"><b>@Rental_WebCore2.Resources.Rental_Manager.Rental.Status</b>: Đã chốt</samp>
 
-                                                    <a class="dropdown-item " onclick="WEAW(0)"><i>Ghi số điện và nước</i></a>
-                                                    <a class="dropdown-item " onclick="WEAW(0)"><i>Xem</i></a>
+                                                                </div>
+                                                            </div>
+                                                        </a>
 
+                                                        i = i + 1;
+                                                    }
                                                 </div>
-                                            }
-                                            else
-                                            {
-                                                <a class="dropdown-item " onclick="WEAW(0)"><i>Ghi số điện và nước</i></a>
+
                                             }
                                         </div>
-                                    </div>
-                                    @*  *@
-                                    <div class="col-sm-3 top-5">
-                                        <div class="dropdown">
-                                            <button class="btn btn-outline-primary " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <p>
-                                                    <img src="~/wwwroot/images/Rental/Contract/icons8-profile-48.png" /><br />
-                                                    <b>Vina-phone</b> <br>
-                                                    <b>Tầng 2</b> <br>
-                                                    <b>P.123</b> <br>
-                                                    <b>Nguyễn Hữu Bình</b><br>
-                                                    <b style="font-style: italic;">10.000.000</b><br />
-                                                    <b>(Chưa ghi)</b>
-                                                </p>
-                                            </button>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item"onclick="WEAW(0)" ><i>Ghi số điện và nước</i></a>
-                                                <a class="dropdown-item" onclick="WEAW(0)"<i>Xem</i></a>
+                                        <br />
+                                    }
 
-                                            </div>
-                                        </div>
-                                    </div>
-                                    @*  *@
-                                    <div class="col-sm-3 top-5">
-                                        <div class="dropdown">
-                                            <button class="btn btn-outline-primary " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <p>
-                                                    <img src="~/wwwroot/images/Rental/Contract/icons8-profile-48.png" /><br />
-                                                    <b>Vina-phone</b> <br>
-                                                    <b>Tầng 2</b> <br>
-                                                    <b>P.123</b> <br>
-                                                    <b>Trân Hữu Cảnh</b><br>
-                                                    <b style="font-style: italic;">8.000.000</b><br />
-                                                    <b>(Đã ghi)</b>
-                                                </p>
-                                            </button>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" onclick="WEAW(0)"><i>Ghi số điện và nước</i></a>
-                                                <a class="dropdown-item"onclick="WEAW(0)"><i>Xem</i></a>
-
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
+
                             </div>
 
-                            <p></p>
-                            <br />
-                            
-                            <hr style="margin-top:900px" />
+
+                            <hr style="margin-top:0px" />
                             @* tạo qua trang *@
-                            <ul class="pagination" style="margin-left:500px">
+                               
+                            <ul class="pagination"style="margin-left:265px">
                                 <li class="page-item disabled"><a class="page-link" href="#">«</a></li>
                                 <li class="page-item active"><a class="page-link" href="#">1</a></li>
                                 <li class="page-item"><a class="page-link" href="#">2</a></li>
@@ -194,10 +185,13 @@
                                 <li class="page-item"><a class="page-link" href="#">5</a></li>
                                 <li class="page-item"><a class="page-link" href="#">»</a></li>
                             </ul>
-
+                               
                         </div>
+
+                       
                     </div>
                 </div>
+
             </div>
         </div>
     </main>
@@ -206,9 +200,9 @@
 @* Ghi điện nước *@
 <div class="modal fade" id="myModalElectricityWater">
     <div class="modal-dialog">
-        <div class="modal-content"style="width:550px;height:600px;">
-            <text class="form-control" style="background-color:#007065; height:50px;color:aliceblue;border:hidden; text-align:center;font-size:25px; padding-left:0px;border-radius:unset" id="modalTitleElectricityWater;">
-                Ghi điện nước
+        <div class="modal-content" style="width:600px;height:770px;">
+            <text class="form-control" style="background-color:#007065; height:40px;color:aliceblue;border:hidden; text-align:center;font-size:20px; padding-left:0px;border-radius:unset" id="modalTitleElectricityWater;">
+                @Rental_WebCore2.Resources.Rental_Manager.Rental.Record_Electricity_Water
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white; font-size:30px">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -216,70 +210,80 @@
 
             <div class="modal-body">
                 <form id="form">
-                    <div >
-                        <text style="text-align:center" ><h4 style="color:#007065">Tên dự án >> Tên tòa nhà >> Số tầng >> Số phòng</h4></text>
-                    </div>
-                    <br />
-                    <br />
                     <div>
-                        <div class="form-group row">
-                            <label class="control-label col-md-3" style="text-align:right">Ngày tháng chốt</label>
-                            <div class="col-md-8">
-                                <input class="text-body col-md-4 " type="text" value="21/2/2019" disabled="disabled">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="control-label col-md-3" style="text-align:right">Giờ chốt</label>
-                            <div class="col-md-8">
-                                <input class="text-body col-md-4 " type="text" value="7:30 PM" disabled="disabled">
-                            </div>
-                        </div>
+                        <text style="text-align:center"><b style="color:#007065;font-size:16px">Tên dự án >> Tên BĐS >> Nhà >> Số tầng >> Số phòng</b></text>
                     </div>
-                    <hr />
+                    <p></p>
                     <div>
-                        <table class="table table-bordered">
+                        <table class="table table-bordered" border="1" style="border-color:black;">
                             <thead>
                                 <tr>
-                                    
-                                    <th style="background-color:darkgray">Chỉ số</th>
-                                    <th style="background-color:darkgray">Chỉ số đầu</th>
-                                    <th style="background-color:darkgray">Chỉ số cuối</th>
-                                    
+                                    <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Latch_For_Month</th>
+                                    <th><input class="text-body col-md-6 " type="month" value=""></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                
+                                <tr>
+                                    <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Latch_Date</th>
+                                    <th><input class="text-body col-md-6 " type="date" value=""></th>
+                                </tr>
+                               
+                            </tbody>
+                        </table>
+                       
+                    </div>
+
+                    <div>
+                        <table class="table table-bordered" style="height:50px">
+                            <thead>
+                                <tr>
+                                    <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Index</th>
+                                    <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Index_Head</th>
+                                    <th style="background-color:lavender">@Rental_WebCore2.Resources.Rental_Manager.Rental.Index_Final</th>
+                                </tr>
+                            </thead>
+                            <tbody>
                                 <tr>
                                     <td>Số điện</td>
                                     <td><input class="text-center " type="text" style="width:80px" value="760" disabled="" /></td>
                                     <td><input class="text-dark " style="width:80px" type="text" value="" /></td>
-                                    
+
                                 </tr>
                                 <tr>
                                     <td>Số nước</td>
                                     <td><input class="text-center " style="width:80px" type="text" value="1020" disabled="" /></td>
                                     <td><input class="text-dark " style="width:80px" type="text" value="" /></td>
-                                    
+
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <div>
-                        <div class="form-group row">
-                            <label class="control-label col-md-3"style="text-align:right">Ghi chú</label>
-                            <div class="col-md-9">
-                                <textarea class="text-body" rows="4" placeholder="Note"style="width:380px"></textarea>
-                            </div>
+                    <div class="row col-12">
+
+                        <div class="col-6">
+                            <div id="square" style="background-color:aliceblue;margin-left:60px; width: 50%;height: 150px;text-align:center;border:solid 1px;border-color:black;">+ @Rental_WebCore2.Resources.Rental_Manager.Rental.Add_Photos</div><p></p>
+                            <input type="file">
+                        </div>
+                        <div class="col-6">
+                            <div id="square" style="background-color:aliceblue;margin-left:60px ; width: 50%;height: 150px;text-align:center;border:solid 1px;border-color:black;">+ @Rental_WebCore2.Resources.Rental_Manager.Rental.Add_Photos</div><p></p>
+                            <input type="file" />
+                            
+                              
                         </div>
                     </div>
-                    
-                    
+                    <p></p>
+                    <div>
+                        <label class="control-label col-md-3" style="text-align:center;margin-left:0px">@Rental_WebCore2.Resources.Rental_Manager.Rental.Note</label>
+                        <div>
+                            <textarea class="text-body" style="margin-left:13px;width:450px" rows="3" placeholder=@Rental_WebCore2.Resources.Rental_Manager.Rental.Note></textarea>
+                        </div>
 
-
+                    </div>
                 </form>
+
                 <div class="modal-footer">
-                    <a class="btn btn-primary" style="background-color: #007065;color:white">Lưu</a>
-                    <button class="btn btn-primary" style="background-color: #007065;color:white" data-dismiss="modal">Hủy</button>
+                    <a class="btn btn-primary" style="background-color: #007065;color:white">@Rental_WebCore2.Resources.Rental_Manager.Rental.Save</a>
+                    <button class="btn btn-primary" style="background-color: #007065;color:white" data-dismiss="modal">@Rental_WebCore2.Resources.Rental_Manager.Rental.Cancel</button>
                 </div>
             </div>
         </div>

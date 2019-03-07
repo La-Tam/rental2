@@ -1,0 +1,208 @@
+﻿@{
+    string[] name = new string[12];
+    int i = 0;
+}
+
+@{
+    ViewData["Title"] = "ContractIndex";
+}
+<head>
+    <link href="~/wwwroot/CSS_Rental/css/main.css" rel="stylesheet" />
+    <style type="text/css">
+        a:hover, a:focus {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="app-content">
+        <div class="page-item" style="height: 100%;">
+
+            <!--PAGE CONTENT BEGINS HERE-->
+            @* Chon du an *@
+
+            <div class="form-group col-2" style="margin-left:-13px">
+                <select class="form-control" id="exampleSelect1">
+                    <option>TNN</option>
+                    <option>An Lạc</option>
+                    <option>Bình Minh</option>
+                    <option>Thiên Đường</option>
+                    <option>BBC</option>
+                </select>
+            </div>
+            @* Tua de *@
+            <div>
+                <div class="alert alert-warning" style="background-color:#009688;">
+                    <h5 style="margin-bottom:0px; text-align:center;color:aliceblue">
+                        @Rental_WebCore2.Resources.Rental_Manager.Rental.Product_Contract_Management
+
+                    </h5>
+                </div>
+            </div>
+            @* Chia 2 cot *@
+            <div class="row">
+                @* Cot loc *@
+                <div class="col-md-2">
+
+
+                    @* Loc theo nha *@
+                    <div class="tile">
+                        <div class="widget-header">
+                            @*<h5><i class="fa fa-home" ></i> Tên nhà</h5>*@
+                            <b style="text-align:left;font-size:16px">@Rental_WebCore2.Resources.Rental_Manager.Rental.Name_Property</b>
+                        </div>
+                        <hr style="width:153px;margin-left:-20px" />
+                        <div class="widget-body">
+                            <p>
+                                <label>
+                                    <input name="REHouseId" type="radio" checked="checked">
+                                    <span> Viettel (6)</span>
+                                </label>
+                                <label>
+                                    <input name="REHouseId" type="radio" checked="checked">
+                                    <span> Vina-phone (4)</span>
+                                </label>
+                            </p>
+                        </div>
+                    </div>
+
+                    @* Loc theo trang thai *@
+                    <div class="tile">
+                        <div class="widget-header">
+                            @*<h5 class="widget-title"><i class="fa fa-renren" ></i> Trạng thái</h5>*@
+                            <b style="text-align:center;font-size:16px"> @Rental_WebCore2.Resources.Rental_Manager.Rental.Status</b>
+                        </div>
+                        <hr style="width:153px;margin-left:-20px" />
+                        <div class="widget-body">
+                            <div class="widget-main">
+                                <p>
+                                    <label>
+                                        <input name="Status" type="radio" checked="checked">
+                                        <span class="lbl"> @Rental_WebCore2.Resources.Rental_Manager.Rental.All (50)</span>
+                                    </label>
+
+                                    <label>
+                                        <input name="Status" type="radio">
+                                        <span class="lbl"> @Rental_WebCore2.Resources.Rental_Manager.Rental.Hired (37)</span>
+                                    </label>
+
+                                    <label>
+                                        <input name="Status" type="radio">
+                                        <span class="lbl"> @Rental_WebCore2.Resources.Rental_Manager.Rental.Empty (13)</span>
+                                    </label>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                @* Cot du lieu *@
+                <div class="col-md-10">
+                    <div class="tile" style="height:693px">
+
+                        <div class="row">
+                            <input class="app-search__input" type="Search" placeholder=@Rental_WebCore2.Resources.Rental_Manager.Rental.Search style="margin-left:17px;border:solid 1px;border-color:#009688" />
+                            <a class="btn btn-primary" style="background-color: #007065;color:white;margin-left:10px">@Rental_WebCore2.Resources.Rental_Manager.Rental.Search</a>
+                        </div>
+
+                        <br />
+                        <div style=" height:555px; border:1px solid black; padding:20px; overflow:auto;border-color:darkgray">
+                            <div class="tile" style="height:30px;margin-top:-10px;border:solid 1px red">
+                                <p style="margin-top:-12px;color:red"><i>@Rental_WebCore2.Resources.Rental_Manager.Rental.Attention_3</i></p>
+                            </div>
+                            <hr style="margin-top:-20px" />
+
+                            <style>
+                                .btn-outline-primary {
+                                    background-color: white;
+                                    color: #009688;
+                                    font-size: 13px;
+                                    border: solid 1px;
+                                    border-color: darkgray;
+                                    text-align: left;
+                                }
+
+                                .tile-menu {
+                                    display: none;
+                                    background-color: white;
+                                    max-width: 10px;
+                                    margin-left: 38px;
+                                    border: solid 1px;
+                                    border-color: darkgray;
+                                }
+
+                                .dropbtn:hover, .dropbtn:focus {
+                                    background-color: #009688;
+                                }
+
+                                .tile a:hover {
+                                    background-color: #009688;
+                                    color: white;
+                                }
+                            </style>
+
+                            <div class="top-10 clearfix">
+                                <div class="row">
+                                    <div class="tile" id="HD">
+                                        @for (var k = 0; k < 4; k++)
+                                        {
+                                            <div class="row">
+                                                @for (var j = 0; j < 3; j++)
+                                                {
+                                                    <div class="col-lg-4">
+                                                        @{name[i] = "Sản phẩm sắp hết hạn HĐ " + (i + 1);
+                                                            <a class="list-group-item list-group-item-action" href="@Url.Action("DetailContract","RentalManager")" style="border-color:#009688">
+                                                                <img src="~/wwwroot/images/Rental/Contract/icons8-profile-48.png" style="width:30px;height:30px;margin-top:-15px;margin-left:0px" />
+                                                                <samp style="font-size:18px">P.123</samp>
+                                                                <hr style="background-color:#009688;margin-top:0px" />
+                                                                <div style="margin-top:-14px">
+                                                                    <div class="row">
+                                                                        <samp class="list-group-item-text" style="word-break:break-word"><b>@Rental_WebCore2.Resources.Rental_Manager.Rental.Property</b>: Vina-Tel/HN3/Tầng 12/dsds/dsd/sd/s/ds/ds/dsdsd/</samp>
+                                                                        <samp class="list-group-item-text"><b>@Rental_WebCore2.Resources.Rental_Manager.Rental.Customer_ID</b>: KH000011125</samp>
+                                                                        <samp class="list-group-item-text"><b>@Rental_WebCore2.Resources.Rental_Manager.Rental.Renter</b>: Đương Tam muội</samp>
+                                                                        <samp class="list-group-item-text"><b>@Rental_WebCore2.Resources.Rental_Manager.Rental.From_date</b>: (23/1/2016)</samp>
+                                                                        <samp class="list-group-item-text"><b>@Rental_WebCore2.Resources.Rental_Manager.Rental.To_Date</b>: (22/3/2019)</samp>
+                                                                        <samp class="list-group-item-text"><b>@Rental_WebCore2.Resources.Rental_Manager.Rental.Status</b>: Sắp hết hạn HĐ</samp>
+
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+
+                                                            i = i + 1;
+                                                        }
+                                                    </div>
+                                                }
+                                            </div>
+                                            <br />
+                                        }
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <hr style="margin-top:00px" />
+                            @* tạo qua trang *@
+                            <ul class="pagination" style="margin-left:500px">
+                                <li class="page-item disabled"><a class="page-link" href="#">«</a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#">»</a></li>
+                            </ul>
+                        </div>
+                       
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--PAGE CONTENT ENDS HERE-->
+
+    </main>
+</body>
