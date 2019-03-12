@@ -11,7 +11,21 @@ namespace Rental_WebCore2.Controllers
     public class AssetManageController : Controller
     {
         // GET: AssetManage
-        public ActionResult TypeAsset(string language)
+        public ActionResult AsignAsset(string language)
+        {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(language);
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);
+            return View();
+        }
+
+        public ActionResult ListAsset(string language)
+        {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(language);
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);
+            return View();
+        }
+
+        public ActionResult StateOfTheAsset(string language)
         {
             Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(language);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);

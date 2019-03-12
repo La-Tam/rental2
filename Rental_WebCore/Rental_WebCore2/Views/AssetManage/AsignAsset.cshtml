@@ -1,0 +1,295 @@
+﻿
+@{
+    ViewBag.Title = "TypeAsset";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+    var hidden = false;
+    function action() {
+        hidden = !hidden;
+        if (hidden) {
+            document.getElementById('togglee').style.visibility = 'hidden';
+        } else {
+            document.getElementById('togglee').style.visibility = 'visible';
+        }
+    }
+</script>
+
+<main class="app-content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="tile">
+                <div class="tile-title-w-btn">
+                    <h3 class="widget-title">
+                        <i class="ace-icon fa fa-star orange"></i>
+                        @Rental_WebCore2.Resources.TypeAsset.TypeAsset.ListTypeAsset
+                    </h3>
+                    @*<p><a class="btn btn-primary icon-btn" onclick="AddMaintenance(0)" href="#"><i class="fa fa-plus"></i> @Rental_WebCore2.Resources.RentalTexts.them</a></p>*@
+                   
+                </div>
+                <div class="tile-body">
+                    <b>Chỉ định tài sản</b><br>
+                    Bạn có thể chỉ định tài sản nào đi với bất động sản nào. Nên nhớ 1 tài sản đi được đi với 1 bất động sản. <br />
+                    <a href="#"><i class="fa fa-bookmark"> </i></a> : Chỉ định tài sản <br />
+                    <a href="#"><i class="fa fa-trash"> </i></a> : Xóa chỉ định tài sản
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="tile" style="height:95%">
+                <h3 class="tile-title">Tài sản chưa chỉ định</h3>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="tile">
+                            <div class="tile-body">
+                                <table class="table table-hover table-bordered" id="sampleTable3">
+                                    <thead>
+                                        <tr>
+                                            <th> @Rental_WebCore2.Resources.TypeAsset.TypeAsset.AssetID</th>
+                                            <th> @Rental_WebCore2.Resources.TypeAsset.TypeAsset.AssetName</th>
+                                            <th> @Rental_WebCore2.Resources.TypeAsset.TypeAsset.Image</th>
+                                            <th> @Rental_WebCore2.Resources.TypeAsset.TypeAsset.Status</th>
+                                            <th> @Rental_WebCore2.Resources.TypeAsset.TypeAsset.Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr data-toggle="collapse" role="row" class="odd">
+                                            <td>TV001</td>
+                                            <td>TV Sony</td>
+                                            <td>Accountant</td>
+                                            <td><span class="badge badge-danger">Chưa chỉ định</span></td>
+                                            <td>
+                                                <a href="#" data-toggle="modal" data-target="#AsignTaiSanDaThue" style="margin-left:15%"><i class="fas fa-bookmark fa-2x"></i></a>
+                                                @*Modal*@
+                                                <div class="modal fade" id="AsignTaiSanDaThue" tabindex="-1" role="dialog" aria-labelledby="SuaPhieuChiTitle" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="SuaPhieuChiTitle">Please Chose Your Property</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                                                                </button>
+                                                            </div>
+                                                            <br />
+                                                            <div class="modal-body">
+                                                                <div>
+                                                                    <select id="Type3" name="Type" style="height: 32px;width:150px">
+                                                                        <option value="All">All</option>
+                                                                        <option value="Types">Project 1</option>
+                                                                        <option value="Types">Project 2</option>
+                                                                        <option value="Types">Project 3</option>
+                                                                    </select>
+                                                                </div>
+                                                                <table class="table table-bordered">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>No.</th>
+                                                                            <th>Project Name</th>
+                                                                            <th>Adress</th>
+                                                                            <th>Username</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>1</td>
+                                                                            <td>Mark</td>
+                                                                            <td>Otto</td>
+                                                                            <td><div class="animated-checkbox"><label><input type="checkbox"><span class="label-text"> </span></label></div></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>2</td>
+                                                                            <td>Jacob</td>
+                                                                            <td>Thornton</td>
+                                                                            <td></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3</td>
+                                                                            <td>Larry</td>
+                                                                            <td>the Bird</td>
+                                                                            <td></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn" data-dismiss="modal">Close</button>
+                                                                <button type="button" class="btn btn-primary">@Rental_WebCore2.Resources.Finance.Thu.Save</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                @*Kết thúc Modal*@
+                                             
+                                                <a href="#" id="demoSwal" style="margin-left:15%"><i class="fas fa-trash fa-2x"></i></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="tile" style="height:95%">
+                <h3 class="tile-title">Tài sản đã chỉ định</h3>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="tile">
+                            <div class="tile-body">
+                                <table class="table table-hover table-bordered" id="sampleTable2">
+                                    <thead>
+                                        <tr>
+                                            <th> @Rental_WebCore2.Resources.TypeAsset.TypeAsset.AssetID</th>
+                                            <th> @Rental_WebCore2.Resources.TypeAsset.TypeAsset.AssetName</th>
+                                            <th> @Rental_WebCore2.Resources.TypeAsset.TypeAsset.Image</th>
+                                            <th> @Rental_WebCore2.Resources.TypeAsset.TypeAsset.Status</th>
+                                            <th> @Rental_WebCore2.Resources.TypeAsset.TypeAsset.OwnerID</th>
+                                            <th> @Rental_WebCore2.Resources.TypeAsset.TypeAsset.PropertyID</th>
+                                            <th> @Rental_WebCore2.Resources.TypeAsset.TypeAsset.Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr data-toggle="collapse" role="row" class="odd">
+                                            <td>TV001</td>
+                                            <td>TV Sony</td>
+                                            <td>Accountant</td>
+                                            <td><span class="badge badge-success">Đã chỉ định</span></td>
+                                            <td>LL001</td>
+                                            <td>2008/11/28</td>
+                                            <td>
+                                                <a href="#" data-toggle="modal" data-target="#AsignTaiSanDaThue"><i class="fas fa-bookmark fa-2x"></i></a>
+                                                @*Modal*@
+                                                <div class="modal fade" id="AsignTaiSanDaThue" tabindex="-1" role="dialog" aria-labelledby="SuaPhieuChiTitle" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="SuaPhieuChiTitle">Please Chose Your Property</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                                                                </button>
+                                                            </div>
+                                                            <br />
+                                                            <div class="modal-body">
+                                                                <div>
+                                                                    <select id="Type3" name="Type" style="height: 32px;width:150px">
+                                                                        <option value="All">All</option>
+                                                                        <option value="Types">Project 1</option>
+                                                                        <option value="Types">Project 2</option>
+                                                                        <option value="Types">Project 3</option>
+                                                                    </select>
+                                                                </div>
+                                                                <table class="table table-bordered">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>No.</th>
+                                                                            <th>Project Name</th>
+                                                                            <th>Adress</th>
+                                                                            <th>Username</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>1</td>
+                                                                            <td>Mark</td>
+                                                                            <td>Otto</td>
+                                                                            <td><div class="animated-checkbox"><label><input type="checkbox"><span class="label-text"> </span></label></div></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>2</td>
+                                                                            <td>Jacob</td>
+                                                                            <td>Thornton</td>
+                                                                            <td></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3</td>
+                                                                            <td>Larry</td>
+                                                                            <td>the Bird</td>
+                                                                            <td></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn" data-dismiss="modal">Close</button>
+                                                                <button type="button" class="btn btn-primary">@Rental_WebCore2.Resources.Finance.Thu.Save</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                @*Kết thúc Modal*@
+                                              
+                                                <a href="#" id="demoSwal"><i class="fas fa-trash fa-2x"></i></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- Data table plugin-->
+<script type="text/javascript" src="~/wwwroot/js/plugins/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="~/wwwroot/js/plugins/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript">$('#sampleTable2').DataTable();</script>
+<script type="text/javascript">$('#sampleTable3').DataTable();</script>
+
+<!-- Data Picker -->
+<script type="text/javascript" src="~/wwwroot/js/plugins/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript" src="~/wwwroot/js/plugins/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript">
+    $('#demoDate').datepicker({
+        format: "dd/mm/yyyy",
+        autoclose: true,
+        todayHighlight: true
+    });
+    $('#demoDate2').datepicker({
+        format: "dd/mm/yyyy",
+        autoclose: true,
+        todayHighlight: true
+    });
+</script>
+
+<!-- Page specific javascripts-->
+<script type="text/javascript" src="~/wwwroot/js/plugins/bootstrap-notify.min.js"></script>
+<script type="text/javascript" src="~/wwwroot/js/plugins/sweetalert.min.js"></script>
+<script type="text/javascript">
+    $('#demoNotify').click(function () {
+
+        $.notify({
+            title: "Update Complete : ",
+            message: "Something cool is just updated!",
+            icon: 'fa fa-check'
+        }, {
+                type: "info"
+            });
+    });
+
+    $('#demoSwal').click(function () {
+        swal({
+            title: "Are you sure?",
+            text: "You will not be able to recover this imaginary file!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Yes, delete it!",
+            cancelButtonText: "No, cancel plx!",
+            closeOnConfirm: false,
+            closeOnCancel: false
+        }, function (isConfirm) {
+            if (isConfirm) {
+                swal("Deleted!", "Your imaginary file has been deleted.", "success");
+            } else {
+                swal("Cancelled", "Your imaginary file is safe :)", "error");
+            }
+        });
+    });
+</script>

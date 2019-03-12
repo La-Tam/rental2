@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rental_WebCore2", "Rental_WebCore2\Rental_WebCore2.csproj", "{21F729CB-FB6F-4D1B-AF8E-27BC6242D2B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PPC_RentalDataAccess", "PPC_RentalDataAccess\PPC_RentalDataAccess.csproj", "{ABE33C63-37FE-4AA7-8229-DE0FFB1F0996}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{21F729CB-FB6F-4D1B-AF8E-27BC6242D2B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21F729CB-FB6F-4D1B-AF8E-27BC6242D2B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21F729CB-FB6F-4D1B-AF8E-27BC6242D2B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABE33C63-37FE-4AA7-8229-DE0FFB1F0996}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABE33C63-37FE-4AA7-8229-DE0FFB1F0996}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABE33C63-37FE-4AA7-8229-DE0FFB1F0996}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABE33C63-37FE-4AA7-8229-DE0FFB1F0996}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

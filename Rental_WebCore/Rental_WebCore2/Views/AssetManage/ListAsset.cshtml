@@ -1,0 +1,164 @@
+﻿
+@{
+    ViewBag.Title = "ListAsset";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<main class="app-content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="tile">
+                <div class="tile-title-w-btn">
+                    <h3 class="title">@Rental_WebCore2.Resources.TypeAsset.TypeAsset.ListTypeAsset</h3>
+                    <button type="button" class="btn btn-primary icon-btn" data-toggle="modal" data-target="#AddTaiSan" style="margin-left:60%"><i class="fa fa-plus"> </i>@Rental_WebCore2.Resources.TypeAsset.TypeAsset.AddAsset</button>
+                    @*Modal*@
+                    <div class="modal fade" id="AddTaiSan" tabindex="-1" role="dialog" aria-labelledby="LapPhieuChiTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="LapPhieuChiTitle">@Rental_WebCore2.Resources.TypeAsset.TypeAsset.AddAsset</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label class="control-label">Loại Tài Sản</label>
+                                            <select id="selectThemTaiSan" name="Type" style="height: 32px;width:150px">
+                                                <option value="TV">TV</option>
+                                                <option value="Refri">Tủ Lạnh</option>
+                                                <option value="Washing">Máy Giặt</option>
+                                                <option value="None">None</option>
+
+                                            </select>
+                                            <div class="form-group">
+                                                <label class="control-label">Tên Loại Tài Sản</label>
+                                                <input class="form-control" type="email" placeholder="TV, Refri,..">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Tên Tài Sản</label>
+                                            <input class="form-control" type="email" placeholder="Asset Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Tình Trạng</label>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="radio" name="gender">Good
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="radio" name="gender">Not Good
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Số Lượng</label>
+                                            <input class="form-control" type="text" placeholder="Number Of Asset" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="example-date-input">Ngày Thêm</label>
+                                            <input class="form-control" id="demoDate" type="text" placeholder="Select Date">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Mô Tả</label>
+                                            <textarea class="form-control" id="txtThemTaiSan" rows="3"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Thêm Hình Ảnh</label>
+                                            <input class="form-control" type="file">
+                                        </div>
+
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn" data-dismiss="modal">@Rental_WebCore2.Resources.Finance.Thu.Close</button>
+                                    <button type="button" class="btn btn-primary">@Rental_WebCore2.Resources.Finance.Thu.Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @*Kết thúc Modal*@
+                </div>
+                <div class="tile-body">
+                    <b>Hiển thị tất cả tài sản mà bạn đang sở hữu </b><br>
+                    Bạn có thể tìm kiếm với bất kì thông tin gì liên quan tới giá trị của tên cột mà bạn nhớ.
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="tile">
+                <div class="tile-body">
+                    <table class="table table-hover table-bordered" id="sampleTable">
+                        <thead>
+                            <tr>
+                                <th>Mã Tài Sản</th>
+                                <th>Tên Tài Sản </th>
+                                <th>Hình ảnh</th>
+                                <th> Mô tả</th>
+                                <th>Tình trạng</th>
+                                <th>Trạng thái</th>
+                                <th>Thực hiện</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tiger Nixon</td>
+                                <td>System Architect</td>
+                                <td>Edinburgh</td>
+                                <td>61</td>
+                                <td><span class="badge badge-danger">Chưa chỉ định</span></td>
+                                <td><span class="badge badge-danger">Hư hỏng</span></td>
+                                <td><button aria-hidden="true" style="margin-left:0px; margin-right:10px"><i class="fa fa-trash"></i></button><button style="color:black"><i class="fa fa-edit"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td>Tiger Nixon</td>
+                                <td>System Architect</td>
+                                <td>Edinburgh</td>
+                                <td>61</td>
+                                <td><span class="badge badge-success">Đã chỉ định</span></td>
+                                <td><span class="badge badge-success">Tốt</span></td>
+                                <td><button aria-hidden="true" style="margin-left:0px; margin-right:10px"><i class="fa fa-trash"></i></button><button style="color:black"><i class="fa fa-edit"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td>Tiger Nixon</td>
+                                <td>System Architect</td>
+                                <td>Edinburgh</td>
+                                <td>61</td>
+                                <td><span class="badge badge-danger">Chưa chỉ định</span></td>
+                                <td><span class="badge badge-success">Tốt</span></td>
+                                <td><button aria-hidden="true" style="margin-left:0px; margin-right:10px"><i class="fa fa-trash"></i></button><button style="color:black"><i class="fa fa-edit"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td>Tiger Nixon</td>
+                                <td>System Architect</td>
+                                <td>Edinburgh</td>
+                                <td>61</td>
+                                <td><span class="badge badge-success">Đã chỉ định</span></td>
+                                <td><span class="badge badge-danger">Hư hỏng</span></td>
+                                <td><button aria-hidden="true" style="margin-left:0px; margin-right:10px"><i class="fa fa-trash"></i></button><button style="color:black"><i class="fa fa-edit"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Data Picker-->
+<script type="text/javascript" src="~/wwwroot/js/plugins/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript" src="~/wwwroot/js/plugins/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript">
+    $('#demoDate').datepicker({
+        format: "dd/mm/yyyy",
+        autoclose: true,
+        todayHighlight: true
+    });
+</script>
+
+<!-- Data table plugin-->
+<script type="text/javascript" src="~/wwwroot/js/plugins/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="~/wwwroot/js/plugins/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript">$('#sampleTable').DataTable();</script>

@@ -88,7 +88,7 @@ namespace Rental_WebCore2.Resources.TypeAsset {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Asign.
+        ///   Looks up a localized string similar to Asign Asset.
         /// </summary>
         public static string Asign {
             get {
@@ -165,6 +165,15 @@ namespace Rental_WebCore2.Resources.TypeAsset {
         public static string PropertyID {
             get {
                 return ResourceManager.GetString("PropertyID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to State Asset.
+        /// </summary>
+        public static string State {
+            get {
+                return ResourceManager.GetString("State", resourceCulture);
             }
         }
         

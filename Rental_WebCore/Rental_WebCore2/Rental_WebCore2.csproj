@@ -143,6 +143,16 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Admin\AccountManager.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountManager.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Admin\AccountManager.vi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountManager.vi.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Finance\Thu.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -462,7 +472,7 @@
     <Content Include="Views\Property\Index.cshtml" />
     <Content Include="Views\Property\ListProperty.cshtml" />
     <Content Include="Views\Property\Update.cshtml" />
-    <Content Include="Views\AssetManage\TypeAsset.cshtml" />
+    <Content Include="Views\AssetManage\AsignAsset.cshtml" />
     <Content Include="Views\FinanceManagement\Chi.cshtml" />
     <Content Include="Views\FinanceManagement\Thu.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
@@ -494,8 +504,10 @@
     <Content Include="Views\Maintenance\Task.cshtml" />
     <Content Include="Views\Maintenance\Text.cshtml" />
     <Content Include="Views\Admin\AccountManager.cshtml" />
-    <Content Include="Views\Admin\BrowseRealEstate.cshtml" />
+    <Content Include="Views\Admin\DecentralizationAccount.cshtml" />
     <Content Include="Views\Admin\_LayoutAdmin.cshtml" />
+    <Content Include="Views\AssetManage\ListAsset.cshtml" />
+    <Content Include="Views\AssetManage\StateOfTheAsset.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -518,6 +530,14 @@
   <ItemGroup>
     <EmbeddedResource Include="obj\Debug\Rental_WebCore2.Resources.RentalTexts.resources" />
     <EmbeddedResource Include="obj\Debug\Rental_WebCore2.Resources.RentalTexts.vi.resources" />
+    <EmbeddedResource Include="Resources\Admin\AccountManager.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AccountManager.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Admin\AccountManager.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AccountManager.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Finance\Thu.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Thu.Designer.cs</LastGenOutput>

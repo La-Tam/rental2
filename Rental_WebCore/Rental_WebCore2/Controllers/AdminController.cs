@@ -18,7 +18,7 @@ namespace Rental_WebCore2.Controllers
             return View();
         }
 
-        public ActionResult BrowseRealEstate(string language)
+        public ActionResult DecentralizationAccount(string language)
         {
             Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(language);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);

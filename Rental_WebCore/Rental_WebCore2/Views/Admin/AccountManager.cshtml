@@ -2,18 +2,33 @@
 @{
     ViewBag.Title = "AccountManager";
     Layout = "~/Views/Admin/_LayoutAdmin.cshtml";
+
 }
 <main class="app-content">
+
     <div class="tile">
-        <table class="table table-bordered"  style="margin-top:15px;font-size:20px" >
-            <thead >
+        <div class="widget-header" style="border-radius:4px">
+            <h3 class="widget-title">
+                <i class="ace-icon fa fa-star orange"></i>
+                @Rental_WebCore2.Resources.Admin.AccountManager.ListAccountNoActive
+            </h3>
+        </div>
+        <table class="table table-bordered" style="margin-top:15px;font-size:20px">
+            <thead>
                 <tr style="height:25px;background-color:lavender">
                     <th>ID</th>
-                    <th>@Rental_WebCore2.Resources.RentalTexts.Ten_DA</th>
-                    <th>@Rental_WebCore2.Resources.RentalTexts.Dia_Chi</th>
-                    <th>@Rental_WebCore2.Resources.RentalTexts.Loai_Hinh</th>
-                    <th>@Rental_WebCore2.Resources.RentalTexts.Trang_Thai</th>
-                    <th>@Rental_WebCore2.Resources.RentalTexts.Email</th>
+                    <th>@Rental_WebCore2.Resources.Admin.AccountManager.Username</th>
+                    <th>@Rental_WebCore2.Resources.Admin.AccountManager.Password</th>
+                    <th>@Rental_WebCore2.Resources.Admin.AccountManager.Email</th>
+                    <th>
+                        @Rental_WebCore2.Resources.Admin.AccountManager.AccountType <br />
+                        (1-Cơ bản; 2-Tiêu chuẩn; 3- Nâng cao)
+                    </th>
+                    <th>
+                        @Rental_WebCore2.Resources.Admin.AccountManager.Status <br />
+                        (0-Chưa kích hoạt;1-Đã kích hoạt)
+                    </th>
+
                     <th>@Rental_WebCore2.Resources.RentalTexts.Hanh_Dong</th>
                 </tr>
             </thead>
@@ -22,46 +37,10 @@
                     <td>001</td>
                     <td>ABC</td>
                     <td>128 duong a, phuong b , quan c</td>
-                    <td>CCC</td>
-                    <td>Status11111</td>
                     <td>Lethanhtung@gmail.com</td>
+                    <td>1</td>
+                    <td></td>
                     <td><button style="background-color:aqua">@Rental_WebCore2.Resources.RentalTexts.Approve</button></td>
-                </tr>
-                <tr>
-                    <td>002</td>
-                    <td>DEF</td>
-                    <td>128 duong a, phuong b , quan c</td>
-                    <td>CCC</td>
-                    <td>Status1111</td>
-                    <td>Lethanhtung@gmail.com</td>
-                    <td><button style="background-color:aqua">Approve</button></td>
-                </tr>
-                <tr>
-                    <td>003</td>
-                    <td>ABC</td>
-                    <td>128 duong a, phuong b , quan c</td>
-                    <td>CCC</td>
-                    <td>Status111</td>
-                    <td>Lethanhtung@gmail.com</td>
-                    <td><button style="background-color:aqua">Approve</button></td>
-                </tr>
-                <tr>
-                    <td>004</td>
-                    <td>ABC</td>
-                    <td>128 duong a, phuong b , quan c</td>
-                    <td>CCC</td>
-                    <td>Status1111</td>
-                    <td>Lethanhtung@gmail.com</td>
-                    <td><button style="background-color:aqua">Approve</button></td>
-                </tr>
-                <tr>
-                    <td>005</td>
-                    <td>ABC</td>
-                    <td>128 duong a, phuong b , quan c</td>
-                    <td>CCC</td>
-                    <td>Status1111</td>
-                    <td>Lethanhtung@gmail.com</td>
-                    <td><button style="background-color:aqua">Approve</button></td>
                 </tr>
             </tbody>
         </table>

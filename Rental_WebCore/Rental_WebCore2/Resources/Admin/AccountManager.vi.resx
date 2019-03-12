@@ -117,52 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Action" xml:space="preserve">
-    <value>Thực hiện</value>
+  <data name="AccountType" xml:space="preserve">
+    <value>Loại tài khoản</value>
   </data>
-  <data name="AddAsset" xml:space="preserve">
-    <value>Thêm tài sản</value>
+  <data name="Decentralization" xml:space="preserve">
+    <value>Phân quyền tài khoản</value>
   </data>
-  <data name="AddingDate" xml:space="preserve">
-    <value>Ngày tạo</value>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
   </data>
-  <data name="Asign" xml:space="preserve">
-    <value>Chỉ định tài sản</value>
+  <data name="ListAccountNoActive" xml:space="preserve">
+    <value>Danh sách tài khoản chưa kích hoạt</value>
   </data>
-  <data name="AssetID" xml:space="preserve">
-    <value>Mã tài sản</value>
-  </data>
-  <data name="AssetName" xml:space="preserve">
-    <value>Tên tài sản</value>
-  </data>
-  <data name="Delete" xml:space="preserve">
-    <value>Xóa</value>
-  </data>
-  <data name="Image" xml:space="preserve">
-    <value>Hình ảnh</value>
-  </data>
-  <data name="ListTypeAsset" xml:space="preserve">
-    <value>Danh sách tài sản</value>
-  </data>
-  <data name="No" xml:space="preserve">
-    <value>STT</value>
-  </data>
-  <data name="OwnerID" xml:space="preserve">
-    <value>Mã người sở hữu</value>
-  </data>
-  <data name="PropertyID" xml:space="preserve">
-    <value>Mã bất động sản</value>
-  </data>
-  <data name="State" xml:space="preserve">
-    <value>Tình trạng tài sản</value>
+  <data name="Password" xml:space="preserve">
+    <value>Mật khẩu</value>
   </data>
   <data name="Status" xml:space="preserve">
     <value>Trạng thái</value>
   </data>
-  <data name="TypeAsset1" xml:space="preserve">
-    <value>Loại Tài Sản</value>
-  </data>
-  <data name="Update" xml:space="preserve">
-    <value>Cập nhật</value>
+  <data name="Username" xml:space="preserve">
+    <value>Tài khoản</value>
   </data>
 </root>

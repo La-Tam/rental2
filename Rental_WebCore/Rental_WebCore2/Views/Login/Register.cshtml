@@ -56,17 +56,57 @@
         $(document).ready(function () {
             $('#btnRegister').click(function () {
                 var Username = $('#txtUsername').val();
+                var Email = $('#txtEmail').val();
                 var Password = $('#txtPassword').val();
+                var Status = 0;
                 var ConfirmPassword = $('#txtConfirmPassword').val();
                 var selector = document.getElementById('inpAccount');
                 var value = selector[selector.selectedIndex].id;
-                console.log(Username);
-                console.log(Password);
-                console.log(ConfirmPassword);
-                console.log(value);
+                if (Password != ConfirmPassword) {
+                    $('#Error').show();
+                } else {
+                    //  Post Register == Đăng ký tài khoản
+                    $.ajax({
+                        type: 'POST',
+                        url: 'http://localhost:65453/api/RegisterAPI',
+                        headers: {
+                            "Content-Type": "application/x-www-form-urlencoded",
+                            "Accept": "application/json",
+                        },
+                        data: {
+                            Username: Username,
+                            Password: Password,
+                            Email: Email,
+                            Status: Status,
+                            AccountType: value
+                        },
+                        success: function (response) {
+                            $('#Success').show();
+                            $(function () {
+                                count = 0;
+                                wordsArray = ["5", "4", "3", "2", "1"];
+                                setInterval(function () {
+                                    count++;
+                                    $("#time").fadeOut(500, function () {
+                                        $(this).text(wordsArray[count % wordsArray.length]).fadeIn(500);
+                                    });
+                                }, 1000);
+                            });
+                            setTimeout(function () {
+                                location.href = "loginRental.html";
+                            }, 5000);
+                        },
+                        error: function (err) {
+                            console.log(err);
+                        }
+                    })
+
+
+                }
             })
         })
     </script>
     <script src="~/wwwroot/CSS_Login_Register/LoginValidation.js"></script>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
 </body>
 </html>

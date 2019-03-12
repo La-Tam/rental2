@@ -132,12 +132,17 @@
     <aside class="app-sidebar" style="color:white">
         <ul class="app-menu">
             <li align="center"><a class="app-sidebar__toggle" style="background-color:#222d32" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a></li>
-            
+
             <li>
                 <a class="app-menu__item property" href="@Url.Action("AccountManager", "Admin")">
                     <i class="app-menu__icon fa fa-building-o"></i><span class="app-menu__label">@Rental_WebCore2.Resources.RentalTexts.QLTK</span>
                 </a>
-            </li>            
+            </li>
+            <li>
+                <a class="app-menu__item property" href="@Url.Action("DecentralizationAccount", "Admin")">
+                    <i class="app-menu__icon fa fa-building-o"></i><span class="app-menu__label">@Rental_WebCore2.Resources.Admin.AccountManager.Decentralization</span>
+                </a>
+            </li>
         </ul>
     </aside>
     @RenderBody()

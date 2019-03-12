@@ -5,7 +5,7 @@
 }
 
 <link rel="stylesheet" href="~/wwwroot/css/jquery-ui.css">
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+@*<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>*@
 
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <script src="https://unpkg.com/gijgo@1.9.11/js/gijgo.min.js" type="text/javascript"></script>
@@ -18,6 +18,7 @@
         grid-row-gap: 15px;*/
         border: 1px solid black;
         padding: 20px;
+        height: 100%;
     }
 
 
@@ -72,860 +73,310 @@
 <main class="app-content">
     <div class="row">
         <div class="col-md-6 col-lg-3">
-                    <p>
-                            <select class="form-control" id="sel1">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                            </select>
-                    </p>
-                </div>
-            </div>
-        
+            <p>
+                <select class="form-control" id="sel1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+            </p>
+        </div>
+    </div>
+
     <div class="row">
         <div class="col-md-12">
             <div class="tile">
-                <h3 class="tile-title">
-                    <i class="fa fa-star"></i>@Rental_WebCore2.Resources.Finance.Thu.ListSpending
+                <div class="tile-title-w-btn">
+                    <h3 class="title"> <i class="fa fa-star"></i> @Rental_WebCore2.Resources.Finance.Thu.ListSpending</h3>
+                    <button type="button" class="btn" data-toggle="modal" data-target="#LapPhieuChi" style="margin-left:60%"><i class="fa fa-plus"> </i>@Rental_WebCore2.Resources.Finance.Thu.AddSpending</button>
+                    @*Modal*@
+                    <div class="modal fade" id="LapPhieuChi" tabindex="-1" role="dialog" aria-labelledby="LapPhieuChiTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header" style="background-color:#009688">
+                                    <h5 class="modal-title" id="LapPhieuChiTitle">@Rental_WebCore2.Resources.Finance.Thu.AddSpending</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
 
-                </h3>
-
-
-                <div class="Group-PhieuThu">
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <b>@Rental_WebCore2.Resources.Finance.Thu.Fromday : </b> <input id="startDate" />
-                        </div>
-                        <div class="col-sm-3">
-                            <b>@Rental_WebCore2.Resources.Finance.Thu.Today :</b> <input id="endDate" />
-                        </div>
-
-                        <script>
-                            var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
-                            $('#startDate').datepicker({
-                                uiLibrary: 'bootstrap4',
-                                iconsLibrary: 'fontawesome',
-                                maxDate: function () {
-                                    return $('#endDate').val();
-                                }
-                            });
-                            $('#endDate').datepicker({
-                                uiLibrary: 'bootstrap4',
-                                iconsLibrary: 'fontawesome',
-                                minDate: function () {
-                                    return $('#startDate').val();
-                                }
-                            });
-                        </script>
-
-                        <div style="margin-top:2%;margin-left:23%">
-                            <center> <button type="button" class="btn" data-toggle="modal" data-target="#LapPhieuChi">@Rental_WebCore2.Resources.Finance.Thu.AddSpending</button></center>
-                        </div>
-                        @*Modal*@
-                        <div class="modal fade" id="LapPhieuChi" tabindex="-1" role="dialog" aria-labelledby="LapPhieuChiTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header" style="background-color:#009688">
-                                        <h5 class="modal-title" id="LapPhieuChiTitle">@Rental_WebCore2.Resources.Finance.Thu.AddSpending</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="row">
-                                            
-                                            <div class="col-sm-6">
-                                                <label for="chonBDS"><b>@Rental_WebCore2.Resources.Finance.Thu.Property</b></label>
-                                                <select class="form-control" id="chonBDS">
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                    <option>4</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <label><b>@Rental_WebCore2.Resources.Finance.Thu.SpendingDay</b></label>
-                                                <input class="form-control" type="date" />
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <label><b>@Rental_WebCore2.Resources.Finance.Thu.Content</b></label>  <input class="form-control" />
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <label><b>@Rental_WebCore2.Resources.Finance.Thu.Price</b></label>
-                                                <input class="form-control" type="number" />
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <label><b>@Rental_WebCore2.Resources.Finance.Thu.Receiver</b></label>
-                                                <input class="form-control" />
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <label for="loaichi"><b>@Rental_WebCore2.Resources.Finance.Thu.IDContract</b></label>
-                                                <select class="form-control" id="loaichi">
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <label for="hinhthucthu"><b>@Rental_WebCore2.Resources.Finance.Thu.Form</b></label>
-                                                <select class="form-control" id="hinhthucthu">
-                                                    <option>Tiền mặt</option>
-                                                    <option>Chuyển khoản</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <label><b>@Rental_WebCore2.Resources.Finance.Thu.Note</b></label>  <input class="form-control" type="text" />
-                                            </div>
+                                        <div class="col-sm-6">
+                                            <label for="chonBDS"><b>@Rental_WebCore2.Resources.Finance.Thu.Property</b></label>
+                                            <select class="form-control" id="chonBDS">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label><b>@Rental_WebCore2.Resources.Finance.Thu.SpendingDay</b></label>
+                                            <input class="form-control" id="demoDate" type="text" placeholder="Select Date">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label><b>@Rental_WebCore2.Resources.Finance.Thu.Content</b></label>  <input class="form-control" />
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label><b>@Rental_WebCore2.Resources.Finance.Thu.Price</b></label>
+                                            <input class="form-control" type="number" />
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label><b>@Rental_WebCore2.Resources.Finance.Thu.Receiver</b></label>
+                                            <input class="form-control" />
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="loaichi"><b>@Rental_WebCore2.Resources.Finance.Thu.IDContract</b></label>
+                                            <select class="form-control" id="loaichi">
+                                                <option>1</option>
+                                                <option>2</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="hinhthucthu"><b>@Rental_WebCore2.Resources.Finance.Thu.Form</b></label>
+                                            <select class="form-control" id="hinhthucthu">
+                                                <option>Tiền mặt</option>
+                                                <option>Chuyển khoản</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label><b>@Rental_WebCore2.Resources.Finance.Thu.Note</b></label>  <input class="form-control" type="text" />
                                         </div>
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn" data-dismiss="modal">@Rental_WebCore2.Resources.Finance.Thu.Close</button>
-                                        <button type="button" class="btn">@Rental_WebCore2.Resources.Finance.Thu.Add</button>
-                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn" data-dismiss="modal">@Rental_WebCore2.Resources.Finance.Thu.Close</button>
+                                    <button type="button" class="btn">@Rental_WebCore2.Resources.Finance.Thu.Add</button>
                                 </div>
                             </div>
                         </div>
-                        @*Kết thúc Modal*@
-                        <div style="padding-top:2%;margin-left:10px">
-                            <button type="button" class="btn">@Rental_WebCore2.Resources.Finance.Thu.PrintSpending</button>
-                        </div>
                     </div>
+                    @*Kết thúc Modal*@
+                    <button type="button" class="btn" style="margin-right:2%"><i class="fas fa-print"> </i> @Rental_WebCore2.Resources.Finance.Thu.PrintSpending</button>
+                </div>
+                <div class="tile-body">
+                    <b>Xem tất cả các phiếu chi theo dự án </b><br>
+                    Giúp bạn quản lý phiếu chi của mình và xem tổng số tiền bạn đã chi theo dự. <br />
+                    <a href="#"><i class="fas fa-tools"></i> </a>: Chỉnh sửa thông tin. <br />
+                    <a href="#"><i class="fas fa-trash"></i> </a>: Xóa thông tin. <br />
+                    <a href="#"><i class="fas fa-print"></i> </a>: In thông tin.
                 </div>
                 <br />
-
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="Group-PhieuThu">
-                            <b style="text-transform:uppercase">@Rental_WebCore2.Resources.Finance.Thu.TotalSpending</b> <br />
+                            <i class="fas fa-money-bill fa-2x"> <b style="text-transform: uppercase">@Rental_WebCore2.Resources.Finance.Thu.TotalSpending</b></i>  <br />
                             <label style="font-size:40px;color:forestgreen"> 15.000.000 </label> <b>VNĐ</b>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="Group-PhieuThu">
-                            <b style="text-transform:uppercase">@Rental_WebCore2.Resources.Finance.Thu.TotalSpending2</b> <br />
+                            <i class="fas fa-money-bill fa-2x"> <b style="text-transform:uppercase">@Rental_WebCore2.Resources.Finance.Thu.TotalSpending2</b></i>  <br />
                             <label style="font-size:40px;color:forestgreen"> 15.000.000 </label> <b>VNĐ</b>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="Group-PhieuThu">
-                            <b style="text-transform:uppercase">@Rental_WebCore2.Resources.Finance.Thu.TotalSpending3</b> <br />
+                            <i class="fas fa-money-bill fa-2x"> <b style="text-transform:uppercase">@Rental_WebCore2.Resources.Finance.Thu.TotalSpending3</b></i>  <br />
+
                             <label style="font-size:40px;color:forestgreen"> 15.000.000 </label> <b>VNĐ</b>
                         </div>
                     </div>
 
                 </div>
                 <br />
-                <div>
-                    <table class="table table-hover">
-                        <tr>
-                            <th>@Rental_WebCore2.Resources.Finance.Thu.ID</th>
-                            <th>@Rental_WebCore2.Resources.Finance.Thu.IDContract</th>
-                            <th>@Rental_WebCore2.Resources.Finance.Thu.Project</th>
-                            <th>@Rental_WebCore2.Resources.Finance.Thu.Property</th>
-                            <th>@Rental_WebCore2.Resources.Finance.Thu.House</th>
-                            <th>@Rental_WebCore2.Resources.Finance.Thu.Price</th>
-                            <th>@Rental_WebCore2.Resources.Finance.Thu.Receiver</th>
-                            <th>@Rental_WebCore2.Resources.Finance.Thu.Content</th>
-                            <th>@Rental_WebCore2.Resources.Finance.Thu.Form</th>
-                            <th>@Rental_WebCore2.Resources.Finance.Thu.SpendingDay</th>
-                            <th>@Rental_WebCore2.Resources.Finance.Thu.Note</th>
-                            <th style="width:8%">@Rental_WebCore2.Resources.Finance.Thu.Action</th>
-                        </tr>
-                        <tr>
-                            <td>BĐS001</td>
-                            <td>HĐ0456</td>
-                            <td>Chung cư H3</td>
-                            <td>Căn hộ</td>
-                            <td>478</td>
-                            <td>3.000.000</td>
-                            <td>Hiếu Trần</td>
-                            <td>Thu tiền đặt cọc</td>
-                            <td>Chuyển khoản</td>
-                            <td>21/2/2019</td>
-                            <td>Tiền cọc cho thuê nhà</td>
-                            <td>
-                                <a href="#" data-toggle="modal" data-target="#editPhieuChi"><i class="fas fa-tools"></i></a>
-                                @*Modal*@
-                                <div class="modal fade" id="editPhieuChi" tabindex="-1" role="dialog" aria-labelledby="SuaPhieuChiTitle" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header" style="background-color:#009688">
-                                                <h5 class="modal-title" id="SuaPhieuChiTitle">Sửa Phiếu Chi</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <label for="chonBDS"><b>Chọn bất động sản</b></label>
-                                                        <select class="form-control" id="chonBDS">
-                                                            <option>1</option>
-                                                            <option>2</option>
-                                                            <option>3</option>
-                                                            <option>4</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label><b>Ngày chi</b></label>
-                                                        <input class="form-control" type="date" />
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label><b>Lý do chi</b></label>  <input class="form-control" />
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label><b>Số tiền</b></label>
-                                                        <input class="form-control" type="number" />
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label><b>Người nhận</b></label>
-                                                        <input class="form-control" />
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label for="loaichi"><b>Loại chi</b></label>
-                                                        <select class="form-control" id="loaichi">
-                                                            <option>Tiền cọc phòng</option>
-                                                            <option>Khác</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label for="hinhthucthu"><b>Hình thức thu</b></label>
-                                                        <select class="form-control" id="hinhthucthu">
-                                                            <option>Tiền mặt</option>
-                                                            <option>Chuyển khoản</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label><b>Ghi chú</b></label>  <input class="form-control" type="text" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn" data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn">Save</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                @*Kết thúc Modal*@
-                                <a href="#" data-toggle="modal" data-target="#deletePhieuChi"><i class="fas fa-trash"></i></a>
-                                <!-- Modal -->
-                                <div class="modal fade" id="deletePhieuChi" tabindex="-1" role="dialog" aria-labelledby="DeletePhieuChiTitle" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header" style="background-color:#009688">
-                                                <h5 class="modal-title" id="DeletePhieuChiTitle">Xóa Phiếu Chi</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <h4>Bạn có chắc muốn xóa phiếu chi này ?</h4>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn" data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn">Delete</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Kết thúc Modal-->
-                                <a href="#" data-toggle="modal" data-target="#PrintPhieuChi"><i class="fas fa-print"></i></a>
-                                <!-- Modal -->
-                                <div class="modal fade" id="PrintPhieuChi" tabindex="-1" role="dialog" aria-labelledby="PrintPhieuChiTitle" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header" style="background-color:#009688">
-                                                <h5 class="modal-title" id="PrintPhieuChiTitle">In Phiếu Chi</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <h4>Bạn có muốn in phiếu chi này ?</h4>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn" data-dismiss="modal">No</button>
-                                                <button type="button" class="btn">Yes</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Kết thúc Modal-->
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>BĐS001</td>
-                            <td>HĐ0456</td>
-                            <td>Chung cư H3</td>
-                            <td>Căn hộ</td>
-                            <td>478</td>
-                            <td>3.000.000</td>
-                            <td>Hiếu Trần</td>
-                            <td>Thu tiền đặt cọc</td>
-                            <td>Chuyển khoản</td>
-                            <td>21/2/2019</td>
-                            <td>Tiền cọc cho thuê nhà</td>
-                            <td>
-                                <a href="#" data-toggle="modal" data-target="#editPhieuChi"><i class="fas fa-tools"></i></a>
-                                @*Modal*@
-                                <div class="modal fade" id="editPhieuChi" tabindex="-1" role="dialog" aria-labelledby="SuaPhieuChiTitle" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header" style="background-color:#009688">
-                                                <h5 class="modal-title" id="SuaPhieuChiTitle">Sửa Phiếu Chi</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <label><b>Dự án &nbsp;</b></label>
-                                                        <input class="form-control" />
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label for="chonBDS"><b>Chọn bất động sản</b></label>
-                                                        <select class="form-control" id="chonBDS">
-                                                            <option>1</option>
-                                                            <option>2</option>
-                                                            <option>3</option>
-                                                            <option>4</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label for="chonnha"><b>Chọn nhà</b></label>
-                                                        <select class="form-control" id="chonnha">
-                                                            <option>1</option>
-                                                            <option>2</option>
-                                                            <option>3</option>
-                                                            <option>4</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label><b>Ngày chi</b></label>
-                                                        <input class="form-control" type="date" />
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label><b>Lý do chi</b></label>  <input class="form-control" />
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label><b>Số tiền</b></label>
-                                                        <input class="form-control" type="number" />
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label><b>Người nhận</b></label>
-                                                        <input class="form-control" />
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label for="loaichi"><b>Loại chi</b></label>
-                                                        <select class="form-control" id="loaichi">
-                                                            <option>Tiền cọc phòng</option>
-                                                            <option>Khác</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label for="hinhthucthu"><b>Hình thức thu</b></label>
-                                                        <select class="form-control" id="hinhthucthu">
-                                                            <option>Tiền mặt</option>
-                                                            <option>Chuyển khoản</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label><b>Ghi chú</b></label>  <input class="form-control" type="text" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn" data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn">Save</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                @*Kết thúc Modal*@
-                                <a href="#" data-toggle="modal" data-target="#deletePhieuChi"><i class="fas fa-trash"></i></a>
-                                <!-- Modal -->
-                                <div class="modal fade" id="deletePhieuChi" tabindex="-1" role="dialog" aria-labelledby="DeletePhieuChiTitle" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header" style="background-color:#009688">
-                                                <h5 class="modal-title" id="DeletePhieuChiTitle">Xóa Phiếu Chi</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <h4>Bạn có chắc muốn xóa phiếu chi này ?</h4>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn" data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn">Delete</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Kết thúc Modal-->
-                                <a href="#" data-toggle="modal" data-target="#PrintPhieuChi"><i class="fas fa-print"></i></a>
-                                <!-- Modal -->
-                                <div class="modal fade" id="PrintPhieuChi" tabindex="-1" role="dialog" aria-labelledby="PrintPhieuChiTitle" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header" style="background-color:#009688">
-                                                <h5 class="modal-title" id="PrintPhieuChiTitle">In Phiếu Chi</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <h4>Bạn có muốn in phiếu chi này ?</h4>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn" data-dismiss="modal">No</button>
-                                                <button type="button" class="btn">Yes</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Kết thúc Modal-->
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>BĐS001</td>
-                            <td>HĐ0456</td>
-                            <td>Chung cư H3</td>
-                            <td>Căn hộ</td>
-                            <td>478</td>
-                            <td>3.000.000</td>
-                            <td>Hiếu Trần</td>
-                            <td>Thu tiền đặt cọc</td>
-                            <td>Chuyển khoản</td>
-                            <td>21/2/2019</td>
-                            <td>Tiền cọc cho thuê nhà</td>
-                            <td>
-                                <a href="#" data-toggle="modal" data-target="#editPhieuChi"><i class="fas fa-tools"></i></a>
-                                @*Modal*@
-                                <div class="modal fade" id="editPhieuChi" tabindex="-1" role="dialog" aria-labelledby="SuaPhieuChiTitle" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header" style="background-color:#009688">
-                                                <h5 class="modal-title" id="SuaPhieuChiTitle">Sửa Phiếu Chi</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <label><b>Dự án &nbsp;</b></label>
-                                                        <input class="form-control" />
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label for="chonBDS"><b>Chọn bất động sản</b></label>
-                                                        <select class="form-control" id="chonBDS">
-                                                            <option>1</option>
-                                                            <option>2</option>
-                                                            <option>3</option>
-                                                            <option>4</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label for="chonnha"><b>Chọn nhà</b></label>
-                                                        <select class="form-control" id="chonnha">
-                                                            <option>1</option>
-                                                            <option>2</option>
-                                                            <option>3</option>
-                                                            <option>4</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label><b>Ngày chi</b></label>
-                                                        <input class="form-control" type="date" />
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label><b>Lý do chi</b></label>  <input class="form-control" />
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label><b>Số tiền</b></label>
-                                                        <input class="form-control" type="number" />
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label><b>Người nhận</b></label>
-                                                        <input class="form-control" />
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label for="loaichi"><b>Loại chi</b></label>
-                                                        <select class="form-control" id="loaichi">
-                                                            <option>Tiền cọc phòng</option>
-                                                            <option>Khác</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label for="hinhthucthu"><b>Hình thức thu</b></label>
-                                                        <select class="form-control" id="hinhthucthu">
-                                                            <option>Tiền mặt</option>
-                                                            <option>Chuyển khoản</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label><b>Ghi chú</b></label>  <input class="form-control" type="text" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn" data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn">Save</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                @*Kết thúc Modal*@
-                                <a href="#" data-toggle="modal" data-target="#deletePhieuChi"><i class="fas fa-trash"></i></a>
-                                <!-- Modal -->
-                                <div class="modal fade" id="deletePhieuChi" tabindex="-1" role="dialog" aria-labelledby="DeletePhieuChiTitle" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header" style="background-color:#009688">
-                                                <h5 class="modal-title" id="DeletePhieuChiTitle">Xóa Phiếu Chi</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <h4>Bạn có chắc muốn xóa phiếu chi này ?</h4>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn" data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn">Delete</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Kết thúc Modal-->
-                                <a href="#" data-toggle="modal" data-target="#PrintPhieuChi"><i class="fas fa-print"></i></a>
-                                <!-- Modal -->
-                                <div class="modal fade" id="PrintPhieuChi" tabindex="-1" role="dialog" aria-labelledby="PrintPhieuChiTitle" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header" style="background-color:#009688">
-                                                <h5 class="modal-title" id="PrintPhieuChiTitle">In Phiếu Chi</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <h4>Bạn có muốn in phiếu chi này ?</h4>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn" data-dismiss="modal">No</button>
-                                                <button type="button" class="btn">Yes</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Kết thúc Modal-->
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>BĐS001</td>
-                            <td>HĐ0456</td>
-                            <td>Chung cư H3</td>
-                            <td>Căn hộ</td>
-                            <td>478</td>
-                            <td>3.000.000</td>
-                            <td>Hiếu Trần</td>
-                            <td>Thu tiền đặt cọc</td>
-                            <td>Chuyển khoản</td>
-                            <td>21/2/2019</td>
-                            <td>Tiền cọc cho thuê nhà</td>
-                            <td>
-                                <a href="#" data-toggle="modal" data-target="#editPhieuChi"><i class="fas fa-tools"></i></a>
-                                @*Modal*@
-                                <div class="modal fade" id="editPhieuChi" tabindex="-1" role="dialog" aria-labelledby="SuaPhieuChiTitle" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header" style="background-color:#009688">
-                                                <h5 class="modal-title" id="SuaPhieuChiTitle">Sửa Phiếu Chi</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <label><b>Dự án &nbsp;</b></label>
-                                                        <input class="form-control" />
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label for="chonBDS"><b>Chọn bất động sản</b></label>
-                                                        <select class="form-control" id="chonBDS">
-                                                            <option>1</option>
-                                                            <option>2</option>
-                                                            <option>3</option>
-                                                            <option>4</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label for="chonnha"><b>Chọn nhà</b></label>
-                                                        <select class="form-control" id="chonnha">
-                                                            <option>1</option>
-                                                            <option>2</option>
-                                                            <option>3</option>
-                                                            <option>4</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label><b>Ngày chi</b></label>
-                                                        <input class="form-control" type="date" />
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label><b>Lý do chi</b></label>  <input class="form-control" />
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label><b>Số tiền</b></label>
-                                                        <input class="form-control" type="number" />
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label><b>Người nhận</b></label>
-                                                        <input class="form-control" />
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label for="loaichi"><b>Loại chi</b></label>
-                                                        <select class="form-control" id="loaichi">
-                                                            <option>Tiền cọc phòng</option>
-                                                            <option>Khác</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label for="hinhthucthu"><b>Hình thức thu</b></label>
-                                                        <select class="form-control" id="hinhthucthu">
-                                                            <option>Tiền mặt</option>
-                                                            <option>Chuyển khoản</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label><b>Ghi chú</b></label>  <input class="form-control" type="text" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn" data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn">Save</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                @*Kết thúc Modal*@
-                                <a href="#" data-toggle="modal" data-target="#deletePhieuChi"><i class="fas fa-trash"></i></a>
-                                <!-- Modal -->
-                                <div class="modal fade" id="deletePhieuChi" tabindex="-1" role="dialog" aria-labelledby="DeletePhieuChiTitle" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header" style="background-color:#009688">
-                                                <h5 class="modal-title" id="DeletePhieuChiTitle">Xóa Phiếu Chi</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <h4>Bạn có chắc muốn xóa phiếu chi này ?</h4>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn" data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn">Delete</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Kết thúc Modal-->
-                                <a href="#" data-toggle="modal" data-target="#PrintPhieuChi"><i class="fas fa-print"></i></a>
-                                <!-- Modal -->
-                                <div class="modal fade" id="PrintPhieuChi" tabindex="-1" role="dialog" aria-labelledby="PrintPhieuChiTitle" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header" style="background-color:#009688">
-                                                <h5 class="modal-title" id="PrintPhieuChiTitle">In Phiếu Chi</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <h4>Bạn có muốn in phiếu chi này ?</h4>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn" data-dismiss="modal">No</button>
-                                                <button type="button" class="btn">Yes</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Kết thúc Modal-->
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>BĐS001</td>
-                            <td>HĐ0456</td>
-                            <td>Chung cư H3</td>
-                            <td>Căn hộ</td>
-                            <td>478</td>
-                            <td>3.000.000</td>
-                            <td>Hiếu Trần</td>
-                            <td>Thu tiền đặt cọc</td>
-                            <td>Chuyển khoản</td>
-                            <td>21/2/2019</td>
-                            <td>Tiền cọc cho thuê nhà</td>
-                            <td>
-                                <a href="#" data-toggle="modal" data-target="#editPhieuChi"><i class="fas fa-tools"></i></a>
-                                @*Modal*@
-                                <div class="modal fade" id="editPhieuChi" tabindex="-1" role="dialog" aria-labelledby="SuaPhieuChiTitle" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header" style="background-color:#009688">
-                                                <h5 class="modal-title" id="SuaPhieuChiTitle">Sửa Phiếu Chi</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <label><b>Dự án &nbsp;</b></label>
-                                                        <input class="form-control" />
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label for="chonBDS"><b>Chọn bất động sản</b></label>
-                                                        <select class="form-control" id="chonBDS">
-                                                            <option>1</option>
-                                                            <option>2</option>
-                                                            <option>3</option>
-                                                            <option>4</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label for="chonnha"><b>Chọn nhà</b></label>
-                                                        <select class="form-control" id="chonnha">
-                                                            <option>1</option>
-                                                            <option>2</option>
-                                                            <option>3</option>
-                                                            <option>4</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label><b>Ngày chi</b></label>
-                                                        <input class="form-control" type="date" />
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label><b>Lý do chi</b></label>  <input class="form-control" />
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label><b>Số tiền</b></label>
-                                                        <input class="form-control" type="number" />
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label><b>Người nhận</b></label>
-                                                        <input class="form-control" />
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label for="loaichi"><b>Loại chi</b></label>
-                                                        <select class="form-control" id="loaichi">
-                                                            <option>Tiền cọc phòng</option>
-                                                            <option>Khác</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label for="hinhthucthu"><b>Hình thức thu</b></label>
-                                                        <select class="form-control" id="hinhthucthu">
-                                                            <option>Tiền mặt</option>
-                                                            <option>Chuyển khoản</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label><b>Ghi chú</b></label>  <input class="form-control" type="text" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn" data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn">Save</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                @*Kết thúc Modal*@
-                                <a href="#" data-toggle="modal" data-target="#deletePhieuChi"><i class="fas fa-trash"></i></a>
-                                <!-- Modal -->
-                                <div class="modal fade" id="deletePhieuChi" tabindex="-1" role="dialog" aria-labelledby="DeletePhieuChiTitle" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header" style="background-color:#009688">
-                                                <h5 class="modal-title" id="DeletePhieuChiTitle">Xóa Phiếu Chi</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <h4>Bạn có chắc muốn xóa phiếu chi này ?</h4>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn" data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn">Delete</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Kết thúc Modal-->
-                                <a href="#" data-toggle="modal" data-target="#PrintPhieuChi"><i class="fas fa-print"></i></a>
-                                <!-- Modal -->
-                                <div class="modal fade" id="PrintPhieuChi" tabindex="-1" role="dialog" aria-labelledby="PrintPhieuChiTitle" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header" style="background-color:#009688">
-                                                <h5 class="modal-title" id="PrintPhieuChiTitle">In Phiếu Chi</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <h4>Bạn có muốn in phiếu chi này ?</h4>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn" data-dismiss="modal">No</button>
-                                                <button type="button" class="btn">Yes</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Kết thúc Modal-->
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-
-
-                <nav>
-                    <ul class="pagination pg-teal">
-                        <li class="page-item">
-                            <a class="page-link" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                        </li>
-                        <li class="page-item active"><a class="page-link">1</a></li>
-                        <li class="page-item"><a class="page-link">2</a></li>
-                        <li class="page-item"><a class="page-link">3</a></li>
-                        <li class="page-item"><a class="page-link">4</a></li>
-                        <li class="page-item"><a class="page-link">5</a></li>
-                        <li class="page-item">
-                            <a class="page-link" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
             </div>
         </div>
+    </div>
 
+    <div class="row">
+        <div class="col-md-12">
+            <div class="tile">
+                <div class="tile-body">
+                    <table class="table table-hover table-bordered" id="sampleTable">
+                        <thead>
+                            <tr>
+                                <th>@Rental_WebCore2.Resources.Finance.Thu.ID</th>
+                                <th>@Rental_WebCore2.Resources.Finance.Thu.IDContract</th>
+                                <th>@Rental_WebCore2.Resources.Finance.Thu.Project</th>
+                                <th>@Rental_WebCore2.Resources.Finance.Thu.Property</th>
+                                <th>@Rental_WebCore2.Resources.Finance.Thu.House</th>
+                                <th>@Rental_WebCore2.Resources.Finance.Thu.Price</th>
+                                <th>@Rental_WebCore2.Resources.Finance.Thu.Receiver</th>
+                                <th>@Rental_WebCore2.Resources.Finance.Thu.Content</th>
+                                <th>@Rental_WebCore2.Resources.Finance.Thu.Form</th>
+                                <th>@Rental_WebCore2.Resources.Finance.Thu.SpendingDay</th>
+                                <th>@Rental_WebCore2.Resources.Finance.Thu.Note</th>
+                                <th>@Rental_WebCore2.Resources.Finance.Thu.Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>BĐS001</td>
+                                <td>HĐ0456</td>
+                                <td>Chung cư H3</td>
+                                <td>Căn hộ</td>
+                                <td>478</td>
+                                <td>3.000.000</td>
+                                <td>Hiếu Trần</td>
+                                <td>Thu tiền đặt cọc</td>
+                                <td>Chuyển khoản</td>
+                                <td>21/2/2019</td>
+                                <td>Tiền cọc cho thuê nhà</td>
+                                <td>
+                                    <a href="#" data-toggle="modal" data-target="#editPhieuChi"><i class="fas fa-tools"></i></a>
+                                    @*Modal*@
+                                    <div class="modal fade" id="editPhieuChi" tabindex="-1" role="dialog" aria-labelledby="SuaPhieuChiTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header" style="background-color:#009688">
+                                                    <h5 class="modal-title" id="SuaPhieuChiTitle">Sửa Phiếu Chi</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <label for="chonBDS"><b>Chọn bất động sản</b></label>
+                                                            <select class="form-control" id="chonBDS">
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                                <option>3</option>
+                                                                <option>4</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <label><b>Ngày chi</b></label>
+                                                            <input class="form-control" id="demoDate2" type="text" placeholder="Select Date">
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <label><b>Lý do chi</b></label>  <input class="form-control" />
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <label><b>Số tiền</b></label>
+                                                            <input class="form-control" type="number" />
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <label><b>Người nhận</b></label>
+                                                            <input class="form-control" />
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <label for="loaichi"><b>Loại chi</b></label>
+                                                            <select class="form-control" id="loaichi">
+                                                                <option>Tiền cọc phòng</option>
+                                                                <option>Khác</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <label for="hinhthucthu"><b>Hình thức thu</b></label>
+                                                            <select class="form-control" id="hinhthucthu">
+                                                                <option>Tiền mặt</option>
+                                                                <option>Chuyển khoản</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <label><b>Ghi chú</b></label>  <input class="form-control" type="text" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @*Kết thúc Modal*@
+                                    <a href="#" id="demoSwal"><i class="fas fa-trash"></i></a>
+
+                                    <a href="#" data-toggle="modal" data-target="#PrintPhieuChi"><i class="fas fa-print"></i></a>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="PrintPhieuChi" tabindex="-1" role="dialog" aria-labelledby="PrintPhieuChiTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header" style="background-color:#009688">
+                                                    <h5 class="modal-title" id="PrintPhieuChiTitle">In Phiếu Chi</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <h4>Bạn có muốn in phiếu chi này ?</h4>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn" data-dismiss="modal">No</button>
+                                                    <button type="button" class="btn">Yes</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Kết thúc Modal-->
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 
+
+<!-- Data table plugin-->
+<script type="text/javascript" src="~/wwwroot/js/plugins/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="~/wwwroot/js/plugins/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript">$('#sampleTable').DataTable();</script>
+
+<!-- Page specific javascripts-->
+<script type="text/javascript" src="~/wwwroot/js/plugins/bootstrap-notify.min.js"></script>
+<script type="text/javascript" src="~/wwwroot/js/plugins/sweetalert.min.js"></script>
+<script type="text/javascript">
+    $('#demoNotify').click(function () {
+
+        $.notify({
+            title: "Update Complete : ",
+            message: "Something cool is just updated!",
+            icon: 'fa fa-check'
+        }, {
+                type: "info"
+            });
+    });
+
+    $('#demoSwal').click(function () {
+        swal({
+            title: "Are you sure?",
+            text: "You will not be able to recover this imaginary file!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Yes, delete it!",
+            cancelButtonText: "No, cancel plx!",
+            closeOnConfirm: false,
+            closeOnCancel: false
+        }, function (isConfirm) {
+            if (isConfirm) {
+                swal("Deleted!", "Your imaginary file has been deleted.", "success");
+            } else {
+                swal("Cancelled", "Your imaginary file is safe :)", "error");
+            }
+        });
+    });
+</script>
+
+
+<script type="text/javascript" src="~/wwwroot/js/plugins/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript" src="~/wwwroot/js/plugins/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript">
+    $('#demoDate').datepicker({
+        format: "dd/mm/yyyy",
+        autoclose: true,
+        todayHighlight: true
+    });
+    $('#demoDate2').datepicker({
+        format: "dd/mm/yyyy",
+        autoclose: true,
+        todayHighlight: true
+    });
+</script>

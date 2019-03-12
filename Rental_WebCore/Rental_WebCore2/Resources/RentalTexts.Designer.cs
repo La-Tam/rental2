@@ -115,7 +115,7 @@ namespace Rental_WebCore2.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Asset Type.
+        ///   Looks up a localized string similar to Asset Manage.
         /// </summary>
         public static string Asset_Type {
             get {

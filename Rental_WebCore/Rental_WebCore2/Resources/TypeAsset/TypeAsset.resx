@@ -127,7 +127,7 @@
     <value>Adding Data</value>
   </data>
   <data name="Asign" xml:space="preserve">
-    <value>Asign</value>
+    <value>Asign Asset</value>
   </data>
   <data name="AssetID" xml:space="preserve">
     <value>Asset ID</value>
@@ -152,6 +152,9 @@
   </data>
   <data name="PropertyID" xml:space="preserve">
     <value>Property ID</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>State Asset</value>
   </data>
   <data name="Status" xml:space="preserve">
     <value>Status</value>
